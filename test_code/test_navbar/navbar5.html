@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive Navbar with Submenus</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <style>
+        /* General Styles */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+
+        .navbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background-color: #333;
+            padding: 10px 20px;
+            color: white;
+        }
+
+        .navbar .logo {
+            font-size: 1.5rem;
+            font-weight: bold;
+        }
+
+        .navbar .menu {
+            display: flex;
+            list-style: none;
+            margin: 0;
+            padding: 0;
+        }
+
+        .navbar .menu li {
+            position: relative;
+            margin-left: 20px;
+        }
+
+        .navbar .menu li a {
+            color: white;
+            text-decoration: none;
+            padding: 8px 12px;
+            display: block;
+        }
+
+        .navbar .menu li a:hover {
+            background-color: #555;
+            border-radius: 4px;
+        }
+
+        /* Sub-navbar and Sub-sub-navbar */
+        .navbar .menu li ul {
+            display: none;
+            position: absolute;
+            left: 0;
+            top: 100%;
+            background-color: #444;
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        .navbar .menu li:hover > ul {
+            display: block;
+        }
+
+        .navbar .menu li ul li a {
+            padding: 8px 15px;
+            width: 150px;
+        }
+
+        .navbar .menu li ul li ul {
+            top: 0;
+            left: 100%;
+        }
+
+        /* Mobile View */
+        .navbar .menu-toggle {
+            display: none;
+            font-size: 1.5rem;
+            cursor: pointer;
+        }
+
+        @media screen and (max-width: 768px) {
+            .navbar .menu {
+                display: none;
+                flex-direction: column;
+                width: 100%;
+                background-color: #333;
+                position: absolute;
+                top: 60px;
+                left: 0;
+            }
+
+            .navbar .menu.active {
+                display: flex;
+            }
+
+            .navbar .menu li {
+                margin: 10px 0;
+                text-align: center;
+            }
+
+            .navbar .menu li ul {
+                position: static;
+            }
+
+            .navbar .menu li ul li ul {
+                position: static;
+            }
+
+            .navbar .menu-toggle {
+                display: block;
+            }
+        }
+
+        /* Arrows for Submenus */
+        .navbar .menu li > a:after {
+            content: url('data:image/svg+xml,%3Csvg xmlns=%27http://www.w3.org/2000/svg%27 viewBox=%270 0 24 24%27 fill=%27white%27%3E%3Cpath d=%27M8.59 16.58L13.17 12 8.59 7.41 10 6l6 6-6 6z%27/%3E%3C/svg%3E');
+            margin-left: 5px;
+        }
+
+        .navbar .menu li ul li > a:after {
+            content: url('data:image/svg+xml,%3Csvg xmlns=%27http://www.w3.org/2000/svg%27 viewBox=%270 0 24 24%27 fill=%27white%27%3E%3Cpath d=%27M8.59 16.58L13.17 12 8.59 7.41 10 6l6 6-6 6z%27/%3E%3C/svg%3E');
+            margin-left: 5px;
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar">
+        <div class="logo">MySite</div>
+        <i class="fas fa-bars menu-toggle"></i>
+        <ul class="menu">
+            <li><a href="#">Home</a></li>
+            <li>
+                <a href="#">About</a>
+                <ul>
+                    <li><a href="#">Team</a></li>
+                    <li>
+                        <a href="#">History</a>
+                        <ul>
+                            <li><a href="#">Milestones</a></li>
+                            <li><a href="#">Achievements</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </li>
+            <li><a href="#">Services</a></li>
+            <li><a href="#">Contact</a></li>
+        </ul>
+    </nav>
+
+    <script>
+        // Toggle menu visibility
+        const menuToggle = document.querySelector('.menu-toggle');
+        const menu = document.querySelector('.menu');
+
+        menuToggle.addEventListener('click', () => {
+            menu.classList.toggle('active');
+        });
+    </script>
+</body>
+</html>

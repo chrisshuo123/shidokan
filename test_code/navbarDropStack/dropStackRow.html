@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="img/arrow-icon.png"> <!-- Favicon with arrow -->
+    <link rel="stylesheet" href="style_coba2.css"> 
+    <title>Drop Stack Row</title>
+</head>
+<body>
+    <nav class="navbar">
+        <div class="logo">
+            <a href="#">Logo</a>
+        </div>
+        <div class="menu-toggle" id="menu-toggle">
+            <span>&#9776;</span> <!-- Hamburger icon -->
+        </div>
+        <ul class="navbar-links" id="navbar-links">
+            <li><a href="#home">Home</a></li>
+            <li><a href="#about">About</a></li>
+
+            <!-- Sub-menu with dropdown -->
+            <li class="dropdown">
+            <a href="#">Services &#9662;</a> <!-- Arrow icon (down) -->
+            <ul class="dropdown-content">
+                <li><a href="#">Web Development</a></li>
+                <li class="sub-dropdown">
+                <a href="#">App Development &#9654;</a> <!-- Arrow icon (right) -->
+                <ul class="sub-dropdown-content">
+                    <li><a href="#">Android</a></li>
+                    <li><a href="#">iOS</a></li>
+                </ul>
+                </li>
+                <li><a href="#">SEO</a></li>
+            </ul>
+            </li>
+
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </nav>
+    <!-- Memanggil file eksternal script.js -->
+    <script src="js_dropStack.js"></script>
+</body>
+</html>

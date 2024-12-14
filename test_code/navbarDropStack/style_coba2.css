@@ -1,0 +1,115 @@
+/* Base navbar styles */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    background-color: #007bff;
+}
+
+.navbar .logo a {
+    text-decoration: none;
+    color: white;
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.navbar-links {
+    display: flex;
+    gap: 20px;
+    list-style: none; /* Remove list bullets */
+    padding: 0;
+}
+
+.navbar-links li {
+    position: relative; /* Needed for dropdown positioning */
+}
+
+.navbar-links a {
+    text-decoration: none;
+    color: white;
+    font-size: 16px;
+    padding: 10px 15px;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+.navbar-links a:hover {
+    background-color: #0056b3;
+}
+
+/* Toggle menu (hamburger) */
+.menu-toggle {
+    display: none;
+    cursor: pointer;
+    font-size: 30px;
+    color: white;
+}
+
+/* Dropdown menu (services) */
+.dropdown > .dropdown-content {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: #007bff;
+    min-width: 200px;
+    padding: 10px 0;
+    list-style: none;
+}
+
+.sub-dropdown > .sub-dropdown-content {
+    display: none;
+    position: absolute;
+    top: 0;
+    left: 100%;
+    background-color: #007bff;
+    min-width: 150px;
+    padding: 10px 0;
+    list-style: none;
+}
+
+/* Hover effects for dropdowns */
+.dropdown:hover > .dropdown-content,
+.sub-dropdown:hover > .sub-dropdown-content {
+    display: block;
+}
+
+/* Add arrows */
+.dropdown > a::after {
+    content: ' ▼';
+    font-size: 12px;
+}
+
+.sub-dropdown > a::after {
+    content: ' ►';
+    font-size: 12px;
+}
+
+/* Mobile view: hide links and show menu toggle */
+@media (max-width: 768px) {
+    .navbar-links {
+        display: none;
+        width: 100%;
+        flex-direction: column;
+        position: absolute;
+        top: 60px;
+        left: 0;
+        background-color: #007bff;
+        padding: 10px 0;
+    }
+
+    .navbar-links a {
+        text-align: center;
+        width: 100%;
+        padding: 15px;
+    }
+
+    .menu-toggle {
+      display: block; /* Show the hamburger icon in mobile */
+    }
+
+    .navbar.active .navbar-links {
+      display: flex; /* Show the links when the navbar is active */
+    }
+}
