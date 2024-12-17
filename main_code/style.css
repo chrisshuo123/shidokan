@@ -1,3 +1,10 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+* {
+    box-sizing: border-box;
+    font-family: 'poppins', sans-serif;
+}
+
 body {
     overflow-x: hidden;
     /*background-color: rgb(35, 12, 23);*/
@@ -9,7 +16,7 @@ h1 {
     text-align: center;
 }
 
-img {
+.slides img {
     display: block;
 }
 
@@ -37,12 +44,12 @@ img {
 
 /* Berita Carousel */
 
-.carousel-berita .list-carousel-berita img {
+/*.carousel-berita .list-carousel-berita img {
     width:356px;
     height:210px;
-}
+}*/
 
-@media screen and (max-width: 768px) {
+/*@media screen and (max-width: 768px) {
 
     .carousel-berita .list-carousel-berita .row .col-4 {
         margin-right: 5%;
@@ -53,9 +60,109 @@ img {
         height:150px;
         margin-left: -10%;
     }
+}*/
+
+/* - - RESPONSIVE IMAGES - - */
+
+img {
+    max-width: 100%;
+    height: auto;
+    display: block; /* Prevents inline spacing issues */
 }
 
-/* Daftar Dojo */
+/* - - HOME - - */
+
+.introduction {
+    margin-top: 4%;
+    margin-bottom: 7%;
+}
+
+.introduction .row {
+    display: flex;
+    justify-content: center;
+}
+
+.introduction .btn {
+    display:block;
+    margin: 2% auto;
+}
+
+/* Menyesuaikan margin */
+@media screen and (max-width: 768px) {
+    .introduction .row .col-md-6:nth-last-child() {
+        margin-top: -13%;
+    }
+}
+
+/* Menyesuaikan ukuran teksnya */
+.font-responsive .row h1 {
+    text-align: left;
+}
+.font-responsive .row h3 {
+    font-size: 1.6em;
+}
+
+@media screen and (max-width:992px) {
+    .font-responsive .row p {
+        font-size: 0.95em;
+    }
+    .font-responsive .row h1 {
+        font-size:1.6em;
+    }
+    .font-responsive .row h3 {
+        font-size:1.3em;
+    }
+}
+@media screen and (max-width:768px) {
+    .font-responsive .row p {
+        font-size: 1em;
+        text-align: center;
+    }
+    .font-responsive .row h1 {
+        font-size:1.8em;
+        text-align: center;
+    }
+}
+
+/* Carousel Berita */
+.carousel-berita .btn {
+    display:block;
+    margin: 2% auto;
+}
+
+/* - - BERITA LAYOUT - - */
+/* dibagian Home */
+
+/* Menyesuaikan Layout Berita (di Home) */
+@media screen and (max-width:576px) {
+
+}
+
+/* Menyesuaikan ukuran teksnya */
+@media screen and (max-width:992px) {
+    .font-berita .row p {
+        font-size: 0.95em;
+    }
+    .font-berita .row h3 {
+        font-size:1.8em;
+    }
+}
+@media screen and (max-width:768px) {
+    .font-berita .row p {
+        font-size: 1em;
+        text-align: center;
+    }
+    .font-berita .row h3 {
+        font-size:1.8em;
+        text-align: center;
+    }
+}
+
+.justify-content-center h3 {
+    font-size: 2em;
+}
+
+/* - - DAFTAR DOJO - - */
 
 .daftar-dojo .row ul {
     display:flex;
@@ -75,9 +182,17 @@ img {
     margin: 0 calc(-50vw + 50%);
 }
 
+.footer .footer-atas {
+    margin-left: -2%;
+}
+
+.footer .footer-tengah {
+    margin-left: -2%;
+}
+
 /* Footer Atas */
 
-.footer .footer-atas .flex-shidokanlogo-footer {
+/*.footer .footer-atas .flex-shidokanlogo-footer {
     text-align: center;
 }
 
@@ -85,11 +200,178 @@ img {
     display:flex;
     flex-direction: row;
     justify-content: center;
+    list-style-type: none;
+} */
+
+/* ===RESPONSIVE 2 LOGO & 1 TITLE SHIDOKAN=== */
+/* General styling for the footer */
+.footer-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: nowrap; /* Default: no wrapping */
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    text-align: center;
 }
+/* Default styles for each item */
+.footer-item {
+    flex: 1;
+    margin: 10px;
+}
+
+.footer-logo img {
+    width:70%; /* Default logo size */
+    max-width:150px; /* Limit logo size on larger screens */
+    margin: 0 auto;
+    display: block;
+}
+
+.footer-text {
+    max-width:400px; /* Prevent text from stretching too wide */
+    margin: 0 auto;
+    padding: 10px;
+}
+
+/* Responsive Styles */
+@media (max-width:768px) { /*432px baru bisa*/
+    .footer-container {
+        flex-wrap: wrap; /* Enable wrapping */
+        justify-items: center; /* Center the items */
+    }
+
+    .footer-item:nth-of-type(1),
+    .footer-item:nth-of-type(3) {
+        flex: 1; /* Equal width for logos */
+        order: 1; /* Logos stay together at the top */
+    }
+
+    .footer-item:nth-of-type(2) {
+        order: 2; /* Title and text move below logos */
+        flex: 0 0 100%; /* Forces it to take full row */
+        margin-top: 20px;
+    }
+}
+
+/*======SEJARAH======*/
+/* Dropdown Styling */
+.dropdown-div {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    font-family: 'Poppins', sans-serif;
+    /*height: 100vh;
+    margin: 0;*/
+    background: #f5f5f5;
+}
+
+.dropdown-stack {
+    list-style: none;
+    padding: 0;
+    width: auto;
+}
+
+.dropdown {
+    position: relative;
+    display: block;
+    margin-bottom: 16px;
+}
+
+.dropbtn {
+    width: 100%;
+    background-color: #000;
+    color: #fff;
+    border: none;
+    border-radius: 8px;
+    font-size: 12px;
+    padding: 12px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    text-align:left;
+}
+
+.dropbtn:hover {
+    background-color: #555;
+}
+
+.dropdown-content {
+    display: none; /* Hidden by default */
+    position: relative;
+    background-color: #fff;
+    min-width: 100%;
+    box-shadow: 0px 4px 8px rgba(0,0,0,0.2);
+    border-radius: 8px;
+    z-index: -1;
+    margin-top: -4px;
+    padding: 12px 16px;
+    /* Animation Transition */
+    opacity: 0; /* Start fully hidden */
+    transform: scaleY(0); /* Start collapsed */
+    transform-origin: top; /* Animation from the top */
+    transition: transform 0.3s ease, opacity 0.3s ease; /* Smooth animation */
+}
+
+.dropdown-content.show {
+    /* Animation Transition */
+    display: block; /* Ensure it takes space */
+    opacity: 1; /* Fully visible */
+    transform: scaleY(1); /* Expand smoothly */
+}
+
+.dropdown-content p {
+    margin: 0;
+    color: #333;
+    font-size: 12px;
+}
+
+/*=====================*/
+/*===== HALAMAN BERITA ===== */
+
+/* Pagination (Halaman, Next / Prev & Bulletin Page) */
+.pagination {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    margin: 20px;
+}
+.content {
+    text-align: left;
+    font-size: 18px;
+    margin: 20px auto;
+    max-width: 1100px;
+}
+.bullets {
+    display: flex;
+    gap: 5px;
+}
+.bullet {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background-color: gray;
+    cursor: pointer;
+}
+.bullet.active {
+    background-color: blue;
+}
+.paragraph {
+    margin-bottom: 20px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: #f9f9f9;
+}
+
+
+/*==============*/
+/*====FOOTER====*/
 
 .footer .footer-atas .flex-nav-footer {
     margin: auto;
-    width: 50%;
+    width: 100%;
     border: 3px solid green;
     padding: 10px;
 }
@@ -97,13 +379,103 @@ img {
 .footer .footer-atas .flex-nav-footer ul {
     display:flex;
     flex-direction: row;
-    justify-content: space-around;
+    justify-content: center;
+    flex:0;
+}
+
+/* Button decoration */
+.button-style {
+    background-color: #04AA6D; /* Green */
+    border: none;
+    color: white;
+    padding: 4px 8px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 12px;
+    margin: 4px 2px;
+    transition-duration: 0.4s;
+    cursor: pointer;
+}
+
+.button-purple {
+    background-color: white; 
+    color: black; 
+    border: 2px solid #008CBA;
+}
+
+.button-purple:hover {
+    background-color: #008CBA;
+    color: white;
+}
+
+@media screen and (max-width: 768px) {
+    .footer .footer-atas .flex-shidokanlogo-footer .flex-nav-footer ul {
+        display: flex;
+        flex-direction: column;
+        width:100%;
+        background-color: green;
+        margin-left: -2%;
+    }
+
+    .button-purple {
+        width:100%;
+    }
 }
 
 /* Footer Tengah */
-.footer .footer-tengah .layout-infolatihan-footer ul li {
+
+.footer .footer-tengah .row {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around !important;
+}
+
+.footer .footer-tengah .row .layout-infoDojo-footer ul {
+    display: flex;
+    flex-direction: column;
+    align-items: left;
+    white-space: nowrap;
+    margin-left: -7.5%;
+}
+
+.footer .footer-tengah .row .layout-infoDojo-footer ul li {
+    display: flex;
+    flex-direction: row;
+}
+
+.footer .footer-tengah .row .layout-infolatihan-footer ul {
+    display: flex;
+    flex-direction: column;
+    align-items: left;
+    white-space: nowrap;
+}
+
+.footer .footer-tengah .row .layout-infolatihan-footer ul li {
     display:flex;
     flex-direction: row;
+}
+
+@media screen and (max-width: 576px) {
+    .footer .footer-tengah .row .layout-infoDojo-footer ul {
+        align-items: center;
+    }
+
+    .footer .footer-tengah .row .layout-infoDojo-footer ul li {
+        display: relative;
+        text-align: center;
+    }
+
+    .footer .footer-tengah .row .layout-infolatihan-footer ul {
+        align-items: center;
+        margin-left: -7.5%;
+    }
+
+    .footer .footer-tengah .layout-infolatihan-footer ul li {
+        display:flex;
+        flex-direction: row;
+        text-align: center;
+    }
 }
 
 /* Footer Bawah */

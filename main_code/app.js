@@ -1,4 +1,5 @@
-/* - - - - - - 1 - HALAMAN MAIN - - - - - - */
+/*========== 1 - HALAMAN MAIN ==========*/
+/*===Header===*/
 
 document.addEventListener('DOMContentLoaded', init);
 
@@ -41,3 +42,30 @@ bck.onclick = function(e) {
 
     slide.src = baseURL + cars[index];
 };
+
+/*=======================*/
+/*=======SEJARAH=======*/
+/*---dropdown---*/
+
+function toggleDropdown(button) {
+    // Close any open dropdowns
+    /*document.querySelectorAll('.dropdown-content').forEach(dropdown => {
+        if (dropdown !== button.nextElementSibling) {
+            dropdown.classList.remove('show');
+        }
+    });*/
+
+    // Toggle the target dropdown
+    const dropdown = button.nextElementSibling;
+    dropdown.classList.toggle('show');
+}
+
+// Close dropdowns when clicking outside
+/*window.onclick = function(event) {
+    if (!event.target.matches('.dropbtn')) {
+        document.querySelectorAll('.dropdown-content').forEach(dropdown => {
+            dropdown.classList.remove('show');
+        });
+    }
+}*/
+
