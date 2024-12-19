@@ -8,6 +8,8 @@
 body {
     overflow-x: hidden;
     /*background-color: rgb(35, 12, 23);*/
+    background: #2A0134;
+    color:white;
 }
 
 /* - - BANNER (UJICOBA) - - */
@@ -270,7 +272,9 @@ img {
 .dropdown-stack {
     list-style: none;
     padding: 0;
-    width: auto;
+    max-width: 800px;
+    margin: 0 auto;
+    display:block;
 }
 
 .dropdown {
@@ -278,6 +282,29 @@ img {
     display: block;
     margin-bottom: 16px;
 }
+
+.dropdown .title-dropbtn {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    transition: 0.15s ease;
+}
+
+/*.dropdown-content .show .arrow {
+    transform: rotate(45deg) translate(-5px, -5px);
+}
+
+.dropdown-content .show .arrow:before {
+    transform: translate(10px,0);
+}
+.dropdown-content .show .arrow:after {
+    transform: rotate(90deg) translate(10px, 0);
+}
+
+.dropdown-content .show {
+    opacity: 0.3;
+    height:108px;
+} */
 
 .dropbtn {
     width: 100%;
@@ -306,24 +333,86 @@ img {
     z-index: -1;
     margin-top: -4px;
     padding: 12px 16px;
+
+    max-height: 0;
+    overflow:hidden;
+    transform: translateY(-20px); /* Slide up initially */
+    opacity: 0;
+    display: none; /* Start with a display name */
+    transition: transform 0.5s ease, opacity 0.5s ease, max-height 0.5s ease;
+
     /* Animation Transition */
-    opacity: 0; /* Start fully hidden */
-    transform: scaleY(0); /* Start collapsed */
-    transform-origin: top; /* Animation from the top */
-    transition: transform 0.3s ease, opacity 0.3s ease; /* Smooth animation */
+    /*opacity: 0; /* Start fully hidden */
+    /*transform: scaleY(0); /* Start collapsed */
+    /*transform-origin: top; /* Animation from the top */
+    /*transition: transform 0.3s ease, opacity 0.3s ease; /* Smooth animation */
 }
 
 .dropdown-content.show {
-    /* Animation Transition */
-    display: block; /* Ensure it takes space */
+    max-height: 1200px; /* Adjust to fit content */
+    transform: translateY(0); /* Slide down to original position */
     opacity: 1; /* Fully visible */
-    transform: scaleY(1); /* Expand smoothly */
+    display:block; /* Ensure it's visible */
+    
+    /* Animation Transition */
+    /*display: block; /* Ensure it takes space */
+    /*opacity: 1; /* Fully visible */
+    /*transform: scaleY(1); /* Expand smoothly */
 }
 
 .dropdown-content p {
     margin: 0;
     color: #333;
     font-size: 12px;
+}
+
+.dropdown-content ol li {
+    color: #000;
+    font-size: 12px;
+}
+
+/* Arrow Animation */
+/*.arrow {
+    width: 13px;
+    height: 13px;
+    display: inline-block;
+    position: relative;
+    bottom: -5px;
+    left: -10px;
+    transition: 0.4s ease;
+    margin-top: 2px;
+    margin-left: 2%;
+    margin-right: 1%;
+    text-align: left;
+    transform: rotate(45deg);
+    float: right;
+}
+
+.arrow:before, .arrow:after {
+    position: absolute;
+    content: '';
+    display: inline-block;
+    width: 12px;
+    height: 3px;
+    background-color: #fff;
+    transition: 0.4s ease;
+} */
+
+/*.arrow:after {
+    position: absolute;
+    transform: rotate(90deg);
+    top: -5px;
+    left: 5px;
+} */
+
+.arrow {
+    margin-left: 10px !important;
+    display: inline-block !important;
+    transition: transform 0.5s ease !important;
+}
+
+.arrow.rotated {
+    transform: rotate(180deg) !important;
 }
 
 /*=====================*/

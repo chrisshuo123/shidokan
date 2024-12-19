@@ -57,7 +57,27 @@ function toggleDropdown(button) {
 
     // Toggle the target dropdown
     const dropdown = button.nextElementSibling;
-    dropdown.classList.toggle('show');
+    // dropdown.classList.toggle('show');
+
+    // Check if the dropdown is already shown
+    if(dropdown.classList.contains('show')) {
+        dropdown.classList.remove('show');
+
+        // Delay hiding the display to allow the animation to finish
+        setTimeout(()=> {
+            dropdown.style.display = 'none';
+        }, 500); // Match the CSS transition duration (0,5s)
+    } else {
+        dropdown.style.display = 'block'; // Show immediately
+        // Allow transition to animate
+        setTimeout(()=> {
+            dropdown.classList.add('show');
+        }, 0); // Wait briefly to trigger animation
+    }
+
+    // Making the button turn 180 degree
+    const arrow = button.querySelector('.arrow');
+    arrow.classList.toggle('rotated');
 }
 
 // Close dropdowns when clicking outside
@@ -68,4 +88,3 @@ function toggleDropdown(button) {
         });
     }
 }*/
-
