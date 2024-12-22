@@ -349,7 +349,7 @@ img {
 }
 
 .dropdown-content.show {
-    max-height: 1200px; /* Adjust to fit content */
+    max-height: 2400px; /* Adjust to fit content */
     transform: translateY(0); /* Slide down to original position */
     opacity: 1; /* Fully visible */
     display:block; /* Ensure it's visible */
