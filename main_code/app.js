@@ -1,4 +1,12 @@
 /*========== 1 - HALAMAN MAIN ==========*/
+
+/*===NAVBAR===*/
+let menuToggle = document.querySelector('.menuToggle');
+let nav = document.querySelector('nav');
+menuToggle.onclick = function() {
+    nav.classList.toggle('show');
+};
+
 /*===Header===*/
 
 document.addEventListener('DOMContentLoaded', init);
