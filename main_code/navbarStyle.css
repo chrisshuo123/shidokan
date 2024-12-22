@@ -45,7 +45,7 @@ header ul li {
 
 header ul li a {
     color: #fff;
-    font-size: 1.1em;
+    font-size: 0.9em;
     padding: 20px 25px;
     text-decoration: none;
     display: flex;
@@ -82,6 +82,10 @@ header ul li ul li ul {
 
 .navbarActive .active {
     background: #5d0568;
+}
+
+.navbarStyle {
+    margin-left: 20%;
 }
 
 /* Now, make it responsive */
