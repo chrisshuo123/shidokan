@@ -10,55 +10,58 @@
 </head>
 <body>
     <!-- Navbar -->
-    <header>
-        <a href="#" class="logo">My Logo</a>
-        <div class="menuToggle"></div>
-        <nav class="navbarActive"> <!-- Class navbarActive hanya untuk memanggil li yang .active -->
-            <ul>
-                <li><a href="#" class="active">Home</a></li>
-                <li><a href="../news/berita.html">News<b>▼</b></a>
-                    <ul>
-                        <li><a href="../news/nasional.html">National</a></li>
-                        <li><a href="../news/internasional.html">International</a></li>
-                    </ul>
-                </li>
-                <li><a href="../about-us/about-us.html">About Us<b>▼</b></a>
-                    <ul>
-                        <li><a href="../about-us/sejarah.html">History</a></li>
-                        <li><a href="../about-us/profile.html">Profile</a></li>
-                        <li><a href="../about-us/blackbelts/blackbelts.html">Blackbelts<b>+</b></a>
-                            <ul>
-                                <li><a href="../about-us/blackbelts/shodan.html">Shodan</a></li>
-                                <li><a href="#">Nidan</a></li>
-                                <li><a href="#">Sandan</a></li>
-                                <li><a href="#">Yondan</a></li>
-                                <li><a href="#">Godan</a></li>
-                            </ul>
-                        </li>
-                    </ul>
-                </li>
-                <li><a href="../contact-us/contacts.html">Contact Us<b>▼</b></a>
-                    <ul>
-                        <li><a href="#">Daftar Dojo</a></li>
-                        <li><a href="../about-us/profile.html">Profile</a></li>
-                        <li><a href="#">Join Us!<b>+</b></a>
-                            <ul>
-                                <li><a href="#">Terms & Conditions</a></li>
-                                <li><a href="#">Tata Tertib Dojo</a></li>
-                            </ul>
-                        </li>
-                    </ul>
-                </li>
-                <li><a href="#">Voice from Shibucho</a></li>
-                <li><a href="#">Our Sponsors<b>▼</b></a>
-                    <ul>
-                        <li><a href="../sponsors/our_partner.html">Our Partner</a></li>
-                        <li><a href="../sponsors/merchandise.html">Merchandise</a></li>
-                    </ul>
-                </li>
-            </ul>
-        </nav>
-    </header>
+    <div class="div-header">
+        <header>
+            <a href="#" class="logo"><img src="../img/7-shidokan-logo/shidokan-indonesia.png" style="width:80px;"></a>
+            <div class="menuToggle"></div>
+            <nav class="navbarActive"> <!-- Class navbarActive hanya untuk memanggil li yang .active -->
+                <ul class="adjust-navbar">
+                    <li><a href="#" class="active">Home</a></li>
+                    <li><a href="../news/berita.html">News<b>&nbsp;▼</b></a>
+                        <ul>
+                            <li><a href="../news/nasional.html">National</a></li>
+                            <li><a href="../news/internasional.html">International</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="../about-us/about-us.html">About Us<b>&nbsp;▼</b></a>
+                        <ul>
+                            <li><a href="../about-us/sejarah.html">History</a></li>
+                            <li><a href="../about-us/profile.html">Profile</a></li>
+                            <li><a href="../about-us/blackbelts/blackbelts.html">Blackbelts<b>&nbsp;+</b></a>
+                                <ul>
+                                    <li><a href="../about-us/blackbelts/1_shodan.html">Shodan</a></li>
+                                    <li><a href="../about-us/blackbelts/2_nidan.html">Nidan</a></li>
+                                    <li><a href="../about-us//blackbelts/3_sandan.html">Sandan</a></li>
+                                    <li><a href="../about-us/blackbelts/4_yondan.html">Yondan</a></li>
+                                    <li><a href="../about-us/blackbelts/5_godan.html">Godan</a></li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </li>
+                    <li><a href="../contact-us/contacts.html">Contact Us<b>&nbsp;▼</b></a>
+                        <ul>
+                            <li><a href="#">Daftar Dojo</a></li>
+                            <li><a href="../about-us/profile.html">Profile</a></li>
+                            <li><a href="#">Join Us!<b>&nbsp;+</b></a>
+                                <ul>
+                                    <li><a href="#">Terms & Conditions</a></li>
+                                    <li><a href="#">Tata Tertib Dojo</a></li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </li>
+                    <li><a href="#">Voice from Shibucho</a></li>
+                    <li><a href="#">Our Sponsors<b>&nbsp;▼</b></a>
+                        <ul>
+                            <li><a href="../sponsors/our_partner.html">Our Partner</a></li>
+                            <li><a href="../sponsors/merchandise.html">Merchandise</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </nav>
+        </header>
+    </div>
+    
     <!-- Header (Banner Carousel) -->
     <div class="container">
         <div class="slides">
@@ -278,7 +281,7 @@
         <!-- Footer Tengah -->
         <div class="footer-tengah">
             <div class="row justify-content-sm-center text-center">
-                <div class="col-sm-4 col-12 layout-infoDojo-footer" style="background-color: yellow;">
+                <div class="col-sm-4 col-12 layout-infoDojo-footer">
                     <p><b>Lokasi Dojo:</b></p>
                     <ul>
                         <li>
@@ -291,16 +294,16 @@
                         </li>
                     </ul>
                 </div>
-                <div class="col-sm-4 col-12" style="background-color: orange;">
+                <div class="col-sm-4 col-12">
                     <p><b>Info Latihan:</b></p>
                     <div class="layout-infolatihan-footer">
                         <ul>
                             <li>
-                                <i class="fa-solid fa-square-phone fa-xl"></i>
+                                <i class="fa-solid fa-square-phone fa-xl" style="margin-top:7%; margin-right: 5%;"></i>
                                 <p>62 812-3456-7890</p>
                             </li>
                             <li>
-                                <i class="fa-solid fa-camera-retro fa-xl"></i>
+                                <i class="fa-solid fa-camera-retro fa-xl" style="margin-top:9%; margin-right: 5%;"></i>
                                 <p>@shidokan.id</p>
                             </li>
                         </ul>
@@ -309,7 +312,7 @@
             </div>
         </div>
         <!-- Footer Tengah -->
-        <div class="footer-bawah" style="background-color: orangered;">
+        <div class="footer-bawah">
             <p><i class="fa-solid fa-copyright fa-lg"></i> 2024 - Situs Resmi Shidokan Indonesia by PixelMind Solution</p>
         </div>
     </div>

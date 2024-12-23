@@ -164,6 +164,110 @@ img {
     font-size: 2em;
 }
 
+/* ===== BLACKBELTS LIST ====== */
+table {
+    width: 100%;
+    margin: 0 auto;
+    border-collapse: separate; /* Separates cell borders */
+    border-spacing: 0; /* Ensures no gaps between cells */
+    border: 2px solid #000; /* Outer border for the table */
+    border-radius: 15px; /* Rounds the outer corners */
+    /*overflow: hidden; /* Ensures contents stay within rounded corners */
+}
+
+/* Gives the Layout Style */
+th, td {
+    border: 2px solid #ddd; /* Inner cell borders */
+    text-align: center;
+    padding: 8px; /* Optional for better spacing */
+}
+
+thead tr:first-child th:first-child {
+    border-top-left-radius: 15px; /* Top-left corner */
+}
+
+thead tr:first-child th:last-child {
+    border-top-right-radius: 15px; /* Top-right corner */
+}
+
+tbody tr:last-child td:first-child {
+    border-bottom-left-radius: 15px; /* Bottom-left corner */
+}
+
+tbody tr:last-child td:last-child {
+    border-bottom-right-radius: 15px; /* Bottom-right corner */
+}
+
+/* Gives the Color Style for each Column and Rows */
+thead {
+    background-color: #000;
+}
+tbody {
+    background-color: #130716;
+}
+
+@media (max-width: 525px) {
+    table, thead, tbody, th, td, tr {
+        display: block;
+    }
+
+    table {
+        border: none;
+        border-radius: 0;
+    }
+
+    tr {
+        margin-bottom: 1rem;
+        border: 2px solid #ddd;
+        border-radius: 10px;
+        padding: 10px;
+    }
+
+    th {
+        display: none; /* Hide table headers */
+    }
+
+    td {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 8px;
+    }
+
+    td::before {
+        content: attr(data-label); /* Use data-label for column names */
+        flex: 0 0 40%;
+        font-weight: bold;
+        text-align: left;
+    }
+
+    td {
+        flex: 1 0 60%;
+        text-align: right;
+    }
+
+    /* Hide empty cells */
+    thead {
+        display: none; /* Completely hide empty cells */
+    }
+
+    thead tr:first-child th:first-child {
+        border-top-left-radius: 0px; /* Top-left corner */
+    }
+    
+    thead tr:first-child th:last-child {
+        border-top-right-radius: 0px; /* Top-right corner */
+    }
+    
+    tbody tr:last-child td:first-child {
+        border-bottom-left-radius: 0px; /* Bottom-left corner */
+    }
+    
+    tbody tr:last-child td:last-child {
+        border-bottom-right-radius: 0px; /* Bottom-right corner */
+    }
+}
+
 /* - - DAFTAR DOJO - - */
 
 .daftar-dojo .row ul {
@@ -206,54 +310,76 @@ img {
 } */
 
 /* ===RESPONSIVE 2 LOGO & 1 TITLE SHIDOKAN=== */
-/* General styling for the footer */
+/* General container styles */
 .footer-container {
     display: flex;
-    flex-direction: row;
-    justify-content: center;
+    /*flex-wrap: nowrap; /* Default: no wrapping */
+    justify-content: space-around;
     align-items: center;
-    flex-wrap: nowrap; /* Default: no wrapping */
     list-style: none;
-    padding: 0;
+    padding: 0 10%;
     margin: 0;
-    text-align: center;
 }
-/* Default styles for each item */
+
+@media (max-width:900px) {
+    .footer-container {
+        padding:0;
+    }
+}
+
+/* Footer items default styling */
 .footer-item {
-    flex: 1;
+    /*flex: 1;*/
     margin: 10px;
+    text-align:center;
 }
 
+/* Logo-specific styling */
 .footer-logo img {
-    width:70%; /* Default logo size */
-    max-width:150px; /* Limit logo size on larger screens */
-    margin: 0 auto;
+    /*width: 70%; /* Default logo size */
+    max-width: 150px; /* Limit logo size on larger screens */
     display: block;
+    margin: 0 auto;
 }
 
+/* Title and text styling */
 .footer-text {
-    max-width:400px; /* Prevent text from stretching too wide */
+    max-width: 400px; /* Prevent text from stretching too wide */
     margin: 0 auto;
-    padding: 10px;
+    /*padding: 10px; */
 }
 
 /* Responsive Styles */
-@media (max-width:768px) { /*432px baru bisa*/
+@media (max-width:725px) {
     .footer-container {
-        flex-wrap: wrap; /* Enable wrapping */
-        justify-items: center; /* Center the items */
+        flex-wrap: wrap; /* Enable wrapping at 768px */
+        justify-content: space-between; /* Ensure logos are spaced correctly */
     }
 
+    /* Ensure logos are in the same row */
     .footer-item:nth-of-type(1),
     .footer-item:nth-of-type(3) {
         flex: 1; /* Equal width for logos */
-        order: 1; /* Logos stay together at the top */
+        margin-bottom: 10px; /* Add space between Logos and text */
+        /*order: 1; /* Logos stay together at the top */
     }
 
+    /* Title moves below logos and take full width */
     .footer-item:nth-of-type(2) {
-        order: 2; /* Title and text move below logos */
-        flex: 0 0 100%; /* Forces it to take full row */
-        margin-top: 20px;
+        order: 2; 
+        /*width: 100%; */ /* Full-width title */
+        flex: 0 0 100%; /* Forces it to take a full row */
+        margin-top:2%; /* Add spacing to seperate from logos */
+    }
+}
+
+@media (max-width: 432px) {
+    .footer-item:nth-of-type(1),
+    .footer-item:nth-of-type(3) {
+        flex: 0 0 100%; /* Logos stack vertically */
+    }
+    .footer-logo img {
+        width: 50%; /* Adjust logo size for smaller screens */
     }
 }
 
@@ -458,10 +584,69 @@ img {
 /*==============*/
 /*====FOOTER====*/
 
+/* Adjust Margin-bottom footer saat di 768px */
+
+@media (max-width:768px) {
+    .footer {
+        padding-bottom: 135%;
+    }
+}
+@media (max-width:724px) {
+    .footer {
+        padding-bottom: 180%;
+    }
+    .footer-bawah {
+        margin-top: 10%;
+    }
+}
+@media (max-width:575px) {
+    .footer {
+        padding-bottom: 200%;
+    }
+}
+
+@media screen and (min-width:485px) and (max-width:551px) {
+    .footer {
+        padding-bottom: 230%;
+    }
+}
+@media screen and (min-width:439px) and (max-width:485px) {
+    .footer {
+        padding-bottom: 250%;
+    }
+}
+@media screen and (min-width:420px) and (max-width:439px) {
+    .footer {
+        padding-bottom: 315%;
+    }
+}
+@media screen and (min-width:360px) and (max-width:420px) {
+    .footer {
+        padding-bottom: 375%;
+    }
+}
+@media screen and (min-width:318px) and (max-width:360px) {
+    .footer {
+        padding-bottom: 435%;
+    }
+}
+@media screen and (min-width:289px) and (max-width:318px) {
+    .footer {
+        padding-bottom: 495%;
+    }
+}
+@media screen and (min-width:200px) and (max-width:289px) {
+    .footer {
+        padding-bottom: 555%;
+    }
+}
+
+
+/* Footer Atas */
 .footer .footer-atas .flex-nav-footer {
     margin: auto;
     width: 100%;
-    border: 3px solid green;
+    /*border: 3px solid green;*/
     padding: 10px;
 }
 
@@ -470,6 +655,21 @@ img {
     flex-direction: row;
     justify-content: center;
     flex:0;
+    list-style-type: none;
+}
+
+.footer .footer-atas .flex-nav-footer ul li button {
+    background-color: rgb(153, 45, 153);
+    color:white;
+    border: 1px solid rgb(0, 0, 0);
+    border-radius: 10px;
+}
+
+.footer .footer-atas .flex-nav-footer ul li button:hover {
+    background-color: rgb(82, 34, 82);
+    color:rgb(211, 199, 199);
+    border: 1px solid rgb(101, 15, 28);
+    border-radius: 10px;
 }
 
 /* Button decoration */
@@ -503,7 +703,7 @@ img {
         display: flex;
         flex-direction: column;
         width:100%;
-        background-color: green;
+        /*background-color: green;*/
         margin-left: -2%;
     }
 
@@ -523,7 +723,7 @@ img {
 .footer .footer-tengah .row .layout-infoDojo-footer ul {
     display: flex;
     flex-direction: column;
-    align-items: left;
+    align-items: center;
     white-space: nowrap;
     margin-left: -7.5%;
 }
@@ -536,8 +736,9 @@ img {
 .footer .footer-tengah .row .layout-infolatihan-footer ul {
     display: flex;
     flex-direction: column;
-    align-items: left;
+    align-items: center;
     white-space: nowrap;
+    margin-left: -11%;
 }
 
 .footer .footer-tengah .row .layout-infolatihan-footer ul li {
@@ -571,4 +772,16 @@ img {
 .footer .footer-bawah {
     text-align: center;
     padding-bottom: 2.5%;
+}
+
+@media (max-width:768px) {
+    .footer .footer-bawah {
+        font-size: 0.9em;
+    }
+}
+
+@media (max-width:540px) {
+    .footer .footer-bawah {
+        font-size: 0.8em;
+    }
 }
