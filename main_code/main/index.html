@@ -5,19 +5,19 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
     <link rel="stylesheet" type="text/css" href="../navbarStyle.css">
-    <link rel="stylesheet" href="../style.css">
+    <link rel="stylesheet" type="text/css" href="../style.css">
     <title>Home Shidokan</title>
 </head>
 <body>
     <!-- Navbar -->
     <div class="div-header">
-        <header>
+        <header class="headerStyle">
             <a href="#" class="logo"><img src="../img/7-shidokan-logo/shidokan-indonesia.png" style="width:80px;"></a>
             <div class="menuToggle"></div>
             <nav class="navbarActive"> <!-- Class navbarActive hanya untuk memanggil li yang .active -->
                 <ul class="adjust-navbar">
                     <li><a href="#" class="active">Home</a></li>
-                    <li><a href="../news/berita.html">News<b>&nbsp;▼</b></a>
+                    <li><a href="../news/berita.html">News<b class="arrow">&nbsp;▼</b></a>
                         <ul>
                             <li><a href="../news/nasional.html">National</a></li>
                             <li><a href="../news/internasional.html">International</a></li>
@@ -38,19 +38,32 @@
                             </li>
                         </ul>
                     </li>
-                    <li><a href="../contact-us/contacts.html">Contact Us<b>&nbsp;▼</b></a>
+                    <li class="scrollNavbar"><a href="#">Contact & Dojo List<b>&nbsp;▼</b></a>
                         <ul>
-                            <li><a href="#">Daftar Dojo</a></li>
-                            <li><a href="../about-us/profile.html">Profile</a></li>
-                            <li><a href="#">Join Us!<b>&nbsp;+</b></a>
-                                <ul>
-                                    <li><a href="#">Terms & Conditions</a></li>
-                                    <li><a href="#">Tata Tertib Dojo</a></li>
-                                </ul>
-                            </li>
+                            <li><a href="#">DojoA</a></li>
+                            <li><a href="#">DojoB</a></li>
+                            <li><a href="#">DojoC</a></li>
+                            <li><a href="#">DojoC</a></li>
+                            <li><a href="#">DojoD</a></li>
+                            <li><a href="#">DojoE</a></li>
+                            <li><a href="#">DojoF</a></li>
+                            <li><a href="#">DojoG</a></li>
+                            <li><a href="#">DojoH</a></li>
+                            <li><a href="#">DojoI</a></li>
+                            <li><a href="#">DojoJ</a></li>
+                            <li><a href="#">DojoK</a></li>
+                            <li><a href="#">DojoL</a></li>
+                            <li><a href="#">DojoM</a></li>
+                            <li><a href="#">DojoN</a></li>
+                            <li><a href="#">DojoO</a></li>
                         </ul>
                     </li>
-                    <li><a href="#">Voice from Shibucho</a></li>
+                    <li><a href="#">Voice from Shibucho<b>&nbsp;▼</b></a>
+                        <ul>
+                            <li><a href="#">Tata Tertib Dojo</a></li>
+                            <li><a href="#">Join Us!</a></li>
+                        </ul>
+                    </li>
                     <li><a href="#">Our Sponsors<b>&nbsp;▼</b></a>
                         <ul>
                             <li><a href="../sponsors/our_partner.html">Our Partner</a></li>
@@ -74,14 +87,17 @@
     
     <div class="container">
         <!-- INTRODUCTION -->
-        <div class="introduction font-responsive">
-            <div class="row">
-                <div class="col-lg-4 col-md-6">
-                    <img src="../img/2-face/1-dongoz.png" style="width:auto;">
-                </div>
-                <div class="col-lg-6 col-md-6">
-                    <h1>Selamat datang di Shidokan Indonesia,</h1>
-                    <p>Sebuah organisasi Kyokushin Internasional yang langsung terpusat dengan Jepang ini didirikan oleh Yoshiji Soeno, founder dari Shidokan sekaligus merupakan salah satu murid berprestasinya Sosaimas Oyama.  Yoshiji Soeno, mempercayai serta menunjuk  Sensei Erick Danurahardja, mantan anggota dari Kyokushin Karate Indonesia (KKI) yang saat itu dipimpin oleh Shihan JB Sujoto, untuk menjabat Head Branch Shidokan Indonesia demi mengembang dan memperkenalkan organisasi Shidokan di Indonesia.</p>
+        <div class="paragraph-intro font-responsive">
+            <div class="paragraph-intro font-responsive">
+                <h1>Selamat datang di Shidokan Indonesia</h1>
+                <div class="fullParagraph" >
+                    <div class="image-text-wrapper">
+                        <img src="../img/2-face/1-dongoz.png" class="intro-image">
+                        <div class="text-content">
+                            <p>Sebuah organisasi Kyokushin Internasional yang langsung terpusat dengan Jepang ini didirikan oleh Yoshiji Soeno, founder dari Shidokan sekaligus merupakan salah satu murid berprestasinya Sosaimas Oyama.  Yoshiji Soeno, mempercayai serta menunjuk  Sensei Erick Danurahardja, mantan anggota dari Kyokushin Karate Indonesia (KKI) yang saat itu dipimpin oleh Shihan JB Sujoto, untuk menjabat Head Branch Shidokan Indonesia demi mengembang dan memperkenalkan organisasi Shidokan di Indonesia.</p>
+                        </div>
+                    </div>
+                    <p style="text-align: center;">[Pembatas Garis]</p>
                 </div>
             </div>
             <button type="button" class="btn btn-dark">Lihat Sejarah Kami</button>
@@ -176,23 +192,23 @@
         </div>
 
         <!-- Daftar Dojo -->
-        <div class="daftar-dojo">
+        <div class="katalog-layout">
             <h1>Daftar Dojo</h1>
             <div class="row justify-content-md-center justify-content-center text-center" style="margin-left:1.5%;">
-                <div class="col-sm-4 col-5" style="background-color: purple; margin-right: 3%; margin-bottom: 3%; padding:0;">
-                    <img src="../img/4-dojoBuilding/dojo-image.jpg" class="img-fluid" style="margin-bottom: 2%;">
+                <div class="catalog-btn col-sm-4 col-5" data-link="#">
+                    <img src="../img/4-dojoBuilding/dojo-image.jpg" class="img-fluid">
                     <p>Yuan Surabaya Barat</p>
                 </div>
-                <div class="col-sm-4 col-5" style="background-color: purple; margin-right: 3%; margin-bottom: 3%; padding:0;">
-                    <img src="../img/4-dojoBuilding/dojo-image.jpg" class="img-fluid" style="margin-bottom: 2%;">
+                <div class="catalog-btn col-sm-4 col-5" data-link="#">
+                    <img src="../img/4-dojoBuilding/dojo-image.jpg" class="img-fluid">
                     <p>Shidokan Denpasar Bali</p>
                 </div>
-                <div class="col-sm-4 col-5" style="background-color: purple; margin-right: 3%; margin-bottom: 3%; padding:0;">
-                    <img src="../img/4-dojoBuilding/dojo-image.jpg" class="img-fluid" style="margin-bottom: 2%;">
+                <div class="catalog-btn col-sm-4 col-5" data-link="#">
+                    <img src="../img/4-dojoBuilding/dojo-image.jpg" class="img-fluid">
                     <p>Yuan Surabaya Barat</p>
                 </div>
-                <div class="col-sm-4 col-5" style="background-color: purple; margin-right: 3%; margin-bottom: 3%; padding:0;">
-                    <img src="../img/4-dojoBuilding/dojo-image.jpg" class="img-fluid" style="margin-bottom: 2%;">
+                <div class="catalog-btn col-sm-4 col-5" data-link="#">
+                    <img src="../img/4-dojoBuilding/dojo-image.jpg" class="img-fluid">
                     <p>Shidokan Denpasar Bali</p>
                 </div>
             </div>
@@ -200,31 +216,31 @@
 
         <!-- Our Partner -->
         <div class="our-partner font-responsive">
-            <h1 style="margin-bottom:2%;">Our Partner</h1>
+            <h1>Our Partner</h1>
             <div class="row justify-content-md-center justify-content-center text-center">
                 <div class="col-md-2 col-5" style="padding:0; margin-right:3%; margin-bottom: 2%;">
-                    <img src="../img/5-partnerLogo/tokoemas.png" class="img-fluid" style="margin-bottom: 2%;">
-                    <h3>Toko Emas</h3>
+                    <img src="../img/5-partnerLogo/tokoemas.png" class="img-fluid">
+                    <p>Toko Emas</p>
                 </div>
                 <div class="col-md-2 col-5" style="padding:0; margin-right:3%; margin-bottom: 2%;">
-                    <img src="../img/5-partnerLogo/uc1000.png" class="img-fluid" style="margin-bottom: 2%;">
-                    <h3>You C-1000</h3>
+                    <img src="../img/5-partnerLogo/uc1000.png" class="img-fluid">
+                    <p>You C-1000</p>
                 </div>
                 <div class="col-md-2 col-5" style="padding:0; margin-right:3%; margin-bottom: 2%;">
-                    <img src="../img/5-partnerLogo/tokoemas.png" class="img-fluid" style="margin-bottom: 2%;">
-                    <h3>Shidokan Jepang</h3>
+                    <img src="../img/5-partnerLogo/tokoemas.png" class="img-fluid">
+                    <p>Shidokan Jepang</p>
                 </div>
                 <div class="col-md-2 col-5" style="padding:0; margin-right:3%; margin-bottom: 2%;">
-                    <img src="../img/5-partnerLogo/uc1000.png" class="img-fluid" style="margin-bottom: 2%;">
-                    <h3>Logo A</h3>
+                    <img src="../img/5-partnerLogo/uc1000.png" class="img-fluid">
+                    <p>Logo A</p>
                 </div>
                 <div class="col-md-2 col-5" style="padding:0; margin-right:3%; margin-bottom: 2%;">
-                    <img src="../img/5-partnerLogo/tokoemas.png" class="img-fluid" style="margin-bottom: 2%;">
-                    <h3>Logo B</h3>
+                    <img src="../img/5-partnerLogo/tokoemas.png" class="img-fluid">
+                    <p>Logo B</p>
                 </div>
                 <div class="col-md-2 col-5" style="padding:0; margin-right:3%; margin-bottom: 2%;">
-                    <img src="../img/5-partnerLogo/uc1000.png" class="img-fluid" style="margin-bottom: 2%;">
-                    <h3>Logo C</h3>
+                    <img src="../img/5-partnerLogo/uc1000.png" class="img-fluid">
+                    <p>Logo C</p>
                 </div>
             </div>
         </div>
@@ -268,12 +284,12 @@
                 </ul>
                 <div class="flex-nav-footer">
                     <ul>
-                        <li><button class="button-style button-purple">Home</button></li>
-                        <li><button class="button-style button-purple">News</button></li>
+                        <li><button class="button-style button-purple" data-link="#">Home</button></li>
+                        <li><button class="button-style button-purple" data-link="../news/berita.html">News</button></li>
                         <li><button class="button-style button-purple">About Us</button></li>
-                        <li><button class="button-style button-purple">Contact Us</button></li>
-                        <li><button class="button-style button-purple">Voice of Dongoz</button></li>
-                        <li><button class="button-style button-purple">Sponsors</button></li>
+                        <li><button class="button-style button-purple">Contact & Dojo List</button></li>
+                        <li><button class="button-style button-purple">Voice from Shibucho</button></li>
+                        <li><button class="button-style button-purple">Our Sponsors</button></li>
                     </ul>
                 </div>
             </div>

@@ -7,6 +7,7 @@
     font-family: 'poppins', sans-serif;
     position:sticky;
     top: 0;
+    z-index:100;
 }
 
 /** header {
@@ -74,6 +75,42 @@ header ul li ul {
     display: none;
 }
 
+/* Activate Scrollbar on a particuler Sub-Menu, to ensure mobile views don’t break */
+/* Default styles for mobile (no overflow-y) */
+header ul li ul {
+    max-height: none;
+    overflow: visible;
+}
+
+/* Styles for larger screens */
+@media (max-width: 811px) {
+    header ul li ul:nth-of-type(4) { /* Selects the 4th ul */
+        overflow: scroll;
+        max-height: 400px;
+    }
+}
+/* Styling selengkapnya ada di JS */
+
+
+/*SEMPAT BERHASIL TAPI SULIT DI MOBILE VIEW */
+/*.headerStyle .navbarActive .scrollNavbar ul {
+    /* Comotan dari header ul li ul (persis diatas ini) */
+/*    position: absolute;
+    left: 0;    
+    width: 200px;
+    background: #422d41;
+    display: none;
+    /* Ini intinya: Untuk menerapkan scrollbar overflow */
+/*    max-height: 400px; /* Set max height for scrollable area */
+/*    overflow-y: auto; /* Enable scrolling when content exceeds height */
+/*    overflow-x: hidden;
+}*/
+
+/* Show submenu on hover */
+header > ul > li:hover > ul {
+    display: block;
+}
+
 header ul li ul li:hover {
     background-color: #291928;
 }
@@ -102,6 +139,49 @@ header ul li ul li ul {
     background: #5d0568;
 }
 
+/* Optional Custom Scrollbar */
+.headerStyle .navbarActive > ul > li > ul::-webkit-scrollbar {
+    width: 8px;
+}
+
+.headerStyle .navbarActive > ul > li > ul::-webkit-scrollbar-thumb {
+    background-color: #888;
+    border-radius: 4px;
+}
+
+.headerStyle .navbarActive > ul > li > ul::-webkit-scrollbar-thumb:hover {
+    background-color: #555;
+}
+
+/* Prevent sub-submenus from being scrollable */
+/*.headerStyle .navbarActive > ul > li > ul > li > ul {
+    max-height: none; /* Remove max-height for sub-submenus */
+/*    overflow-y: visible; /* Allow normal content display for nested menus */
+/*}*/
+
+.headerStyle .navbarActive > ul > li > ul > li > a {
+    overflow-y:hidden; /* Remove overflow */
+}
+
+
+/* Show submenu on hover */
+.headerStyle .navbarActive > ul > li:hover > ul {
+    display: block;
+}
+
+/* Submenu Links Styling */
+.headerStyle .navbarActive > ul > li > ul > li > a {
+    text-decoration: none;
+    color:white;
+    padding:10px;
+    display:block; /* Stack Vertically */
+}
+
+/* Hover Effects */
+.headerStyle .navbarActive > ul > li > ul > li > a:hover {
+    background-color: #666;
+}
+
 /*=== UKURAN FONT ===*/
 @media screen and (min-width:900px) and (max-width:1168px) {
     .adjust-navbar {
@@ -126,6 +206,7 @@ header ul li ul li ul {
         width: 200px;
         display: none;
     }
+
     header ul li ul li ul {
         top: 0;
         left: 200px;
@@ -175,6 +256,38 @@ header ul li ul li ul {
         left: 0;
         margin-left: 12.45%; /* Diterapkan utk menutup BG sblh kiri */
     }
+
+    /* Force Specificity */
+    /*header > nav > ul > li > ul {
+        position:absolute;
+        left:0;
+        width:auto;
+        background:#422d41;
+        display:none;
+    }*/
+
+    /* INI YANG OVERFLOW HIDDEN, CUMAN HASILNYA KURANG RAPI */
+
+    /* Disabling the scroll navbar on the tagged sub-menu */
+    /*.headerStyle .navbarActive .scrollNavbar ul {
+        max-height:100%;
+        overflow: hidden;
+        background-color: red;
+    }*/
+    /* Activate Scrollbar on a particuler Sub-Menu */
+    /*.headerStyle .navbarActive .scrollNavbar ul {
+        position: relative;
+        width: 87.6%; /* Dari 100% jadi  87.6% untuk menutup BG sblh kanan */
+        /*left: 0;
+        margin-left: 0; /* Diterapkan utk menutup BG sblh kiri */
+        /*color:white;
+        background-color: white;
+        z-index: 100;
+        /* Ini intinya: Untuk menerapkan scrollbar overflow */
+        /*max-height: 1000px; /* Set max height for scrollable area */
+        /*overflow-y: hidden; /* Enable scrolling when content exceeds height */
+        /*overflow-x: hidden;
+    }*/
 
     header ul li ul li ul {
         top:0;
@@ -230,4 +343,35 @@ header ul li ul li ul {
         justify-content:space-between;
         /*background-color: red;*/
     }
+}
+
+/* ---MEMBERI ANIMASI Pada Navbar */
+/* Hover Animation saat menghover navbar */
+header nav ul li a {
+    transition: background .2s ease-in-out,
+                color .2s ease-in-out;
+}
+
+/* Default hidden state of the dropdown */
+header nav ul li ul {
+    transition: opacity 0.5s ease;
+}
+
+/* Rotate the dropdown arrow on hover or click */
+header nav ul li a b {
+    display:inline-block;
+    transition: transform 0.3s ease;
+}
+
+/* Rotate the arrow by 180 degrees when the parent <a> is hovered or active */
+header ul li:hover > a b,
+header ul li.active > a b {
+    transform: rotate(180deg); /* Rotate the arrow by 180 degrees */
+}
+
+/* Optionally: Make the dropdown menus open on hover */
+header ul li:hover > ul {
+    display: block;
+    opacity: 1;
+    transform: translateY(0);
 }
