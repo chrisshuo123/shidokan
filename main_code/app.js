@@ -216,3 +216,12 @@ document.querySelectorAll('.button-style').forEach((footerLink) => {
         }
     });
 });
+
+/*document.addEventListener('click', (e) => {
+    if(e.target.classList.contains('button-style')) {
+        const linkPath = e.target.getAttribute('data-link');
+        if(linkPath) {
+            window.location.href = linkPath;
+        }
+    }
+});*/
