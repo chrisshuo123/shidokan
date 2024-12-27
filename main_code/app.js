@@ -12,9 +12,9 @@ const ulElements = document.querySelectorAll("header ul li ul");
 
 function adjustStyles() {
     console.log("Detected ul elements: ", ulElements); // Debug
+
     if(ulElements[3]) { // Ensure the 4th ul elements exist
         const submenu = ulElements[3]; // Reference to the specific submenu
-
         if(window.innerWidth >= 900) {  /** Recently 811px */
             // styles for screen >= 900px
             /*ulElements[3].style.backgroundColor = "red";*/
@@ -27,7 +27,7 @@ function adjustStyles() {
             submenu.style.marginLeft = "0%";
             submenu.style.zIndex = "1000"; // Ensure it appears above other elements
             submenu.style.visibility = "hidden"; // Default hidden 
-            submenu.style.backgroundColor = "#444"; // Match design
+            submenu.style.backgroundColor = "#422d41"; // Match design (before, it was setted to 444)
             submenu.style.transition = "visibility 0.2s ease, opacity 0.2s ease";
             submenu.style.opacity = "0"; // Hidden by default
 
@@ -66,6 +66,7 @@ function adjustStyles() {
 
     // Adjusting the "voice of Shinbucho's" Sub-Menu Width
     const subMenuShinbucho = ulElements[4];
+    subMenuShinbucho.style.backgroundColor = "#422d41";
     if(window.innerWidth >= 900) {
         subMenuShinbucho.style.width = "100%";
     } else if (window.innerWidth <= 900) {
