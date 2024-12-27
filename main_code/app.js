@@ -13,25 +13,63 @@ const ulElements = document.querySelectorAll("header ul li ul");
 function adjustStyles() {
     console.log("Detected ul elements: ", ulElements); // Debug
     if(ulElements[3]) { // Ensure the 4th ul elements exist
-        if(window.innerWidth >= 811) {
-            // styles for screen >= 811px
+        const submenu = ulElements[3]; // Reference to the specific submenu
+
+        if(window.innerWidth >= 900) {  /** Recently 811px */
+            // styles for screen >= 900px
             /*ulElements[3].style.backgroundColor = "red";*/
-            ulElements[3].style.overflowY = "scroll";
-            ulElements[3].style.overflowX = "hidden";
-            ulElements[3].style.maxHeight = "400px";
-        } else if(window.innerWidth <= 811) {
-            // Styles for screens <= 811px
-            ulElements[3].style.overflowY = "hidden"; // Hide scrollbar
-            ulElements[3].style.maxHeight = "none"; // Adjust to content size
-            ulElements[3].style.backgroundColor = "red";
-            ulElements[3].style.visibility = "visible"; // Ensure content is visible
-            ulElements[3].style.position = "relative"; // Ensure proper layout
-            ulElements[3].style.paddingLeft = "14%";
-            ulElements[3].style.marginLeft = "-0.5%";
-            ulElements[3].style.paddingRight = "-80%";
+            submenu.style.overflowY = "scroll";
+            submenu.style.overflowX = "hidden";
+            submenu.style.maxHeight = "400px";
+            submenu.style.position = "absolute"; // Prevent affecting parent layout
+            submenu.style.top = "100%"; // Position below the parent menu
+            submenu.style.left = "0";
+            submenu.style.marginLeft = "0%";
+            submenu.style.zIndex = "1000"; // Ensure it appears above other elements
+            submenu.style.visibility = "hidden"; // Default hidden 
+            submenu.style.backgroundColor = "#444"; // Match design
+            submenu.style.transition = "visibility 0.2s ease, opacity 0.2s ease";
+            submenu.style.opacity = "0"; // Hidden by default
+
+            // Reset mobile specific styles
+            submenu.style.paddingLeft = ""; // Reset padding
+            submenu.style.marginLeft = "0%"; // Reset margin
+            submenu.style.paddingRight = ""; // Reset padding-right
+            submenu.style.textalign = "left"; // Default alignment
+
+            // Add hover event to parent to Untuk Menampilkan Submenu
+            submenu.parentElement.addEventListener("mouseenter", ()=> {
+                submenu.style.visibility = "visible"; // Dinyalakan visibilitasnya
+                submenu.style.opacity = "1";  // Opasitas 1 karena sebelumnya diset 0 alias ga bisa lihat
+            });
+            submenu.parentElement.addEventListener("mouseleave", ()=> {
+                submenu.style.visibility = "hidden"; // Visibilitas dimatikan (buat jaga2 jika nyala terus saat di-unhover)
+                submenu.style.opacity = "0"; // Jaga2 jika sub-menu masih nyala terus saat di-unhover
+            });
+
+
+        } else if(window.innerWidth <= 900) {
+            // Styles for screens <= 900 yang sebelumnya diset sebagai 811px
+            submenu.style.overflowY = "hidden"; // Hide scrollbar
+            submenu.style.maxHeight = "none"; // Adjust to content size
+            submenu.style.backgroundColor = "red";
+            submenu.style.visibility = "visible"; // Ensure content is visible
+            submenu.style.position = "relative"; // Ensure proper layout
+            submenu.style.paddingLeft = "14%";
+            submenu.style.marginLeft = "-0.5%";
+            submenu.style.paddingRight = "-80%";
+            /*submenu.style.width = "90%";*/
         }
     } else {
         console.log("ulElements[3] not found");
+    }
+
+    // Adjusting the "voice of Shinbucho's" Sub-Menu Width
+    const subMenuShinbucho = ulElements[4];
+    if(window.innerWidth >= 900) {
+        subMenuShinbucho.style.width = "100%";
+    } else if (window.innerWidth <= 900) {
+        subMenuShinbucho.style.width = "90%";
     }
 }
 
