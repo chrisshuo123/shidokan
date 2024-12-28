@@ -662,7 +662,7 @@ tbody {
 
 .dropbtn {
     width: 100%;
-    background-color: #C4A484;
+    background-color: #7b1364;
     color: #fff;
     border: none;
     border-radius: 8px;
@@ -680,13 +680,14 @@ tbody {
 .dropdown-content {
     display: none; /* Hidden by default */
     position: relative;
-    background-color: #fff;
+    background-color: #190415; /* Warna isi BG paragraf p */
     min-width: 100%;
     box-shadow: 0px 4px 8px rgba(0,0,0,0.2);
     border-radius: 8px;
     z-index: -1;
     margin-top: -4px;
     padding: 12px 16px;
+    margin-top: -3%; /* Menaikkan kotak isi sebanyak 3%, sehingga border radius atas tertutup */
 
     max-height: 0;
     overflow:hidden;
@@ -716,8 +717,9 @@ tbody {
 
 .dropdown-content p {
     margin: 0;
-    color: #333;
+    color: #ffffff;
     font-size: 12px;
+    padding-top: 3%; /* Membenjolkan bagian atas kotak isi p */
 }
 
 .dropdown-content ol li {
