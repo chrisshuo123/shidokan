@@ -110,6 +110,16 @@ img {
     }
 }
 
+.font-responsive {
+    margin-top: 5%;
+}
+.font-responsive h2 {
+    text-align: center;
+}
+.font-responsive p {
+    text-align:center;
+}
+
 /* Other media queries for responsiveness */
 @media screen and (max-width: 992px) {
     .font-responsive .row p {
@@ -782,6 +792,16 @@ tbody {
     margin:5% auto;
     margin-top: 3%;
     border-radius: 10px;
+
+    padding-left:20%;
+    padding-right: 20%;
+}
+
+@media (max-width:900px) {
+    .kontak-shidokan {
+        padding-left: 0%;
+        padding-right: 0%;
+    }
 }
 
 /*==============*/
