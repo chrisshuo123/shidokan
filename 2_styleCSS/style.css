@@ -769,6 +769,19 @@ tbody {
     transform: rotate(180deg) !important;
 }
 
+/*===============*/
+/* === Contact & Dojo List === */
+
+.kontak-shidokan {
+    background-color: #1b0221;
+    padding-top: 2%;
+    padding-bottom: 1%;
+    border: 2px solid #945fa1;
+    margin:5% auto;
+    margin-top: 3%;
+    border-radius: 10px;
+}
+
 /*==============*/
 /* ===Our Partner=== */
 .our-partner {
