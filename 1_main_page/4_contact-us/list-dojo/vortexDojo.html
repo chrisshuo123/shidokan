@@ -10,19 +10,87 @@
 </head>
 <body>
     <!-- Navbar -->
-    <div style="background-color: black;">
-        <h1 style="color:white;">NAVBAR</h1>
+    <div class="div-header">
+        <header class="headerStyle">
+            <a href="#" class="logo"><img src="../../img/7-shidokan-logo/shidokan-indonesia.png" style="width:80px;"></a>
+            <div class="menuToggle"></div>
+            <nav class="navbarActive"> <!-- Class navbarActive hanya untuk memanggil li yang .active -->
+                <ul class="adjust-navbar">
+                    <li><a href="../1_home/index.html" >Home</a></li>
+                    <li><a href="../2_news/berita.html">News<b class="arrow">&nbsp;▼</b></a>
+                        <ul>
+                            <li><a href="../2_news/nasional.html">National</a></li>
+                            <li><a href="../2_news/internasional.html">International</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="../3_about-us/about-us.html">About Us<b>&nbsp;▼</b></a>
+                        <ul>
+                            <li><a href="../3_about-us/sejarah.html">History</a></li>
+                            <li><a href="../3_about-us/profile.html">Profile</a></li>
+                            <li><a href="../3_about-us/blackbelts/blackbelts.html">Blackbelts<b>&nbsp;+</b></a>
+                                <ul>
+                                    <li><a href="../3_about-us/blackbelts/1_shodan.html">Shodan</a></li>
+                                    <li><a href="../3_about-us/blackbelts/2_nidan.html">Nidan</a></li>
+                                    <li><a href="../3_about-us/blackbelts/3_sandan.html">Sandan</a></li>
+                                    <li><a href="../3_about-us/blackbelts/4_yondan.html">Yondan</a></li>
+                                    <li><a href="../3_about-us/blackbelts/5_godan.html">Godan</a></li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="scrollNavbar"><a href="#" class="active">Contact & Dojo List<b>&nbsp;▼</b></a>
+                        <ul>
+                            <li><a href="#">DojoA</a></li>
+                            <li><a href="#">DojoB</a></li>
+                            <li><a href="#">DojoC</a></li>
+                            <li><a href="#">DojoC</a></li>
+                            <li><a href="#">DojoD</a></li>
+                            <li><a href="#">DojoE</a></li>
+                            <li><a href="#">DojoF</a></li>
+                            <li><a href="#">DojoG</a></li>
+                            <li><a href="#">DojoH</a></li>
+                            <li><a href="#">DojoI</a></li>
+                            <li><a href="#">DojoJ</a></li>
+                            <li><a href="#">DojoK</a></li>
+                            <li><a href="#">DojoL</a></li>
+                            <li><a href="#">DojoM</a></li>
+                            <li><a href="#">DojoN</a></li>
+                            <li><a href="#">DojoO</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="../5_voice-from-shibucho/voiceFromShibucho.html">Voice from Shibucho<b>&nbsp;▼</b></a>
+                        <ul>
+                            <li><a href="../5_voice-from-shibucho/tataTertibDojo.html">Tata Tertib Dojo</a></li>
+                            <li><a href="../5_voice-from-shibucho/joinUs.html">Join Us!</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="../6_sponsors/sponsors.html">Our Sponsors<b>&nbsp;▼</b></a>
+                        <ul>
+                            <li><a href="../6_sponsors/our_partner.html">Our Partner</a></li>
+                            <li><a href="../6_sponsors/merchandise.html">Merchandise</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </nav>
+        </header>
     </div>
-    <!-- Header -->
+    <!-- Header Title & Sub -->
+    <div class="container">
+        <div class="header">
+            <img src="../../img/3-news/shidokan-news-sample-1.jpg">
+            <!-- style="max-width:100%; height: auto;" -->
+            <div class="header-content">
+                <h1 class="header-title">Shidokan [NamaDojo]</h1>
+                <p class="header-subtitle">[Semboyan / Motto Cabang Dojo jika ada]</p>
+            </div>
+        </div>
+    </div>
     <!-- Isi Bio Dojo -->
     <div class="container">
-        <div class="font-responsive">
-            <h1>Shidokan [NamaDojo]</h1>
-            <p>[Image Formal Bareng Anggota]</p>
-        </div>
         <!-- Profil Nama Dojo (Jika ada) -->
         <div class="font-responsive">
             <h2>Profil Shidokan [NamaDojo] (Jika Ada)</h2>
+            <p>[Image Formal Bareng Anggota]</p>
             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quos vel ex modi, facere corrupti hic optio unde laboriosam nemo temporibus eaque facilis porro consequatur nostrum nihil, eius maxime voluptas beatae!</p>
         </div>
         <!-- Profil Instruktur -->
@@ -50,9 +118,82 @@
                     
                 </div>
                 <div class="col-12">
+                    <p><i class="fa-solid fa-camera-retro fa-xl" style="margin-right:1%;"></i> @shidokan.id</p>
+                </div>
+                <div class="col-12">
                     <p><i class="fa-solid fa-square-phone fa-xl" style="margin-right:1%;"></i> +62 812-3456-7890 (WhatsApp)</p>
                 </div>
             </div>
+        </div>
+    </div>
+    <!-- Footer -->
+    <div class="footer" style="background-color: black;">
+        <!-- Footer Atas -->
+        <div class="footer-atas">
+            <div class="flex-shidokanlogo-footer" style="padding-top:3%;">
+                <ul class="footer-container">
+                    <!-- First Logo -->
+                    <li class="footer-item footer-logo">
+                        <img src="../../img/7-shidokan-logo/shidokan-internasional.png" alt="Logo 1">
+                    </li>
+                    <!-- Title and Description -->
+                    <li class="footer-item footer-text">
+                        <h3>Shidokan</h3>
+                        <p>(Mottonya) Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nulla cupiditate, libero quod optio tempora rerum blanditiis quas dolore nemo ad sint possimus explicabo cum commodi, totam maiores cumque placeat consequuntur?</p>
+                    </li>
+                    <!-- Second Logo -->
+                    <li class="footer-item footer-logo">
+                        <img src="../../img/7-shidokan-logo/shidokan-indonesia.png" alt="Logo 2">
+                    </li>
+                </ul>
+                <div class="flex-nav-footer">
+                    <ul>
+                        <li><button class="button-style button-purple" data-link="../../1_home/index.html">Home</button></li>
+                        <li><button class="button-style button-purple" data-link="../../2_news/berita.html">News</button></li>
+                        <li><button class="button-style button-purple" data-link="../../3_about-us/about-us.html">About Us</button></li>
+                        <li><button class="button-style button-purple" data-link="../../4_contact-us/contactAndDojoList.html">Contact & Dojo List</button></li>
+                        <li><button class="button-style button-purple" data-link="../../5_voice-from-shibucho/voiceFromShibucho.html">Voice from Shibucho</button></li>
+                        <li><button class="button-style button-purple" data-link="../../6_sponsors/sponsors.html">Our Sponsors</button></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <!-- Footer Tengah -->
+        <div class="footer-tengah">
+            <div class="row justify-content-sm-center text-center">
+                <div class="col-sm-4 col-12 layout-infoDojo-footer">
+                    <p><b>Lokasi Dojo:</b></p>
+                    <ul>
+                        <li>
+                            <i class="fa-solid fa-location-dot fa-lg" style="margin-top:4%; margin-right: 3%;"></i>
+                            <p>Yuan Dojo Surabaya Barat</p>
+                        </li>
+                        <li>
+                            <i class="fa-solid fa-location-dot fa-lg" style="margin-top:4%; margin-right: 3%;"></i>
+                            <p>Shidokan Dojo Bali Denpasar</p>
+                        </li>
+                    </ul>
+                </div>
+                <div class="col-sm-4 col-12">
+                    <p><b>Info Latihan:</b></p>
+                    <div class="layout-infolatihan-footer">
+                        <ul>
+                            <li>
+                                <i class="fa-solid fa-square-phone fa-xl" style="margin-top:7%; margin-right: 5%;"></i>
+                                <p>62 812-3456-7890</p>
+                            </li>
+                            <li>
+                                <i class="fa-solid fa-camera-retro fa-xl" style="margin-top:9%; margin-right: 5%;"></i>
+                                <p>@shidokan.id</p>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Footer Bawah -->
+        <div class="footer-bawah">
+            <p><i class="fa-solid fa-copyright fa-lg"></i> 2024 - Situs Resmi Shidokan Indonesia by PixelMind Solution</p>
         </div>
     </div>
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
