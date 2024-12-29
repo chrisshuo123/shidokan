@@ -805,6 +805,22 @@ tbody {
 }
 
 /*==============*/
+/* === Voice from Shinbucho === */
+
+.layout-instruksi {
+    background-color: #100313;
+    padding: 3%;
+    border-radius: 20px;
+    border: 2px solid #ffffff;
+    margin-bottom: 10%;
+    text-align: justify;
+}
+.layout-instruksi ol {
+    padding-left: 5%;
+    padding-right: 5%;
+}
+
+/*==============*/
 /* ===Our Partner=== */
 .our-partner {
     margin-top:2%;
