@@ -806,7 +806,7 @@ tbody {
 
 /*==============*/
 /* === Voice from Shinbucho === */
-
+/* ==  Tata Tertib Dojo & Join Us == */
 .layout-instruksi {
     background-color: #100313;
     padding: 3%;
@@ -814,10 +814,37 @@ tbody {
     border: 2px solid #ffffff;
     margin-bottom: 10%;
     text-align: justify;
-}
-.layout-instruksi ol {
     padding-left: 5%;
     padding-right: 5%;
+}
+
+/* == Join Us == */
+.layout-joinUs {
+    background-color: #100313;
+    border-radius: 20px;
+    border: 2px solid #ffffff;
+    margin-bottom: 10%;
+    text-align: center;
+    margin: 0 auto;
+    margin-bottom: 10%;
+    /* Flex Aligning */
+    display:flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.layout-joinUs img {
+    margin-top:3%;
+    height: auto;
+    max-width: 100%;
+}
+.layout-joinUs p {
+    padding: 3%;
+}
+.layout-joinUs button {
+    margin-bottom:3%;
+}
+.layout-joinUs:nth-child(odd) {
+    margin-right: 5%;
 }
 
 /*==============*/
