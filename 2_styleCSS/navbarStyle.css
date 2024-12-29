@@ -34,6 +34,21 @@ body .div-header .header {
     justify-content: left;
 }
 
+.fixed-navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%; /* Stretch navbar across the width */
+    display: flex;
+    justify-content: space-between; /* Adjust alignment */
+    align-items: center;
+    background-color: #333; /* Navbar background */
+    color: white; /* Text color */
+    z-index: 10; /* Ensure it's above other elements */
+    padding: 10px 20px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Add shadow for separation */
+}
+
 header {
     position: absolute; /*relative*/
     width: 100%;
