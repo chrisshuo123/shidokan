@@ -635,6 +635,26 @@ tbody {
     gap:20px; /* Adds consistent spacing between items */
     /*height: 100%; /* Ensures the flex container fills the parent height (optional) */
 }
+
+/* Bug: Pada lebar layar max-width 992px, ada sedikit anomali */
+@media screen and (min-width: 991px) and (max-width: 991px) {
+    .testimoni-flex {
+        margin: 6% 0 6% 0;
+    }
+    .testimoni-flex:last-child {
+        margin:0 auto;
+    }
+}
+/* Ini yang tanpa anomali */
+@media (max-width:991px) {
+    .testimoni-flex {
+        margin: 6% 0 6% 0;
+    }
+    .testimoni-flex:last-child {
+        margin:0 auto;
+    }
+}
+
 @media (max-width:768px) {
     .testimoni-flex {
         margin-bottom: 5%;
