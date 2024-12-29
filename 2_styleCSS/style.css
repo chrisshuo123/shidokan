@@ -68,6 +68,9 @@ img {
 .paragraph-intro .fullParagraph {
     display:inline-block;
 }
+.paragraph-intro .fullParagraph p {
+    text-align:justify;
+}
 
 .intro-image {
     width:30%;
@@ -622,6 +625,22 @@ tbody {
 }
 
 /*======SEJARAH======*/
+
+/* === Testimoni === */
+.testimoni-flex {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    gap:20px; /* Adds consistent spacing between items */
+    /*height: 100%; /* Ensures the flex container fills the parent height (optional) */
+}
+@media (max-width:768px) {
+    .testimoni-flex {
+        margin-bottom: 5%;
+    }
+}
+
 /* Dropdown Styling */
 .dropdown-div {
     display: flex;
