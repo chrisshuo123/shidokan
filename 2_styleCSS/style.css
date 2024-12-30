@@ -283,7 +283,7 @@ img {
         font-size: 1.1rem;
     }
 }
-@media screen and (max-width:768px) {
+@media screen and (min-width:495px) and (max-width:768px) {
     .banner {
         margin-bottom: 20%;
     }
@@ -295,6 +295,17 @@ img {
     }
     .banner-content p {
         font-size: 1rem;
+    }
+}
+@media screen and (max-width:495px) {
+    .banner img {
+        margin-top: 101px;
+    }
+    .banner-content h1 {
+        font-size: 1.8rem;
+    }
+    .banner-content p {
+        font-size: 0.8rem;
     }
 }
 
