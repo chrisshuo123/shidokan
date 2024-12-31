@@ -226,6 +226,12 @@ img {
     /*min-height: 400px; */
 /*} */
 
+.banner {
+    position: relative; /* Ensure the banner-content is positioned relative to this */
+    width: 100%;
+    overflow: hidden; /* Prevent content overflow */
+}
+
 .banner img {
     max-height: 400px;
     object-fit: cover;
@@ -247,15 +253,16 @@ img {
     z-index: 3;
     text-align: center;
     color:white;
-    margin-top:0%;
 }
 .banner-content h1 {
-    font-size: 3rem; /* Adjust as needed */
+    /*font-size: 3rem; /* Adjust as needed */
+    font-size: clamp(2rem, 4vw, 3rem); /* Responsive font size */
     font-weight: bold;
     margin: 0;
 }
 .banner-content p {
-    font-size: 1.5rem; /* Adjust as needed */
+    /*font-size: 1.5rem; /* Adjust as needed */
+    font-size: clamp(1rem, 2.5vw, 1.5rem); /* Responsive font size */
     margin: 0;
     text-align: center;
 }
@@ -327,7 +334,7 @@ img {
 /* Adjusting Title+Sub Size each Width */
 @media screen and (max-width:1168px) {
     .header-title {
-        font-size:2.5rem;;
+        font-size:2.5rem;
     }
     .header-subtitle {
         font-size:1.1rem;
@@ -574,6 +581,10 @@ tbody {
 /* General button styling */
 .catalog-btn {
     cursor:pointer;
+}
+.catalog-btn img {
+    max-height: 200px;
+    width:100vh;
 }
 
 /* - - FOOTER - - */
