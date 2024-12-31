@@ -13,52 +13,67 @@ const ulElements = document.querySelectorAll("header ul li ul");
 function adjustStyles() {
     console.log("Detected ul elements: ", ulElements); // Debug
 
-    if(ulElements[3]) { // Ensure the 4th ul elements exist
+    if (ulElements[3]) { // Ensure the 4th ul element exists
         const submenu = ulElements[3]; // Reference to the specific submenu
-        if(window.innerWidth >= 900) {  /** Recently 811px */
-            // styles for screen >= 900px
-            /*ulElements[3].style.backgroundColor = "red";*/
-            submenu.style.overflowY = "scroll";
-            submenu.style.overflowX = "hidden";
-            submenu.style.maxHeight = "400px";
-            submenu.style.position = "absolute"; // Prevent affecting parent layout
-            submenu.style.top = "100%"; // Position below the parent menu
-            submenu.style.left = "0";
-            submenu.style.marginLeft = "0%";
-            submenu.style.zIndex = "1000"; // Ensure it appears above other elements
-            submenu.style.visibility = "hidden"; // Default hidden 
-            submenu.style.backgroundColor = "#422d41"; // Match design (before, it was setted to 444)
-            submenu.style.transition = "visibility 0.2s ease, opacity 0.2s ease";
-            submenu.style.opacity = "0"; // Hidden by default
+        const submenuItems = submenu.querySelectorAll("li"); // Get all <li> elements in the submenu
 
-            // Reset mobile specific styles
-            submenu.style.paddingLeft = ""; // Reset padding
-            submenu.style.marginLeft = "0%"; // Reset margin
-            submenu.style.paddingRight = ""; // Reset padding-right
-            submenu.style.textalign = "left"; // Default alignment
+        // Reset all styles to avoid conflicts when resizing
+        submenu.style.paddingLeft = ""; // Reset padding
+        submenu.style.marginLeft = ""; // Reset margin
+        submenu.style.paddingRight = ""; // Reset padding-right
+        submenu.style.textAlign = ""; // Reset text alignment
+        submenu.style.position = ""; // Reset position
+        submenu.style.visibility = ""; // Reset visibility
+        submenu.style.overflowY = ""; // Reset overflow
+        submenu.style.maxHeight = ""; // Reset max height
+        submenu.style.opacity = ""; // Reset opacity
 
-            // Add hover event to parent to Untuk Menampilkan Submenu
-            submenu.parentElement.addEventListener("mouseenter", ()=> {
-                submenu.style.visibility = "visible"; // Dinyalakan visibilitasnya
-                submenu.style.opacity = "1";  // Opasitas 1 karena sebelumnya diset 0 alias ga bisa lihat
-            });
-            submenu.parentElement.addEventListener("mouseleave", ()=> {
-                submenu.style.visibility = "hidden"; // Visibilitas dimatikan (buat jaga2 jika nyala terus saat di-unhover)
-                submenu.style.opacity = "0"; // Jaga2 jika sub-menu masih nyala terus saat di-unhover
-            });
+        if (window.innerWidth >= 900) { /** Recently 811px */
+            // Check the number of submenu items
+            const itemCount = submenuItems.length;
 
+            if (itemCount <= 9) {
+                // Hide scrollbar completely if there are 9 or fewer items
+                submenu.style.overflowY = "hidden";
+                submenu.style.overflowX = "hidden";
+                submenu.style.maxHeight = "none"; // Allow content to display fully
+                submenu.style.visibility = "visible"; // Ensure the menu is visible
+            } else {
+                // Enable scrollbar for more than 9 items
+                submenu.style.overflowY = "scroll";
+                submenu.style.overflowX = "hidden";
+                submenu.style.maxHeight = "400px";
+                submenu.style.position = "absolute"; // Prevent affecting parent layout
+                submenu.style.top = "100%"; // Position below the parent menu
+                submenu.style.left = "0";
+                submenu.style.marginLeft = "0%";
+                submenu.style.zIndex = "1000"; // Ensure it appears above other elements
+                submenu.style.visibility = "hidden"; // Default hidden 
+                submenu.style.backgroundColor = "#422d41"; // Match design
+                submenu.style.transition = "visibility 0.2s ease, opacity 0.2s ease";
+                submenu.style.opacity = "0"; // Hidden by default
 
-        } else if(window.innerWidth <= 900) {
-            // Styles for screens <= 900 yang sebelumnya diset sebagai 811px
+                // Add hover event to parent to show submenu
+                submenu.parentElement.addEventListener("mouseenter", () => {
+                    submenu.style.visibility = "visible"; // Show the menu
+                    submenu.style.opacity = "1"; // Make it visible
+                });
+                submenu.parentElement.addEventListener("mouseleave", () => {
+                    submenu.style.visibility = "hidden"; // Hide the menu
+                    submenu.style.opacity = "0"; // Make it invisible
+                });
+            }
+
+        } else if (window.innerWidth <= 900) {
+            // Styles for screens <= 900 previously set as 811px
             submenu.style.overflowY = "hidden"; // Hide scrollbar
             submenu.style.maxHeight = "none"; // Adjust to content size
-            submenu.style.backgroundColor = "red";
+            // submenu.style.backgroundColor = "red";
             submenu.style.visibility = "visible"; // Ensure content is visible
             submenu.style.position = "relative"; // Ensure proper layout
             submenu.style.paddingLeft = "14%";
             submenu.style.marginLeft = "-0.5%";
             submenu.style.paddingRight = "-80%";
-            /*submenu.style.width = "90%";*/
         }
     } else {
         console.log("ulElements[3] not found");
@@ -69,14 +84,18 @@ function adjustStyles() {
     subMenuShinbucho.style.backgroundColor = "#422d41";
     if(window.innerWidth >= 900) {
         subMenuShinbucho.style.width = "100%";
+        subMenuShinbucho.style.paddingLeft = "16.7%";
     } else if (window.innerWidth <= 900) {
         subMenuShinbucho.style.width = "90%";
+        subMenuShinbucho.style.paddingLeft = "4.7%";
     }
 }
 
-// Run the function on Load and resize
-adjustStyles();
+// Call the function when the window resizes to reapply styles
 window.addEventListener("resize", adjustStyles);
+
+// Initial call to apply styles when the page loads
+adjustStyles();
 
 /* --Button Dropdown when Navbar in Mobile View (burger stack)-- */
 document.addEventListener('DOMContentLoaded', function () {
