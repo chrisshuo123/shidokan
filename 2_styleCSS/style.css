@@ -798,6 +798,18 @@ tbody {
     justify-content: space-between;
     transition: 0.15s ease;
 }
+.dropdown .dropdown-content p {
+    text-align: left;
+    color:white;
+}
+.dropdown .dropdown-content ol li {
+    color:white;
+}
+
+/* Applying paragraph spaces for the 2nd, 3rd, etc */
+.dropdown-content p + p {
+    margin-top:-1%;
+}
 
 /*.dropdown-content .show .arrow {
     transform: rotate(45deg) translate(-5px, -5px);
