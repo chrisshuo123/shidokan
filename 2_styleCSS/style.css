@@ -493,6 +493,15 @@ tbody {
     background-color: #130716;
 }
 
+@media screen and (min-width:526px) and (max-width: 768px) {
+    table thead tr th {
+        font-size: 0.8rem;
+    }
+    table tbody tr td {
+        font-size: 0.7rem;
+    }
+}
+
 @media (max-width: 525px) {
     table, thead, tbody, th, td, tr {
         display: block;
