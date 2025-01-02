@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
     <link rel="stylesheet" type="text/css" href="../../2_styleCSS/navbarStyle.css">
+    <link rel="stylesheet" type="text/css" href="../../2_styleCSS/popUpStyle.css">
     <link rel="stylesheet" type="text/css" href="../../2_styleCSS/style.css">
     <title>Profile</title>
 </head>
@@ -89,13 +90,17 @@
         <div style="margin-bottom:7%;">
             <h1>Shidokan Branch Jepang</h1>
             <p style="text-align:center;">Pengurus Shidokan International yang berlokasi di Jepang</p>
-            <div class="row justify-content-md-center justify-content-center text-center">
-                <div class="col-sm-4 col-12">
-                    <p>[Image]</p>
-                    <h2>Yoshiji Soeno</h2>
-                    <p>Founder Shidokan International</p>
+            <button id="openPopup">Open Form</button>
+            <div id="openPopup">
+                <div class="row justify-content-md-center justify-content-center text-center">
+                    <div class="col-sm-4 col-12">
+                        <p>[Image]</p>
+                        <h2>Yoshiji Soeno</h2>
+                        <p>Founder Shidokan International</p>
+                    </div>
                 </div>
             </div>
+            
             <div class="row justify-content-md-center justify-content-center text-center">
                 <div class="col-sm-4 col-6">
                     <p>[Image]</p>
@@ -132,6 +137,19 @@
                     <h2>Johan</h2>
                     <p>Head Shidokan Bali</p>
                 </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Pop-up form container -->
+    <div id="popupForm" class="popup hidden">
+        <div class="popup-content">
+            <button id="closePopup" class="close-btn">&times;</button>
+            <h2 style="color:black;">Form Title</h2>
+            <p style="color:black;">Scroll to see more content:</p>
+            <div class="paragraph-intro font-responsive">
+                <img src="../img/2-face/1-dongoz.png">
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ullam, dolorum quis? Similique, quasi commodi voluptatem neque sint sed autem nostrum distinctio eos enim atque ipsum aspernatur, error officiis consequatur molestias.</p>
             </div>
         </div>
     </div>
@@ -212,5 +230,6 @@
     <script src="https://kit.fontawesome.com/52139f278b.js" crossorigin="anonymous"></script>
     <script src="../../3_JavaScript/app.js"></script>
     <script src="../../3_JavaScript/buttonLink.js"></script>
+    <script src="../../3_JavaScript/popUp.js"></script>
 </body>
 </html>
