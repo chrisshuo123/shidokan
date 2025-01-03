@@ -90,35 +90,35 @@
         <form id="contact" action="" method="post" style="background-color: lightblue; margin-bottom:5%; padding: 5% 10% 5% 10%; border-radius: 10px;">
             <div class="mb-3">
                 <label for="namaLengkap" class="form-label">Nama Lengkap</label>
-                <input type="text" class="form-control" id="namaLengkap" aria-describedby="namaPanjangHelp">
+                <input type="text" class="form-control" name="namaLengkap" id="namaLengkap" aria-describedby="namaPanjangHelp">
                 <div id="namaPanjangHelp" class="form-text">Nama Panjang depan & belakang</div>
             </div>
             <div class="mb-3">
                 <label for="bgBeladiri" class="form-label">Background Beladiri</label>
-                <input type="text" class="form-control" id="bgBeladiri" aria-describedby="bgBeladiriHelp">
+                <input type="text" class="form-control" name="bgBeladiri" id="bgBeladiri" aria-describedby="bgBeladiriHelp">
                 <div id="bgBeladiriHelp" class="form-text">Contoh: Aikido, BJJ, Taekwondo, dkk</div>
             </div>
             <div class="mb-3">
                 <label for="prestasi" class="form-label">Prestasi</label>
-                <input type="text" class="form-control" id="prestasi" aria-describedby="prestasiHelp">
+                <input type="text" class="form-control" name="prestasi" id="prestasi" aria-describedby="prestasiHelp">
                 <div id="prestasiHelp" class="form-text">Kejuaraan tanding, atau prestasi non-formal baik kyokushin maupun beladiri luar</div>
             </div>
             <div class="mb-3">
                 <label for="inputEmail" class="form-label">Email Address</label>
-                <input type="email" class="form-control" id="inputEmail" aria-describedby="emailHelp">
+                <input type="email" class="form-control" name="inputEmail" id="inputEmail" aria-describedby="emailHelp">
                 <div id="emailHelp" class="form-text">Kami berkomitmen untuk menjaga kerahasiaan data pribadi.</div>
             </div>
             <div class="mb-3">
                 <label for="noTelepon" class="form-label">Nomor Telepon</label>
-                <input type="text" class="form-control" id="noTelepon" aria-describedby="noTeleponHelp">
+                <input type="text" class="form-control" name="noTelepon" id="noTelepon" aria-describedby="noTeleponHelp">
             </div>
             <div class="mb-3">
                 <label for="pesanTambahan" class="form-label">Pesan Tambahan</label>
-                <textarea class="form-control" placeholder="Pesan Tambahan (Opsional)" tabindex="6" aria-describedby="pesanTambahanHelp"></textarea>
+                <textarea class="form-control" name="pesanTambahan" placeholder="Pesan Tambahan (Opsional)" tabindex="6" aria-describedby="pesanTambahanHelp"></textarea>
                 <div id="pesanTambahanHelp" class="form-text">Pesan lain seputar diri anda & dojo</div>
             </div>
             <div class="mb-3">
-                <input type="image" name="image" accept="../../img/9-tampungFoto" alt="Upload Image">
+                <input type="file" name="image" accept=".png, .jpg, .jpeg" alt="Upload Image">
             </div>
             <button type="submit" class="btn btn-primary" style="width:100%;">Submit</button>
 
