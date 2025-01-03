@@ -1,9 +1,8 @@
 /* styles.css */
 
-button {
-    padding: 10px 20px;
-    font-size: 16px;
-    cursor: pointer;
+/* Change cursor when hover */
+.action-btn {
+    cursor:pointer;
 }
 
 /* Pop-up container */
@@ -18,15 +17,19 @@ button {
     justify-content: center;
     align-items: center;
     z-index: 1000;
+    transition: opacity 0.3s ease;
+    opacity: 0; /* Hidden by default */
+    visibility: hidden; /* Ensures it's not interactable */
 }
 
-/* Hidden class */
-.hidden {
-    display: none;
+/* Make pop-up visible */
+.popup:not(.hidden) {
+    opacity: 1;
+    visibility: visible;
 }
 
 /* Pop-up content */
-.popup-content {
+/*.popup-content {
     background: #fff;
     width: 90%;
     max-width: 500px;
@@ -35,26 +38,39 @@ button {
     border-radius: 8px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
     overflow-y: auto; /* Enables scrolling */
-}
+/*}*/
 
-.popup-content form ul {
-    display:flex;
-    flex-direction: column;
+.popup-content {
+    background: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    width: 80%;
+    max-width: 500px;
+    max-height: 90%;
+    overflow-y: auto;
 }
 
 .popup-content h2 {
     margin-top: 0;
 }
 
+/* Close button */
 .close-btn {
+    font-size: 20px;
+    font-weight: bold;
+    color: #fff;
+    background: #ff4d4f;
+    border: none;
+    border-radius: 50%;
+    width: 30px;
+    height: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
     position: absolute;
     top: 10px;
     right: 10px;
-    background: none;
-    border: none;
-    font-size: 20px;
-    cursor: pointer;
-    color:white;
 }
 
 /* SCROLL BAR TWEAKING */
