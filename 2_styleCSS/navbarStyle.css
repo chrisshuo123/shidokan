@@ -74,7 +74,7 @@ header ul {
 }
 
 .adjust-navbar {
-    margin-top: 3%;
+    margin-top: 2%;
 }
 
 header ul li {
@@ -259,7 +259,18 @@ nav {
 
 /*=== KERAPIAN NAVBAR ===*/
 /* Now, make it responsive */
+
+/* Adjusting the margin-top for navbar in mobile mode at max-width 900px */
+.navbarActive {
+    margin-top: 38px;
+}
+
 @media (max-width: 900px) {
+    .navbarActive {
+        position: none;
+        padding-right: 42px;
+    }
+
     .div-header {
         position:relative; /* Static */
         z-index: 100;
@@ -282,16 +293,13 @@ nav {
         display: block;
     }*/
     header nav ul li { /* Temu Bug (Mitigated, Done) */
-        width: 104.5%; /* Dari 100% jadi 4.5% untuk menutup BG sblh kanan */
-        margin-left:-4.5%; /* Diterapkan utk menutup BG sblh kiri */
+        position:relative;
+        width: 100vw; /* Dari 100% jadi 4.5% untuk menutup BG sblh kanan */
+        max-width: 100vw;
+        margin: 0 calc(-50vw + 50%);
+        /*margin-left:-4.5%; /* Diterapkan utk menutup BG sblh kiri */
     }
-    header nav ul li ul { /* Temu Bug (Mitigated, Done) */
-        position: relative;
-        width: 87.6%; /* Dari 100% jadi  87.6% untuk menutup BG sblh kanan */
-        left: 0;
-        margin-left: 12.45%; /* Diterapkan utk menutup BG sblh kiri */
-    }
-
+    
     /* Force Specificity */
     /*header > nav > ul > li > ul {
         position:absolute;
@@ -379,6 +387,175 @@ nav {
         /*background-color: red;*/
     }
 }
+
+/* Adjusting the margin-top for navbar in mobile mode at max-width 900px */
+@media screen and (max-width: 432px) {
+    .navbarActive {
+        margin-top: 35px;
+    }
+}
+
+/* Continue adjusting the Sub-Menu, Sub-Sub-Menu (max. 3 depth menu levels) for mobile mode
+when it's under 900px and below it (+Main Navbar Menu when above 611px): */
+
+@media screen and (max-width: 900px) {
+    /* Main Menu Navbar (mobile) */
+    header nav ul li ul { /* Temu Bug (Mitigated, Done) */
+        position: relative;
+        /*width: 100%; /* Dari 100% jadi  87.6% untuk menutup BG sblh kanan */
+        width: 100vw; /* Dari 100% jadi 4.5% untuk menutup BG sblh kanan */
+        max-width: 100vw;
+        margin: 0 calc(-50vw + 50%);
+        left: 15%;
+        /*margin-left: 12.45%; /* Diterapkan utk menutup BG sblh kiri */
+    }
+    /* Sub-Menu Navbar */
+    header nav ul li ul li {
+        left: -0.7%;
+        padding-left: 2%;
+    }
+    header nav ul li ul li a.active {
+        margin-left: -2%;
+        padding-left: 3% !important;
+        text-align: left;
+    }
+    /* Sub-Sub-Menu Navbar */
+    header nav ul li ul li ul {
+        position: relative;
+        width: 100vw; /* Dari 100% jadi 4.5% untuk menutup BG sblh kanan */
+        max-width: 100vw;
+        margin: 0 calc(-50vw + 50%);
+        left: 14.5%;
+    }
+    header nav ul li ul li ul li {
+        height: 42.93px;
+    }
+}
+
+/* MIN 576PX - MAX 768PX */
+@media screen and (max-width:768px) {
+    /* Sub-Menu Navbar */
+    header nav ul li ul {
+        padding-right: 20px;
+    }
+    header nav ul li ul li {
+        left: -1.5%;
+        padding-left: 2%; /* For the text */
+        
+    }
+    header nav ul li ul li a.active {
+        margin-left: -2%;
+        padding-left: 3% !important;
+        text-align: left;
+    }
+}
+@media screen and (max-width: 736px) {
+    /* Sub-Menu Navbar */
+    header nav ul li ul li {
+        left: -2%;
+        padding-left: 2%; /* For the text */
+    }
+}
+@media screen and (max-width: 690px) {
+    /* Sub-Menu Navbar */
+    header nav ul li ul li {
+        left: -2.5%;
+        padding-left: 2%; /* For the text */
+    }
+}
+@media screen and (max-width: 638px) {
+    /* Main Menu: Adding more width */
+    header nav ul li {
+        width: 200% !important;
+    }
+    /* Sub-Menu Navbar */
+    header nav ul li ul li {
+        left: -2.8%;
+        padding-left: 2%; /* For the text */
+    }
+    /* Sub-Sub-Menu Navbar */
+    header nav ul li ul li ul {
+        padding-right: 0px;
+    }
+    header nav ul li ul li ul li {
+        left: -2.5%;
+    }
+}
+
+@media screen and (max-width:576px) {
+    /* Sub-Menu Navbar */
+    header nav ul li ul {
+        padding-right: 40px;
+    }
+    header nav ul li ul li {
+        left: -4.5%;
+        padding-left: 2%; /* For the text */
+    }
+    header nav ul li ul li a.active {
+        margin-left: -2%;
+        padding-left: 3% !important;
+        text-align: left;
+    }
+}
+@media screen and (max-width: 559px) {
+    /* Sub-Menu Navbar */
+    header nav ul li ul {
+        padding-right: 40px;
+        padding-right: 60px;
+    }
+    header nav ul li ul li {
+        left: -5.5%;
+        padding-left: 2%; /* For the text */
+    }
+}
+@media screen and (max-width: 516px) {
+    /* Sub-Menu Navbar */
+    header nav ul li ul li {
+        left: -6.5%;
+        padding-left: 2%; /* For the text */
+    }
+    /* Sub-Sub-Menu Navbar */
+    header nav ul li ul li ul li {
+        left: -5%;
+    }
+}
+@media screen and (max-width: 467px) {
+    /* Main Menu: Adding more width */
+    header nav ul li {
+        width: 300% !important;
+    }
+    /* Sub-Menu Navbar */
+    header nav ul li ul {
+        padding-right: 120px;
+    }
+    header nav ul li ul li {
+        left: -13%;
+        padding-left: 5%; /* For the text */
+    }
+}
+@media screen and (max-width: 450px) {
+    /* Main Menu: Adding more width */
+    header nav ul li {
+        width: 1000% !important;
+    }
+    /* Sub-Menu Navbar */
+    header nav ul li ul {
+        padding-right: 140px;
+    }
+    header nav ul li ul li {
+        left: -20.5%;
+        padding-left: 5%; /* For the text */
+    }
+}
+@media screen and (min-width: 100px) and (max-width: 380px) {
+    /* Sub-Menu Navbar */
+    header nav ul li ul li {
+        left: -47.5px;
+        padding-left: 5%; /* For the text */
+    }
+}
+
+
 
 /* This is for the Nth-of-type[3], the Dojo List */
 /* Webkit Scrollbar Styling */
