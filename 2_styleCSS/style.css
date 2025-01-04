@@ -5,8 +5,11 @@
     font-family: 'poppins', sans-serif;
 }
 
-body {
+html, body {
     overflow-x: hidden;
+}
+
+body {
     /*background-color: rgb(35, 12, 23);*/
     background: #2A0134;
     color:white;
