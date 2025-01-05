@@ -587,11 +587,10 @@ tbody {
 }
 
 /* ==== DAFTAR DOJO ==== */
-/*.flex-picAndInfo {
-    display: flex;
-    flex-direction: column;
-    gap: 50px;
-}*/
+.flex-picAndInfo {
+    margin: 0% auto;
+    padding: 2% 0 2% 2%;
+}
 
 .flex-instructorDetails {
     display: flex;
@@ -999,6 +998,21 @@ tbody {
 
 /*===============*/
 /* === Contact & Dojo List === */
+
+.profil-instruktur {
+    background-color: #1b0221;
+    width:80%;
+    margin: 0 auto;
+    border-radius: 20px;
+    border: 2px solid #945fa1;
+}
+.profil-instruktur h2 {
+    text-align: center;
+    padding: 2% 0 2% 0;
+    border-bottom:2px solid #945fa1;
+    background-color: #09020a;
+    border-radius: 20px 20px 0 0;
+}
 
 .kontak-shidokan {
     background-color: #1b0221;
