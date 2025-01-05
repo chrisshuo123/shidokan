@@ -586,7 +586,50 @@ tbody {
     }
 }
 
-/* - - DAFTAR DOJO - - */
+/* ==== DAFTAR DOJO ==== */
+/*.flex-picAndInfo {
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+}*/
+
+.flex-instructorDetails {
+    display: flex;
+    flex-direction: column;
+    gap:70px;
+    padding-top: 3%;
+    padding-left: 2%;
+    margin-left: 5%;
+    background-color: red;
+}
+.flex-instructorDetails .instructor-tagFlex {
+    display: flex;
+    flex-direction: column;
+    justify-content:space-around;
+    align-items: left;
+}
+.flex-instructorDetails .instructor-tagFlex p:nth-of-type(1) {
+    font-size: 1.1rem;
+    margin-bottom: -0.5%;
+}
+@media screen and (max-width:992px) {
+    .flex-picAndInfo-tag img {
+        margin-left: -1.3%;
+    }
+
+    .flex-instructorDetails {
+        margin-left: -1.8%;
+    }
+    .flex-instructorDetails .instructor-tagFlex {
+        text-align: center;
+    }
+    .flex-instructorDetails .instructor-tagFlex:nth-of-type(2) {
+        margin-top: -10%;
+    }
+}
+
+
+/* ==== FUNGSI LAYOUT KATALOG ==== */
 
 .katalog-layout .row div {
     border-radius: 3%;
