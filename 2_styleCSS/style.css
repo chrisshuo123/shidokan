@@ -102,6 +102,12 @@ img {
     margin-bottom: 5%;
 }
 
+@media screen and (min-width:768px) and (max-width: 992px) {
+    .paragraph-intro img {
+        width: 40%;
+    }
+}
+
 .paragraph-intro .fullParagraph {
     display:inline-block;
 }
