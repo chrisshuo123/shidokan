@@ -20,11 +20,13 @@ h1 {
 }
 
 .bottomline {
-    border-bottom: 3px solid white;
-    width: 30%;
+    border-bottom: 6px solid white;
+    width: 20%;
+    border-radius: 2px;
     margin:0% auto;
     padding-top: 5%;
-    margin-bottom: 3%;
+    margin-top: 0%;
+    margin-bottom: 5%;
 }
 @media screen and (max-width: 768px) {
     .bottomline {
