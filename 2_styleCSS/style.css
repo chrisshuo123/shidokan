@@ -1125,10 +1125,12 @@ tbody {
 }
 .our-partner .row div:hover img {
     transform: scale(1.05); /* Scale up the image by 5% */
+    cursor: pointer;
 }
 .our-partner .row div:hover p {
     font-size: 1.15em;
     transform: translateY(5px); /* Move text slightly upwards */
+    cursor: pointer;
 }
 
 
