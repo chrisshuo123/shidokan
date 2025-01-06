@@ -69,6 +69,22 @@ document.addEventListener('DOMContentLoaded', ()=> {
             }
         });
     });
+
+    // Sponsors Logo Button DataLink (Not the Catalog Link, but link for each Sponsor's LOGO)
+    document.querySelectorAll('.logo_dataLink').forEach((logoLink) => {
+        console.log("Button found: ", logoLink); // Debugging
+
+        logoLink.addEventListener('click', () => {
+            // Get the file/folder path from the data-link attribute
+            const linkPath = logoLink.getAttribute('data-link'); //Link stored as a data attribute
+            console.log("Navigating to: ", linkPath); // Debugging
+            if (linkPath && linkPath.startsWith("http")) {
+                window.location.href = linkPath; // Navigate to the specified URL
+            } else {
+                console.error("Invalid or missing data-link attribute");
+            }
+        });
+    });
 });
 
 

@@ -1133,6 +1133,33 @@ tbody {
     cursor: pointer;
 }
 
+/*==============*/
+/* ===Merchandise=== */
+
+.merchandise {
+    margin-top:2%;
+}
+.merchandise h1 {
+    margin-bottom: 2%;
+}
+.merchandise .row div img {
+    border-radius: 3%;
+    margin-bottom: 2%;
+    transition: transform 0.3s ease /* Smooth scaling for hover in/out */
+}
+.merchandise .row div p {
+    font-size: 1.15em;
+    transition: font-size 0.3s ease, transform 0.3s ease; /* Smooth animation for font size and position */
+}
+.merchandise .row div:hover img {
+    transform: scale(1.05); /* Scale up the image by 5% */
+    /*cursor: pointer;*/
+}
+.merchandise .row div:hover p {
+    font-size: 1.15em;
+    transform: translateY(5px); /* Move text slightly upwards */
+    /*cursor: pointer;*/
+}
 
 /*==============*/
 /*====FOOTER====*/
