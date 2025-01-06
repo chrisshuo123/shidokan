@@ -126,6 +126,13 @@ img {
     margin-bottom: 10px;
 }
 
+/* Ini khusus yang intro shidokan bagian Home saja: */
+@media screen and (max-width: 768px) {
+    .intro-home {
+        font-size: 1rem;
+    }
+}
+
 /* Responsive design: when width screen <= 768px */
 @media screen and (max-width: 768px) {
     .image-text-wrapper {
