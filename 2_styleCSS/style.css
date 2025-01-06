@@ -671,6 +671,28 @@ tbody {
     /*transition: transform 0.3s ease; /* Smooth animation effect */
 }
 
+/* Katalog font size and animation behavior in  */
+@media screen and (max-width: 992px) {
+    .katalog-layout .row div p {
+        font-size: 1em;
+        transition: font-size 0.3s ease, transform 0.3s ease; /* Smooth animation for font size and position */
+    }
+    .katalog-layout .row div:hover p { 
+        font-size: 1.05em; /* Expand text size */
+        transform: translateY(5px); /* Move text slightly upwards */
+    }
+}
+@media screen and (max-width: 768px) {
+    .katalog-layout .row div p {
+        font-size: 0.9em;
+        transition: font-size 0.3s ease, transform 0.3s ease; /* Smooth animation for font size and position */
+    }
+    .katalog-layout .row div:hover p { 
+        font-size: 0.95em; /* Expand text size */
+        transform: translateY(5px); /* Move text slightly upwards */
+    }
+}
+
 /* --Button Catalog Behavior-- */
 /* General button styling */
 .catalog-btn {
