@@ -130,12 +130,12 @@
         <div>
             <h2 style="text-align: center;">Berita Internasional Shidokan Jepang</h2>
             <p style="text-align: center;">Seputar aktivitas dan berita internasional Shidokan terutama yang berada di Jepang</p>
-            <div class="row justify-content-md-center justify-content-center text-center">
+            <div class="row justify-content-md-center justify-content-center text-center berita-container">
                 <!-- Layout Kiri -->
-                <div class="col-md-6 col-12" style="background-color: grey;">
+                <div class="col-lg-6 col-12" style="background-color: purple;">
                     <!-- Header (Jika Ada) -->
                     <div class="row">
-                        <div class="col-12" style="background-color: purple; color:white;">
+                        <div class="col-12" style="color:white;">
                             <img src="../img/3-news/shidokan-news-sample-1.jpg">
                             <p style="text-align: left; font-size:0.8em;">Nama Penulis | Tanggal | Nama Media</p>
                             <h2 style="text-align: left;">JUDUL</h2>
@@ -144,26 +144,91 @@
                     </div>
                 </div>
                 <!-- Layout Kanan -->
-                <div class="col-md-6 col-12" style="background-color: yellow;">
-                    <div class="row" style="margin-bottom:2%;">
-                        <div class="col-6">
-                            <img src="../img/3-news/shidokan-news-sample-1.jpg">
+                <div class="col-lg-6 col-12 berita-scroll berita-carousel" style="background-color: yellow;">
+                    <div id="newsCarousel" class="carousel slide d-none" data-bs-ride="carousel">
+                        <div class="carousel-inner">
+                            <div class="carousel-item active">
+                                <div class="row">
+                                    <div class="col-6">
+                                        <img src="../img/3-news/shidokan-news-sample-1.jpg" class="d-block w-100">
+                                    </div>
+                                    <div class="col-6" style="text-align: left;">
+                                        <p style="font-size:0.7em;">Tanggal | Nama Penulis | Nama Media</p>
+                                        <h3 style="font-size: 1.5em;">JUDUL bla bla.....</h3>
+                                        <p style="font-size:0.9em;">Isi bla bla bla bla bla bla....<button>Selengkapnya</button></p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="carousel-item">
+                                <div class="row">
+                                    <div class="col-6">
+                                        <img src="../img/3-news/shidokan-news-sample-1.jpg">
+                                    </div>
+                                    <div class="col-6" style="text-align: left;">
+                                        <p style="font-size:0.7em;">Tanggal | Nama Penulis | Nama Media</p>
+                                        <h3 style="font-size: 1.5em;">JUDUL bla bla.....</h3>
+                                        <p style="font-size:0.9em;">Isi bla bla bla bla bla bla....<button>Selengkapnya</button></p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="carousel-item">
+                                <div class="row">
+                                    <div class="col-6">
+                                        <img src="../img/3-news/shidokan-news-sample-1.jpg">
+                                    </div>
+                                    <div class="col-6" style="text-align: left;">
+                                        <p style="font-size:0.7em;">Tanggal | Nama Penulis | Nama Media</p>
+                                        <h3 style="font-size: 1.5em;">JUDUL bla bla.....</h3>
+                                        <p style="font-size:0.9em;">Isi bla bla bla bla bla bla....<button>Selengkapnya</button></p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="carousel-item">
+                                <div class="row">
+                                    <div class="col-6">
+                                        <img src="../img/3-news/shidokan-news-sample-1.jpg">
+                                    </div>
+                                    <div class="col-6" style="text-align: left;">
+                                        <p style="font-size:0.7em;">Tanggal | Nama Penulis | Nama Media</p>
+                                        <h3 style="font-size: 1.5em;">JUDUL bla bla.....</h3>
+                                        <p style="font-size:0.9em;">Isi bla bla bla bla bla bla....<button>Selengkapnya</button></p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="carousel-item">
+                                <div class="row">
+                                    <div class="col-6">
+                                        <img src="../img/3-news/shidokan-news-sample-1.jpg">
+                                    </div>
+                                    <div class="col-6" style="text-align: left;">
+                                        <p style="font-size:0.7em;">Tanggal | Nama Penulis | Nama Media</p>
+                                        <h3 style="font-size: 1.5em;">JUDUL bla bla.....</h3>
+                                        <p style="font-size:0.9em;">Isi bla bla bla bla bla bla....<button>Selengkapnya</button></p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="carousel-item">
+                                <div class="row">
+                                    <div class="col-6">
+                                        <img src="../img/3-news/shidokan-news-sample-1.jpg">
+                                    </div>
+                                    <div class="col-6" style="text-align: left;">
+                                        <p style="font-size:0.7em;">Tanggal | Nama Penulis | Nama Media</p>
+                                        <h3 style="font-size: 1.5em;">JUDUL bla bla.....</h3>
+                                        <p style="font-size:0.9em;">Isi bla bla bla bla bla bla....<button>Selengkapnya</button></p>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- Add more slides as needed -->
                         </div>
-                        <div class="col-6" style="text-align: left;">
-                            <p style="font-size:0.7em;">Tanggal | Nama Penulis | Nama Media</p>
-                            <h3 style="font-size: 1.5em;">JUDUL bla bla.....</h3>
-                            <p style="font-size:0.9em;">Isi bla bla bla bla bla bla....<button>Selengkapnya</button></p>
-                        </div>
-                    </div>
-                    <div class="row">
-                        <div class="col-6">
-                            <img src="../img/3-news/shidokan-news-sample-1.jpg">
-                        </div>
-                        <div class="col-6" style="text-align: left;">
-                            <p style="font-size:0.7em;">Tanggal | Nama Penulis | Nama Media</p>
-                            <h3 style="font-size: 1.5em;">JUDUL bla bla.....</h3>
-                            <p style="font-size:0.9em;">Isi bla bla bla bla bla bla....<button>Selengkapnya</button></p>
-                        </div>
+                        <button class="carousel-control-prev" type="button" data-bs-target="#newsCarousel" data-bs-slide="prev">
+                            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                            <span class="visually-hidden">Previous</span>
+                        </button>
+                        <button class="carousel-control-next" type="button" data-bs-target="#newsCarousel" data-bs-slide="next">
+                            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                            <span class="visually-hidden">Next</span>
+                        </button>
                     </div>
                 </div>
             </div>
