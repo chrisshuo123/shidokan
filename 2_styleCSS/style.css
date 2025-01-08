@@ -421,26 +421,37 @@ img {
     font-size: 2em;
 }
 
-/* Berita Carousel (jika diperlukan) */
+/* BUAT HAL. UTAMA BERITA */
+/* Bagian Kiri */
+.berita-container div {
+    margin-top: 1%;
+}
 
-/*.carousel-berita .list-carousel-berita img {
-    width:356px;
-    height:210px;
-}*/
-
-/*@media screen and (max-width: 768px) {
-
-    .carousel-berita .list-carousel-berita .row .col-4 {
-        margin-right: 5%;
+/* Bagian Kanan */
+@media screen and (min-width:992px) and (max-width: 2000px) {
+    .berita-scroll {
+        margin-bottom: 2%;
+        overflow: scroll;
+        overflow-x: hidden;
+        max-height: 600px;
     }
-
-    .carousel-berita .list-carousel-berita img {
-        width:210px;
-        height:150px;
-        margin-left: -10%;
+    .berita-scroll div:last-child {
+        margin-bottom: 2%;
     }
-}*/
+}
+@media screen and (max-width: 991px) {
+    .berita-scroll * {
+        overflow: hidden;
+        scrollbar-width: none; /* Firefox */
+        overflow-y: hidden;
+        max-height: none;
+    }
+    .berita-scroll::-webkit-scrollbar {
+        display: none; /* Chrome, Safari, Edge */
+    }
+}
 
+/* BUAT SUB-HAL DARI MASING2 Nasional & Int'll News */
 /* Pagination (Halaman, Next / Prev & Bulletin Page) */
 .pagination {
     display: flex;
