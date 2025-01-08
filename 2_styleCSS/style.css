@@ -426,6 +426,12 @@ img {
 .berita-container div {
     margin-top: 1%;
 }
+.berita-scroll.d-none {
+    display: none !important;
+}
+.news-carousel.d-none {
+    display: none !important;
+}
 
 /* Bagian Kanan */
 @media screen and (min-width:992px) and (max-width: 2000px) {
@@ -440,16 +446,93 @@ img {
     }
 }
 @media screen and (max-width: 991px) {
-    .berita-scroll * {
+    .berita-scroll {
         overflow: hidden;
-        scrollbar-width: none; /* Firefox */
-        overflow-y: hidden;
-        max-height: none;
-    }
-    .berita-scroll::-webkit-scrollbar {
-        display: none; /* Chrome, Safari, Edge */
+        max-height: none; /* Ensure no height constraint */
     }
 }
+/* For Testing Purpose on class .berita-scroll */
+
+.news-carousel {
+    position: relative;
+    z-index: 10; /* Ensure it is above other elements */
+}
+
+/* The Next / Prev Button Does not work, here's what I've implemented: */
+/* 1 - Reset Custom CSS */
+.carousel-control-prev,
+.carousel-control-next {
+    position: absolute; /* Bootstrap default */
+    z-index: 11; /* Bootstrap default */
+    pointer-events: auto; /* Keep this if buttons need to respond to clicks */
+}
+/* 2 - Ensure Buttons Are Visible */
+.carousel-control-prev,
+.carousel-control-next {
+    opacity: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+/* 3 - Fix Overlapping or Hidden Buttons */
+.carousel-control-prev,
+.carousel-control-next {
+    z-index: 2; /* Place above most elements */
+}
+
+.carousel {
+    position: relative; /* Ensure carousel contains buttons properly */
+    overflow: visible; /* Prevent buttons from being clipped */
+}
+/* 4 - Debug Button Placement */
+.carousel-control-prev,
+.carousel-control-next {
+    top: 50%; /* Center vertically */
+    transform: translateY(-50%);
+    width: 5%; /* Adjust button width */
+    height: auto; /* Maintain aspect ratio */
+}
+/* 5 - Check HTML Structure for the Berita Carousel */
+/* Self check inside the id #newsCarousel */
+
+@media screen and (min-width:992px) and (max-width: 2000px) {
+    .berita-scrollz {
+        margin-bottom: 2%;
+        overflow: scroll;
+        overflow-x: hidden;
+        max-height: 600px;
+    }
+    .berita-scrollz div:last-child {
+        margin-bottom: 2%;
+    }
+}
+
+/* Hide the carousel when the screen width is above 992px */
+@media screen and (min-width: 992px) {
+    .news-carousel {
+        display: none !important;
+    }
+    .berita-scrollz {
+        display: block !important;
+    }
+}
+
+/* Show the carousel and hide the scroll when the screen width is below 992px */
+@media screen and (max-width: 991px) {
+    .news-carousel {
+        display: block !important;
+    }
+    .berita-scrollz {
+        display: none !important;
+    }
+}
+
+/*@media screen and (max-width: 991px) {
+    .berita-scrollz {
+        overflow: hidden;
+        max-height: none; /* Ensure no height constraint */
+  /*  }
+}*/
 
 /* BUAT SUB-HAL DARI MASING2 Nasional & Int'll News */
 /* Pagination (Halaman, Next / Prev & Bulletin Page) */
