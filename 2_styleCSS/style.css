@@ -265,45 +265,51 @@ img {
     /*min-height: 400px; */
 /*} */
 
+/* Banner container with background image */
 .banner {
-    position: relative; /* Ensure the banner-content is positioned relative to this */
-    width: 100%;
-    overflow: hidden; /* Prevent content overflow */
+    position: relative;
+    width: 100vw; /* Full screen width */
+    height: 400px; /* Adjust height as needed */
+    overflow: hidden; /* Ensure no overflow */
 }
 
-.banner img {
-    max-height: 400px;
-    object-fit: cover;
-    width:100vw;
-    max-width: 100vw;
-    margin: 0 calc(-50vw + 50%);
-    margin-top: 135px;
-    margin-bottom: 5%;
-    filter: brightness(50%);
+.bannerimage {
+    background-image: url('../1_main_page/img/1-banner/banner_karateGuy.png');
+    background-size: cover; /* Ensures the image covers the entire div */
+    background-position: center; /* Center the image */
+    background-repeat: no-repeat; /* Avoid repeating the image */
 }
 
 /* Text content styles */
 .banner-content {
-    position:absolute;
-    top: 50%; /* Center Vertically */
+    position: absolute;
+    top: 50%; /* Center vertically */
     left: 50%;
     transform: translate(-50%, -50%);
-    text-shadow: 0 2px 4px rgba(0,0,0, 0.8); /* Add a shadow to make text stand out */
-    z-index: 3;
     text-align: center;
-    color:white;
+    color: white;
+    z-index: 2;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.8); /* Add shadow for readability */
 }
+
 .banner-content h1 {
-    /*font-size: 3rem; /* Adjust as needed */
     font-size: clamp(2rem, 4vw, 3rem); /* Responsive font size */
-    font-weight: bold;
     margin: 0;
 }
+
 .banner-content p {
-    /*font-size: 1.5rem; /* Adjust as needed */
     font-size: clamp(1rem, 2.5vw, 1.5rem); /* Responsive font size */
     margin: 0;
-    text-align: center;
+}
+
+/* Adjust height for smaller screens */
+@media screen and (max-width: 768px) {
+    .banner {
+        height: 300px;
+    }
+    .bannerimage {
+        background-image: url('../1_main_page/img/1-banner/banner-sample-1.jpg'); /* Mobile-specific image */
+    }
 }
 
 /* Menyesuaikan Banner dengan  .header ini dengan tingginya Navbar */
