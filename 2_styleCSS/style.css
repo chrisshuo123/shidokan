@@ -267,23 +267,30 @@ img {
 
 /* Banner container with background image */
 .banner {
-    width: 100%; /* Full screen width */
-    aspect-ratio: 16 / 9; /* Automatically adjust height based on width (16:9 ratio) */
-    background-size: cover; /* Ensures the image covers the entire div */
+    width: 100vw; /* Full screen width */
+    height: auto;
+    aspect-ratio: 11 / 4; /* Automatically adjust height based on width (16:9 ratio) -> change to 11:4 ratio */
+    background-size: contain; /* Ensures the image covers the entire div */
     background-position: center; /* Center the image */
     background-repeat: no-repeat; /* Avoid repeating the image */
     position: relative;
     overflow: hidden; /* Ensure no overflow */
     margin-top: var(--navbar-height, 135px); /* Dynamic adjustment for sticky navbar */
-    --default-height: 400px; /* Default height for desktop */
-    height: var(--default-height); /* Adjust height 'Dynamically' */
+    background-color: #000; /* Black, matching the image style */
+}
+
+.bannerimage_karateGuy {
+    background: 
+        url('../1_main_page/img/1-banner/banner_baru.png') center / cover, 
+        url('../1_main_page/img/1-banner/banner_baru.png') center / contain no-repeat;
+    /*filter: brightness(50%); /* Optional: Match the foreground image's brightness */
 }
 
 /* Desktop-specific image */
-.bannerimage_karateGuy {
+/*.bannerimage_karateGuy {
     background-image: url('../1_main_page/img/1-banner/banner_karateGuy.png');
     position: relative;
-}
+}*/
 
 /* Create an overlay using a pseudo-element */
 .banner::before {
@@ -319,25 +326,28 @@ img {
     margin: 0;
 }
 
+.banner-content h1,
+.banner-content p {
+    transition: font-size 0.3s ease;
+}
+
 /* Tablet adjustments */
-@media screen and (min-width: 387px) and (max-width: 768px) {
+@media screen and (min-width: 600px) and (max-width: 768px) {
     .banner {
         --default-height: 300px; /* Smaller height for tablets */
         /*height: 612px;*/
     }
-    .bannerimage_karateGuy {
-        background-image: url('../1_main_page/img/1-banner/banner_karateGuy_tablet.png'); /* Tablet-specific image */
-    }
 }
 
 /* Mobile adjustments */
-@media screen and (max-width: 387px) {
+@media screen and (max-width: 600px) {
     .banner {
         --default-height: 250px /* Smaller height for smartphones */
-        /*height: 300px;*/
+        width: 100%; /* or any percentage of the container */
+        aspect-ratio: 1 / 0.7; /* Makes the element a perfect square */
     }
     .bannerimage_karateGuy {
-        background-image: url('../1_main_page/img/1-banner/banner_karateGuy_mobile.png'); /* Mobile-specific image */
+        background-image: url('../1_main_page/img/1-banner/banner_square.png'); /* Mobile-specific image */
     }
 }
 /* Fine-tune margin-top to dynamically adjust with navbar */
