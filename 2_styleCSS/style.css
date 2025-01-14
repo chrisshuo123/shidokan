@@ -267,18 +267,19 @@ img {
 
 /* Banner container with background image */
 .banner {
-    position: relative;
-    width: 100vw; /* Full screen width */
-    height: 400px; /* Adjust height as needed */
-    overflow: hidden; /* Ensure no overflow */
-}
-
-.bannerimage {
-    background-image: url('../1_main_page/img/1-banner/banner_karateGuy.png');
+    width: 100%; /* Full screen width */
+    aspect-ratio: 16 / 9;
     background-size: cover; /* Ensures the image covers the entire div */
     background-position: center; /* Center the image */
     background-repeat: no-repeat; /* Avoid repeating the image */
     margin-top: 135px;
+    position: relative;
+    height: 400px; /* Adjust height as needed */
+    overflow: hidden; /* Ensure no overflow */
+}
+
+.bannerimage_karateGuy {
+    background-image: url('../1_main_page/img/1-banner/banner_karateGuy.png');
 }
 
 /* Text content styles */
@@ -303,22 +304,31 @@ img {
     margin: 0;
 }
 
-/* Adjust height for smaller screens */
-@media screen and (max-width: 768px) {
+/* Adjust height for tablet screen - Banner */
+@media screen and (min-width: 387px) and (max-width: 768px) {
+    .banner {
+        height: 612px;
+    }
+    .bannerimage_karateGuy {
+        background-image: url('../1_main_page/img/1-banner/banner_karateGuy_tablet.png'); /* Tablet-specific image */
+    }
+}
+/* Adjust height for smartphone screen - Banner */
+@media screen and (max-width: 387px) {
     .banner {
         height: 300px;
     }
-    .bannerimage {
-        background-image: url('../1_main_page/img/1-banner/banner-sample-1.jpg'); /* Mobile-specific image */
+    .bannerimage_karateGuy {
+        background-image: url('../1_main_page/img/1-banner/banner_karateGuy_mobile.png'); /* Mobile-specific image */
     }
 }
 
 /* Menyesuaikan Banner dengan  .header ini dengan tingginya Navbar */
 @media screen and (min-width:900px) and (max-width:1167px) {
-    .bannerimage {
+    .banner {
         margin-top:145px;
     }
-    .banner content h1 {
+    .banner-content h1 {
         font-size: 2.8rem; /* Adjust as needed */
     }
     .banner-content p {
@@ -326,7 +336,7 @@ img {
     }
 }
 @media screen and (min-width:768px) and (max-width:900px) {
-    .bannerimage {
+    .banner {
         margin-top:108px;
     }
     .banner content h1 {
@@ -338,10 +348,8 @@ img {
 }
 @media screen and (min-width:495px) and (max-width:768px) {
     .banner {
-        margin-bottom: 5%;
-    }
-    .bannerimage {
         margin-top:104px;
+        margin-bottom: 5%;
     }
     .banner content h1 {
         font-size: 2.0rem; /* Adjust as needed */
@@ -351,7 +359,7 @@ img {
     }
 }
 @media screen and (max-width:495px) {
-    .bannerimage {
+    .banner {
         margin-top: 101px;
     }
     .banner-content h1 {
