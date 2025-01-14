@@ -278,6 +278,7 @@ img {
     background-size: cover; /* Ensures the image covers the entire div */
     background-position: center; /* Center the image */
     background-repeat: no-repeat; /* Avoid repeating the image */
+    margin-top: 135px;
 }
 
 /* Text content styles */
@@ -313,8 +314,8 @@ img {
 }
 
 /* Menyesuaikan Banner dengan  .header ini dengan tingginya Navbar */
-@media screen and (min-width:900px) and (max-width:1175px) {
-    .banner img {
+@media screen and (min-width:900px) and (max-width:1167px) {
+    .bannerimage {
         margin-top:145px;
     }
     .banner content h1 {
@@ -325,7 +326,7 @@ img {
     }
 }
 @media screen and (min-width:768px) and (max-width:900px) {
-    .banner img {
+    .bannerimage {
         margin-top:108px;
     }
     .banner content h1 {
@@ -339,7 +340,7 @@ img {
     .banner {
         margin-bottom: 5%;
     }
-    .banner img {
+    .bannerimage {
         margin-top:104px;
     }
     .banner content h1 {
@@ -350,7 +351,7 @@ img {
     }
 }
 @media screen and (max-width:495px) {
-    .banner img {
+    .bannerimage {
         margin-top: 101px;
     }
     .banner-content h1 {
