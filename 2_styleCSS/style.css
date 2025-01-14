@@ -268,14 +268,14 @@ img {
 /* Banner container with background image */
 .banner {
     width: 100%; /* Full screen width */
-    aspect-ratio: 16 / 9;
+    aspect-ratio: 16 / 9; /* Automatically adjust height based on width (16:9 ratio) */
     background-size: cover; /* Ensures the image covers the entire div */
     background-position: center; /* Center the image */
     background-repeat: no-repeat; /* Avoid repeating the image */
-    margin-top: 135px;
     position: relative;
-    height: 400px; /* Adjust height as needed */
     overflow: hidden; /* Ensure no overflow */
+    margin-top: 135px;
+    height: 400px; /* Adjust height as needed */
 }
 
 .bannerimage_karateGuy {
