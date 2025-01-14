@@ -37,21 +37,50 @@ h1 {
 /* === BANNER CAROUSEL === */
 
 /* Custom styles for carousel */
-.carousel-item img {
-    height: 500px; /* Fixed height for consistency */
-    object-fit: cover; /* Ensures images fill the container without distortion */
+.carousel {
+    /*margin-top: var(--navbar-height, 135px); /* Adjust for sticky navbar */
+    overflow: hidden; /* Prevent overflow */
 }
 
+.carousel-image {
+    width: 100vw; /* Full container width */
+    height: auto;
+    aspect-ratio: 11 / 4; /* Responsive aspect ratio */
+    background-size: contain; /* Ensure the image fits without cropping */
+    background-position: center; /* Center the image */
+    background-repeat: no-repeat; /* Avoid repeating the image */
+    position: relative;
+    background-color: #000;
+    margin-top: 25px;
+}
+
+.carousel-karateguyimage {
+    background-image: url('../1_main_page/img/1-banner/banner_baru.png');
+}
+
+/* Change image and aspect ratio when screen width is below 600px */
+@media screen and (max-width: 600px) {
+    .carousel-image {
+        aspect-ratio: 1 / 0.7; /* Adjust aspect ratio to 1:0.7 */
+    }
+    .carousel-karateguyimage {
+        background-image: url('../1_main_page/img/1-banner/banner_square.png'); /* New image for mobile */
+    }
+}
+
+/* Carousel caption styling */
 .carousel-caption {
     background: rgba(0, 0, 0, 0.6); /* Semi-transparent background for better text visibility */
     padding: 1rem;
     border-radius: 10px;
 }
 
+/* Indicators */
 .carousel-indicators [data-bs-target] {
-    background-color: #007bff; /* Custom color for indicators */
+    background-color: #007bff; /* Custom indicator colors */
 }
 
+/* Navigation arrows */
 .carousel-control-prev-icon,
 .carousel-control-next-icon {
     filter: invert(1); /* Make navigation arrows more visible on dark images */
@@ -62,26 +91,33 @@ h1 {
     margin-top: 111px;
 }
 
-/* Menyesuaikan Banner dengan  .header ini dengan tingginya Navbar */
+/* Responsive adjustments for smaller screens */
+/* + this .header adjusts it's top margin with the sticky Navbar */
 @media screen and (min-width:900px) and (max-width:1175px) {
     .carousel {
-        margin-top:108px;
+        margin-top:120px;
     }
 }
 @media screen and (min-width:768px) and (max-width:900px) {
     .carousel {
-        margin-top:108px;
+        margin-top:82px;
     }
 }
 @media screen and (min-width:495px) and (max-width:768px) {
     .carousel {
-        margin-top:104px;
+        margin-top:80px;
         margin-bottom: 5%;
+    }
+    .carousel-caption {
+        font-size: 0.9rem; /* Adjust font size for captions */
     }
 }
 @media screen and (max-width:495px) {
     .carousel {
-        margin-top: 101px;
+        margin-top: 77px;
+    }
+    .carousel-caption {
+        font-size: 0.8rem;
     }
 }
 
