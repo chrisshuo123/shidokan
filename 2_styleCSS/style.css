@@ -274,10 +274,12 @@ img {
     background-repeat: no-repeat; /* Avoid repeating the image */
     position: relative;
     overflow: hidden; /* Ensure no overflow */
-    margin-top: 135px;
-    height: 400px; /* Adjust height as needed */
+    margin-top: var(--navbar-height, 135px); /* Dynamic adjustment for sticky navbar */
+    --default-height: 400px; /* Default height for desktop */
+    height: var(--default-height); /* Adjust height 'Dynamically' */
 }
 
+/* Desktop-specific image */
 .bannerimage_karateGuy {
     background-image: url('../1_main_page/img/1-banner/banner_karateGuy.png');
 }
@@ -304,22 +306,34 @@ img {
     margin: 0;
 }
 
-/* Adjust height for tablet screen - Banner */
+/* Tablet adjustments */
 @media screen and (min-width: 387px) and (max-width: 768px) {
     .banner {
-        height: 612px;
+        --default-height: 300px; /* Smaller height for tablets */
+        /*height: 612px;*/
     }
     .bannerimage_karateGuy {
         background-image: url('../1_main_page/img/1-banner/banner_karateGuy_tablet.png'); /* Tablet-specific image */
     }
 }
-/* Adjust height for smartphone screen - Banner */
+
+/* Mobile adjustments */
 @media screen and (max-width: 387px) {
     .banner {
-        height: 300px;
+        --default-height: 250px /* Smaller height for smartphones */
+        /*height: 300px;*/
     }
     .bannerimage_karateGuy {
         background-image: url('../1_main_page/img/1-banner/banner_karateGuy_mobile.png'); /* Mobile-specific image */
+    }
+}
+/* Fine-tune margin-top to dynamically adjust with navbar */
+:root {
+    --navbar-height: 135px; /* Default navbar height */
+}
+@media screen and (max-width: 768px) {
+    :root {
+        --navbar-height: 108px; /* Smaller navbar for mobile */
     }
 }
 
