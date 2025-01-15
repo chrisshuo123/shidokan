@@ -1,4 +1,12 @@
 /* Adjust dropdown for submenu */
+header {
+    position:fixed;
+    top: 0;
+    left: 0;
+    width: 100%; /* Stretch navbar across the width */
+    z-index: 100;
+}
+
 .dropdown-submenu {
     position: relative;
 }
@@ -13,4 +21,42 @@
 /* Adjust dropdown arrow alignment */
 .dropdown-toggle::after {
     margin-left: 0.5rem;
+}
+
+/* Ensure dropdowns work in burger mode */
+.navbar-collapse.show {
+    display: block !important;
+}
+
+.navbar .dropdown-menu {
+    display: none;
+}
+
+.navbar .dropdown.show > .dropdown-menu {
+    display: block;
+}
+
+/* Base Dropdown Menu Styling */
+.dropdown-menu {
+    display: none;
+}
+
+  /* Show Dropdown for Hover and Click */
+.dropdown.show > .dropdown-menu {
+    display: block;
+}
+
+  /* Adjust for Mobile Screens */
+.navbar-collapse.show {
+    display: block !important;
+}
+
+@media (max-width: 991.98px) {
+    .dropdown-menu {
+      position: static; /* Ensure proper positioning in mobile view */
+    }
+}
+
+.collapse:not(.show) {
+    display: none !important;
 }
