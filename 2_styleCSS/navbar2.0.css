@@ -90,8 +90,6 @@ header {
 }
 
 /* === 3 - ANIMATIONS === */
-
-
 /* CUSTOM ANIMATIONS FOR ALL MENUS */
 /* Animation for main menu dropdown */
 .navbar .dropdown-menu {
@@ -124,4 +122,57 @@ header {
         opacity: 1;
         transform: translateX(0);
     }
+}
+
+/* === DECORATIONS & COLORING === */
+/* Give color for the main background menu */
+.bg-custom {
+    background-color: purple;
+}
+.bg-custom div ul li a {
+    color: rgb(232, 227, 227);
+}
+
+/* Give BG Color for the sub-menu */
+.dropdown-menu {
+    background-color: rgb(100, 2, 100);
+}
+.dropdown-menu li a:hover {
+    color: #fff;
+    background-color: rgb(77, 1, 77);
+}
+/* Give BG Color for the sub-sub-menu */
+.dropdown-submenu .dropdown-menu {
+    background-color: rgb(75, 2, 75);
+}
+.dropdown-submenu .dropdown-menu li a:hover {
+    color: #fff;
+    background-color: rgb(56, 3, 56);
+}
+
+/* Make the Selected Navbar appear more Active (override from the scss) */
+.show > .nav-link,
+.nav-link.active {
+    color: white !important;
+    font-style: bold !important;
+}
+
+/* Give colors for the navbar toggler icon button */
+/* Style the navbar toggler icon */
+.navbar-toggler {
+    border-color: #ffffff; /* White border for the toggler button */
+}
+
+.navbar-toggler .navbar-toggler-icon {
+    background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3E%3Cpath stroke='rgba(255, 255, 255, 1)' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E");
+    /* This SVG generates the white stripes for the toggler icon */
+}
+
+/* Add a soft shadow effect on hover for the navbar toggler */
+.navbar-toggler {
+    transition: box-shadow 0.3s ease-in-out; /* Smooth transition for shadow */
+}
+
+.navbar-toggler:hover {
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5); /* Soft, subtle shadow */
 }

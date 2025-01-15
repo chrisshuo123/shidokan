@@ -94,3 +94,60 @@ document.querySelector('.navbar-toggler').addEventListener('click', function() {
     this.setAttribute('aria-expanded', isExpanded);
     console.log('Navbar toggled. Current state:', isExpanded);
 });
+
+// === ANIMATIONS ===
+
+// Handle click for mobile screens
+document.querySelectorAll(".navbar .dropdown > a").forEach(function (dropdownLink) {
+    dropdownLink.addEventListener('click', function (e) {
+        if (isNavbarCollapsed()) { // Only handle clicks in toggle mode (for mobile screen outmost)
+            e.preventDefault(); // Prevent default link behavior
+
+            const parentDropdown = this.parentElement;
+            const dropdownMenu = parentDropdown.querySelector(".dropdown-menu");
+            const isVisible = dropdownMenu.classList.contains("show");
+
+            //toggleDropdownAnimation(parentDropdown, isVisible);
+
+            // Close all open dropdowns except the current one
+            document.querySelectorAll(".navbar .dropdown .dropdown-menu.show").forEach(function (openMenu) {
+                if (openMenu !== dropdownMenu) {
+                    openMenu.classList.remove("show");
+                    openMenu.style.display = "none";
+                }
+            });
+
+            // Toggle the clicked dropdown menu
+            if(isVisible) {
+                // If submenu is already visible, hide it
+                dropdownMenu.classList.remove("show");
+                dropdownMenu.style.display = "none"; // Hide with inline styles
+            } else {
+                // show the clicked sub-menu
+                dropdownMenu.classList.add("show");
+                dropdownMenu.style.display = "block";
+
+                // Close any other open submenus
+                document.querySelectorAll(".navbar .dropdown .dropdown-menu.show").forEach(function (openMenu) {
+                    if (openMenu !== dropdownMenu) {
+                        openMenu.classList.remove("show");
+                        openMenu.style.display = "none";
+                    }
+                });
+            }
+
+            // Close other open dropdowns
+            document.querySelectorAll(".navbar .dropdown.show").forEach(function (openDropdown) {
+                if (openDropdown !== parentDropdown) {
+                    openDropdown.classList.remove("show");
+                    toggleDropdownAnimation(openDropdown, false);
+                }
+            });
+        }
+    });
+});
+
+// Function to check if the navbar is in toggle mode
+function isNavbarCollapsed() {
+    return window.innerWidth < 992; // Adjust breakpoint as per your design
+}
