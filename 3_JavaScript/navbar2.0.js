@@ -45,11 +45,15 @@ document.querySelectorAll(".navbar .dropdown").forEach(function (dropdown) {
     });
 });
 
-// Handle click for mobile screens
+// FIX THE TOGGLE BEHAVIOUR
+// Recently there's a problem when disabling the toggle navbar, when implementing in this shidokan web
+
+// Handle click events for dropdown links in mobile view
 document.querySelectorAll(".navbar .dropdown > a").forEach(function (dropdownLink) {
     dropdownLink.addEventListener('click', function (e) {
         if (isNavbarCollapsed()) { // Only handle clicks for mobile screens
             e.preventDefault(); // Prevent default link behavior
+            
             const parentDropdown = this.parentElement;
 
             // Close any open dropdowns except the current one
@@ -60,42 +64,33 @@ document.querySelectorAll(".navbar .dropdown > a").forEach(function (dropdownLin
                 }
             });
 
-            // Toggle the dropdown menu
+            // Toggle the current dropdown menu
             parentDropdown.classList.toggle("show");
             parentDropdown.querySelector(".dropdown-menu").classList.toggle("show");
         }
     });
 });
 
-// Fix toggle behavior
+// Handle navbar toggle button click
 document.querySelector(".navbar-toggler").addEventListener('click', function() {
-    const navbarCollapse = document.querySelector("#navbarNav");
-    const toggleButton = this;
+    const navbarCollapse = document.querySelector('#navbarNav');
+    const isExpanded = navbarCollapse.classList.contains('show');
 
-    if(navbarCollapse) {
-        const isExpanded = navbarCollapse.classList.contains('show');
-        console.log('Navbar toggle is clicked. Is expanded:', isExpanded);
-
-        if(isExpanded) {
-            navbarCollapse.classList.remove('show'); // Remove the 'show' class to hide
-            toggleButton.setAttribute('aria-expanded', false);
-            toggleButton.classList.remove('collapsed'); // Optional: Remove 'collapsed' state from the button
-        } else {
-            navbarCollapse.classList.add('show'); // Add the 'show' class to show
-            toggleButton.setAttribute('aria-expanded', true);
-            toggleButton.classList.add('collapsed'); // Optional: Add 'collapsed' state to the button
-        }
-    } else {
-        console.error('Navbar collapse element not found.');
-    }
+    // Update aria-expanded attribute
+    this.setAttribute('aria-expanded', isExpanded);
+    console.log('Navbar toggled. Current state:', isExpanded);
 });
 
+// Initialize Bootstrap's collapse component with custom toggle behavior
 const myCollapse = new bootstrap.Collapse(document.querySelector('#navbarNav'), {
-    toggle: false,
+    toggle: false, // Prevent automatic toggling by Bootstrap
 });
 
+// To make the Toggle Functions (Eventhough no dropdown toggle animation)
 document.querySelector('.navbar-toggler').addEventListener('click', function() {
-    myCollapse.toggle();
-});
+    const navbarCollapse = document.querySelector('#navbarNav');
+    const isExpanded = navbarCollapse.classList.toggle('show');
 
-// Giving click function when the screen width is below <992px (when the navbar shows toggle mode)
+    this.setAttribute('aria-expanded', isExpanded);
+    console.log('Navbar toggled. Current state:', isExpanded);
+});
