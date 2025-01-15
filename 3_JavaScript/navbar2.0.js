@@ -69,17 +69,33 @@ document.querySelectorAll(".navbar .dropdown > a").forEach(function (dropdownLin
 
 // Fix toggle behavior
 document.querySelector(".navbar-toggler").addEventListener('click', function() {
-    const navbarCollapse = document.querySelector(".navbar-collapse");
+    const navbarCollapse = document.querySelector("#navbarNav");
+    const toggleButton = this;
 
-    if(navbarCollapse.classList.contains('show')) {
-        // If the navbar is open, hide it
-        navbarCollapse.classList.remove('show');
-        this.setAttribute('aria-expanded', 'false'); // Update ARIA Attribute
+    if(navbarCollapse) {
+        const isExpanded = navbarCollapse.classList.contains('show');
+        console.log('Navbar toggle is clicked. Is expanded:', isExpanded);
+
+        if(isExpanded) {
+            navbarCollapse.classList.remove('show'); // Remove the 'show' class to hide
+            toggleButton.setAttribute('aria-expanded', false);
+            toggleButton.classList.remove('collapsed'); // Optional: Remove 'collapsed' state from the button
+        } else {
+            navbarCollapse.classList.add('show'); // Add the 'show' class to show
+            toggleButton.setAttribute('aria-expanded', true);
+            toggleButton.classList.add('collapsed'); // Optional: Add 'collapsed' state to the button
+        }
     } else {
-        // If the navbar is hidden, show it
-        navbarCollapse.classList.show('show');
-        this.setAttribute('aria-expanded', 'true'); // Update ARIA Attribute
+        console.error('Navbar collapse element not found.');
     }
+});
+
+const myCollapse = new bootstrap.Collapse(document.querySelector('#navbarNav'), {
+    toggle: false,
+});
+
+document.querySelector('.navbar-toggler').addEventListener('click', function() {
+    myCollapse.toggle();
 });
 
 // Giving click function when the screen width is below <992px (when the navbar shows toggle mode)
