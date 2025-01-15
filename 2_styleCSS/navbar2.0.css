@@ -1,3 +1,4 @@
+/* === 1 - DROPDOWN === */
 /* Adjust dropdown for submenu */
 header {
     position:fixed;
@@ -62,4 +63,65 @@ header {
 }*/
 .collapse {
     display: none !important;
+}
+
+/* === 2 - SCROLLBAR === */
+/* Give scrollbar when height of navbar (in toggle mode) exceeds 600px height */
+/* Apply scrollbar styling for the navbar menu */
+@media screen and (max-width: 992px) {
+    .navbar-collapse {
+        max-height: 300px; /* Maximum height before scrollbar appears */
+        overflow-y: auto;  /* Enable vertical scrolling */
+    }
+    
+    /* Optional: Add custom scrollbar styles (for WebKit browsers) */
+    .navbar-collapse::-webkit-scrollbar {
+        width: 8px;
+    }
+    
+    .navbar-collapse::-webkit-scrollbar-thumb {
+        background-color: #ccc; /* Scrollbar color */
+        border-radius: 4px;     /* Rounded edges */
+    }
+    
+    .navbar-collapse::-webkit-scrollbar-thumb:hover {
+        background-color: #999; /* Darker on hover */
+    }
+}
+
+/* === 3 - ANIMATIONS === */
+
+
+/* CUSTOM ANIMATIONS FOR ALL MENUS */
+/* Animation for main menu dropdown */
+.navbar .dropdown-menu {
+    animation: fadeInDown 0.3s ease-in-out;
+}
+
+/* Animation for sub-menu dropdown */
+.navbar .dropdown-menu .dropdown-menu {
+    animation: fadeInLeft 0.3s ease-in-out;
+}
+
+/* Keyframes for fade and slide animations */
+@keyframes fadeInDown {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeInLeft {
+    from {
+        opacity: 0;
+        transform: translateX(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
 }
