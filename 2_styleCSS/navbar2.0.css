@@ -150,12 +150,20 @@ header {
     background-color: rgb(56, 3, 56);
 }
 
-/* Make the Selected Navbar appear more Active (override from the scss) */
+/* Make the "Selected" Navbar appear more Active (override from the scss) */
+/* For the navbar tagged ".active" */
 .show > .nav-link,
 .nav-link.active {
     color: white !important;
     font-style: bold !important;
 }
+/* And also its sub-menu */
+.dropdown-item.active, .dropdown-item:active {
+    background-color: rgb(55, 1, 55);
+}
+/* + the Sub-sub-menu (blackbelt list) */
+/* (Belum ditemukan) */
+
 
 /* Give colors for the navbar toggler icon button */
 /* Style the navbar toggler icon */
