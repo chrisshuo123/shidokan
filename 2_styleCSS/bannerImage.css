@@ -66,6 +66,13 @@
         url('../1_main_page/img/1-banner/Banner_layoutDesktop/1.4.2.1._Banner_FormPengisianInstruktur.jpg') center / contain no-repeat;
 }
 
+/* 6_Sponsors */
+.banner_sponsors {
+    background:
+        url('../1_main_page/img/1-banner/Banner_layoutDesktop/1.5._Banner_OurSponsors.jpg') center / cover,
+        url('../1_main_page/img/1-banner/Banner_layoutDesktop/1.5._Banner_OurSponsors.jpg') center / contain no-repeat;
+}
+
 /* Banner for Mobile View */
 @media screen and (max-width: 600px) {
     /* 2_News */
@@ -110,5 +117,16 @@
     }
     .banner_formPengisian {
         background-image: url('../1_main_page/img/1-banner/Banner_layoutMobile/1.4.2.1._Banner_FormPengisianInstruktur.jpg');
+    }
+
+    /* 6_Sponsors */
+    .banner_sponsors {
+        background-image: url('../1_main_page/img/1-banner/Banner_layoutMobile/1.5._Banner_OurSponsors.jpg');
+    }
+    .banner_ourPartner {
+        background-image: url('../1_main_page/img/1-banner/Banner_layoutMobile/2.5_OurPartner.jpg');
+    }
+    .banner_merchandise {
+        background-image: url('../1_main_page/img/1-banner/Banner_layoutMobile/1.5.1._Banner_OurPartner.jpg');
     }
 }
