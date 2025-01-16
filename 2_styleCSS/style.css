@@ -315,12 +315,12 @@ img {
     background-color: #000; /* Black, matching the image style */
 }
 
-.bannerimage_karateGuy {
+/*.bannerimage_karateGuy {
     background: 
         url('../1_main_page/img/1-banner/banner_baru.png') center / cover, 
         url('../1_main_page/img/1-banner/banner_baru.png') center / contain no-repeat;
     /*filter: brightness(50%); /* Optional: Match the foreground image's brightness */
-}
+/*}*/
 
 /* Desktop-specific image */
 /*.bannerimage_karateGuy {
@@ -382,9 +382,9 @@ img {
         width: 100%; /* or any percentage of the container */
         aspect-ratio: 1 / 0.7; /* Makes the element a perfect square */
     }
-    .bannerimage_karateGuy {
+    /*.bannerimage_karateGuy {
         background-image: url('../1_main_page/img/1-banner/banner_square.png'); /* Mobile-specific image */
-    }
+    /*}*/
 }
 /* Fine-tune margin-top to dynamically adjust with navbar */
 :root {

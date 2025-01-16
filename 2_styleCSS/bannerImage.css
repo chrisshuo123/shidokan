@@ -1,0 +1,30 @@
+/* Banner Berita News */
+.banner_beritaMain {
+    background:
+        url('../1_main_page/img/1-banner/Banner_layoutDesktop/1.1_Banner_News.jpg') center / cover,
+        url('../1_main_page/img/1-banner/Banner_layoutDesktop/1.1_Banner_News.jpg') center / contain no-repeat;
+}
+.banner_beritaInternasional {
+    background:
+        url('../1_main_page/img/1-banner/Banner_layoutDesktop/1.1.1_Banner_News_Internasional.jpg') center / cover,
+        url('../1_main_page/img/1-banner/Banner_layoutDesktop/1.1.1_Banner_News_Internasional.jpg') center / contain no-repeat;
+}
+.banner_beritaNasional {
+    background:
+        url('../1_main_page/img/1-banner/Banner_layoutDesktop/1.1.2_Banner_News_National.jpg') center / cover,
+        url('../1_main_page/img/1-banner/Banner_layoutDesktop/1.1.2_Banner_News_National.jpg') center / contain no-repeat;
+}
+
+/* Banner for Mobile View */
+@media screen and (max-width: 600px) {
+    /* Banner Berita News */
+    .banner_beritaMain {
+        background-image: url('../1_main_page/img/1-banner/Banner_layoutMobile/1.1_Banner_News.jpg'); /* Mobile-specific image */
+    }
+    .banner_beritaInternasional {
+        background-image: url('../1_main_page/img/1-banner/Banner_layoutMobile/1.1.1_Banner_News_Internasional.jpg'); /* Mobile-specific image */
+    }
+    .banner_beritaNasional {
+        background-image: url('../1_main_page/img/1-banner/Banner_layoutMobile/1.1.2_Banner_News_National.jpg'); /* Mobile-specific image */
+    }
+}
