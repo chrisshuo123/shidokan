@@ -586,7 +586,15 @@ img {
 /* 5 - Check HTML Structure for the Berita Carousel */
 /* Self check inside the id #newsCarousel */
 
-@media screen and (min-width:992px) and (max-width: 2000px) {
+/* General Style */
+.berita-scrollz {
+    overflow-y: auto; /* Ensure vertical scrolling */
+    overflow-x: hidden; /* Prevent horizontal scrolling */
+    max-height: 600px; /* Set a consistent maximum height */
+    margin-bottom: 2%; /* Optional spacing */
+}
+
+@media screen and (min-width:992px) {
     .berita-scrollz {
         margin-bottom: 2%;
         overflow: scroll;
