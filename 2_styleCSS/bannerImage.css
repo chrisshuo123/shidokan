@@ -1,4 +1,4 @@
-/* Banner Berita News */
+/* 2_News */
 .banner_beritaMain {
     background:
         url('../1_main_page/img/1-banner/Banner_layoutDesktop/1.1_Banner_News.jpg') center / cover,
@@ -15,9 +15,32 @@
         url('../1_main_page/img/1-banner/Banner_layoutDesktop/1.1.2_Banner_News_National.jpg') center / contain no-repeat;
 }
 
+/* 3_about-us */
+.banner_aboutUs {
+    background:
+        url('../1_main_page/img/1-banner/Banner_layoutDesktop/1.2_Banner_About_Us.jpg') center / cover,
+        url('../1_main_page/img/1-banner/Banner_layoutDesktop/1.2_Banner_About_Us.jpg') center / contain no-repeat;
+}
+.banner_sejarah {
+    background:
+        url('../1_main_page/img/1-banner/Banner_layoutDesktop/2.1_Sejarah_dan_Organisasi.jpg') center / cover,
+        url('../1_main_page/img/1-banner/Banner_layoutDesktop/2.1_Sejarah_dan_Organisasi.jpg') center / contain no-repeat;
+}
+.banner_profil {
+    background:
+        url('../1_main_page/img/1-banner/Banner_layoutDesktop/1.2.2_Banner_Profile.jpg') center / cover,
+        url('../1_main_page/img/1-banner/Banner_layoutDesktop/1.2.2_Banner_Profile.jpg') center / contain no-repeat;
+}
+.banner_blackbelts {
+    background:
+        url('../1_main_page/img/1-banner/Banner_layoutDesktop/2.1_Blackbelts.jpg') center / cover,
+        url('../1_main_page/img/1-banner/Banner_layoutDesktop/2.1_Blackbelts.jpg') center / contain no-repeat;
+}
+
+
 /* Banner for Mobile View */
 @media screen and (max-width: 600px) {
-    /* Banner Berita News */
+    /* 2_News */
     .banner_beritaMain {
         background-image: url('../1_main_page/img/1-banner/Banner_layoutMobile/1.1_Banner_News.jpg'); /* Mobile-specific image */
     }
@@ -26,5 +49,19 @@
     }
     .banner_beritaNasional {
         background-image: url('../1_main_page/img/1-banner/Banner_layoutMobile/1.1.2_Banner_News_National.jpg'); /* Mobile-specific image */
+    }
+
+    /* 3_about-us */
+    .banner_aboutUs {
+        background-image: url('../1_main_page/img/1-banner/Banner_layoutMobile/1.2_Banner_About_Us.jpg'); /* Mobile-specific image */
+    }
+    .banner_sejarah {
+        background-image: url('../1_main_page/img/1-banner/Banner_layoutMobile/2.1_Sejarah_dan_Organisasi.jpg');
+    }
+    .banner_profil {
+        background-image: url('../1_main_page/img/1-banner/Banner_layoutMobile/1.2.2_Banner_Profile.jpg');
+    }
+    .banner_blackbelts {
+        background-image: url('../1_main_page/img/1-banner/Banner_layoutMobile/2.1_Blackbelts.jpg');
     }
 }
