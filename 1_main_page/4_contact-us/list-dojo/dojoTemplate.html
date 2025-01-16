@@ -83,10 +83,58 @@
     </div>
     <!-- Isi Bio Dojo -->
     <div class="container">
+
+        <!-- Sekumpulan Foto Dojo -->
+        <div class="font-responsive" style="margin-top: 7%; margin-bottom: -9%;"><h2>Profil Shidokan [NamaDojo] (Jika Ada)</h2></div>
+        <div id="customCarousel" class="carousel slide" data-bs-ride="carousel">
+            <!-- Indicators -->
+            <div class="carousel-indicators">
+                <button type="button" data-bs-target="#customCarousel" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                <button type="button" data-bs-target="#customCarousel" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                <button type="button" data-bs-target="#customCarousel" data-bs-slide-to="2" aria-label="Slide 3"></button>
+            </div>
+        
+            <!-- Slides -->
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <div class="carousel-image carousel-karateguyimage"></div>
+                    <!--<img src="../img/1-banner/banner_baru.png" class="d-block w-100" alt="Slide 1">-->
+                    <div class="carousel-caption">
+                        <h3>Welcome to Slide 1</h3>
+                        <p>Discover the best moments captured in a single frame.</p>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <div class="carousel-image" style="background-image: url('../img/1-banner/banner-sample-2.jpg');"></div>
+                    <!--<img src="../img/1-banner/banner-sample-2.jpg" class="d-block w-100" alt="Slide 2">-->
+                    <div class="carousel-caption">
+                        <h3>Explore Slide 2</h3>
+                        <p>Uncover new perspectives and innovative ideas.</p>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <div class="carousel-image" style="background-image: url('../img/1-banner/banner-sample-1.jpg');"></div>
+                    <!--<img src="../img/1-banner/banner-sample-1.jpg" class="d-block w-100" alt="Slide 3">-->
+                    <div class="carousel-caption">
+                        <h3>Experience Slide 3</h3>
+                        <p>Take a step forward into a world of possibilities.</p>
+                    </div>
+                </div>
+            </div>
+        
+            <!-- Navigation -->
+            <button class="carousel-control-prev" type="button" data-bs-target="#customCarousel" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#customCarousel" data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Next</span>
+            </button>
+        </div>
+
         <!-- Profil Nama Dojo (Jika ada) -->
-        <div class="font-responsive">
-            <h2>Profil Shidokan [NamaDojo] (Jika Ada)</h2>
-            <p>[Image Formal Bareng Anggota]</p>
+        <div class="font-responsive" style="margin-top: 3%;">
             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quos vel ex modi, facere corrupti hic optio unde laboriosam nemo temporibus eaque facilis porro consequatur nostrum nihil, eius maxime voluptas beatae!</p>
         </div>
         <div class="bottomline"></div>
@@ -94,21 +142,24 @@
         <div class="profil-instruktur">
             <h2>Instructor's Profile</h2>
             <div class="row justify-content-md-center justify-content-center flex-picAndInfo">
-                <div class="col-lg-3 col-12 flex-picAndInfo-tag">
-                    <img src="../../img/2-instruktur-face/foto-ga-pakai/instruktur-foto-1.jpg" class="img-fluid">
+                <div class="col-lg-3 col-md-4 col-12 flex-picAndInfo-tag">
+                    <img src="../../img/2-instruktur-face/foto-ga-pakai/instruktur-foto-1.jpg">
                 </div>
-                <div class="col-lg-7 col-12 flex-instructorDetails flex-picAndInfo-tag">
+                <div class="col-lg-7 col-md-6 col-12 flex-instructorDetails">
                     <div class="instructor-tagFlex">
                         <h3>[Nama]</h3>
                     </div>
                     <div class="instructor-tagFlex">
-                        <div>
+                        <div class="instructor-p-adjust">
                             <p><b>Blackbelt Position:</b></p>
                             <p>[PosisiBlackbelt]</p>
                         </div>
                         <div>
                             <p><b>Expertise Areas:</b></p>
                             <p>[list beladiri seperti boxing, muaythai, dkk]</p>
+                        </div>
+                        <div class="d-grid gap-2 button-instructor" style="padding-bottom: 2%;">
+                            <button type="button" class="btn btn-primary">Biography & Expertise Details</button>
                         </div>
                     </div>
                 </div>
