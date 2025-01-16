@@ -37,6 +37,34 @@
         url('../1_main_page/img/1-banner/Banner_layoutDesktop/2.1_Blackbelts.jpg') center / contain no-repeat;
 }
 
+/* 4_contact-us & Dojo List */
+.banner_contactUs {
+    background:
+        url('../1_main_page/img/1-banner/Banner_layoutDesktop/1.3._Banner_ContactsAndDojoList.jpg') center / cover,
+        url('../1_main_page/img/1-banner/Banner_layoutDesktop/1.3._Banner_ContactsAndDojoList.jpg') center / contain no-repeat;
+}
+
+/* 5_voice-from-shinbucho */
+.banner_voiceFromShibucho {
+    background:
+        url('../1_main_page/img/1-banner/Banner_layoutDesktop/1.4._Banner_VoiceFromShinbucho.jpg') center / cover,
+        url('../1_main_page/img/1-banner/Banner_layoutDesktop/1.4._Banner_VoiceFromShinbucho.jpg') center / contain no-repeat;
+}
+.banner_tataTertibDojo {
+    background:
+        url('../1_main_page/img/1-banner/Banner_layoutDesktop/2.4_TataTertibDojo.jpg') center / cover,
+        url('../1_main_page/img/1-banner/Banner_layoutDesktop/2.4_TataTertibDojo.jpg') center / contain no-repeat;
+}
+.banner_joinUs {
+    background:
+        url('../1_main_page/img/1-banner/Banner_layoutDesktop/1.4.2._Banner_JoinUs.jpg') center / cover,
+        url('../1_main_page/img/1-banner/Banner_layoutDesktop/1.4.2._Banner_JoinUs.jpg') center / contain no-repeat;
+}
+.banner_formPengisian {
+    background:
+        url('../1_main_page/img/1-banner/Banner_layoutDesktop/1.4.2.1._Banner_FormPengisianInstruktur.jpg') center / cover,
+        url('../1_main_page/img/1-banner/Banner_layoutDesktop/1.4.2.1._Banner_FormPengisianInstruktur.jpg') center / contain no-repeat;
+}
 
 /* Banner for Mobile View */
 @media screen and (max-width: 600px) {
@@ -63,5 +91,24 @@
     }
     .banner_blackbelts {
         background-image: url('../1_main_page/img/1-banner/Banner_layoutMobile/2.1_Blackbelts.jpg');
+    }
+
+    /* 4_contact-us */
+    .banner_contactUs {
+        background-image: url('../1_main_page/img/1-banner/Banner_layoutMobile/1.3._Banner_ContactsAndDojoList.jpg');
+    }
+
+    /* 5_voice-from-shibucho */
+    .banner_voiceFromShibucho {
+        background-image: url('../1_main_page/img/1-banner/Banner_layoutMobile/1.4._Banner_VoiceFromShinbucho.jpg');
+    }
+    .banner_tataTertibDojo {
+        background-image: url('../1_main_page/img/1-banner/Banner_layoutMobile/2.4_TataTertibDojo.jpg');
+    }
+    .banner_joinUs {
+        background-image: url('../1_main_page/img/1-banner/Banner_layoutMobile/1.4.2._Banner_JoinUs.jpg');
+    }
+    .banner_formPengisian {
+        background-image: url('../1_main_page/img/1-banner/Banner_layoutMobile/1.4.2.1._Banner_FormPengisianInstruktur.jpg');
     }
 }
