@@ -16,9 +16,13 @@ const Navbar = () => {
         <header className="fixed-navbar">
             <nav className="navbar navbar-expand-lg bg-custom">
                 <div className="container-fluid">
-                    <a href="#" className="navbar-brand">
-                        <img src="../img/7-sprites/1-shidokan-logo/shidokan-indonesia.png" alt="Shidokan Indonesia Logo" style={{ width: '80px' }}/>
-                    </a>
+                    <NavLink to="/" className="navbar-brand">
+                        <img
+                            src="../img/7-sprites/1-shidokan-logo/shidokan-indonesia.png"
+                            alt="Shidokan Indonesia Logo"
+                            style={{ width: '80px' }}
+                        />
+                    </NavLink>
                     <button className="navbar-toggler" type="button" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation" style={{ backgroundColor: 'rgb(110, 4, 110)' }}>
                         <span className="navbar-toggler-icon"></span>
                     </button>
@@ -26,16 +30,50 @@ const Navbar = () => {
                     <div className="collapse navbar-collapse" id="navbarNav">
                         <ul className="navbar-nav">
                             <li className="nav-item">
-                            <a className="nav-link active" aria-current="page" href="#">Home</a>
+                                <NavLink
+                                    to="/"
+                                    className={({isActive}) =>
+                                        isActive ? 'nav-link active' : 'nav-link'
+                                    }
+                                >
+                                    Home
+                                </NavLink>
                             </li>
                             <li className="nav-item dropdown">
-                            <a className="nav-link dropdown-toggle" href="#" id="newsDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            <NavLink to="/" className="nav-link dropdown-toggle" id="newsDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                                 News
-                            </a>
+                            </NavLink>
                             <ul className="dropdown-menu" aria-labelledby="newsDropdown">
-                                <li><a className="dropdown-item active" href="../2_news/berita.html">News</a></li>
-                                <li><a className="dropdown-item" href="../2_news/nasional.html">&nbsp;National</a></li>
-                                <li><a className="dropdown-item" href="../2_news/internasional.html">&nbsp;International</a></li>
+                                <li>
+                                    <NavLink
+                                        to="../2_news/berita.html"
+                                        className= {({isActive}) =>
+                                            isActive ? 'dropdown-item active' : 'dropdown-item'
+                                        }
+                                    >
+                                        News
+                                    </NavLink>
+                                </li>
+                                <li>
+                                    <NavLink
+                                        to="../2_news/nasional.html"
+                                        className= {({isActive}) =>
+                                            isActive ? 'dropdown-item active' : 'dropdown-item'
+                                        }
+                                    >
+                                        &nbsp;National
+                                    </NavLink>
+                                </li>
+                                <li>
+                                    <NavLink
+                                        to="../2_news/internasional.html"
+                                        className= {({isActive}) =>
+                                            isActive ? 'dropdown-item active' : 'dropdown-item'
+                                        }
+                                    >
+                                        &nbsp;International
+                                    </NavLink>
+                                </li>
                             </ul>
                             </li>
                             <li className="nav-item dropdown">
