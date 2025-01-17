@@ -7,22 +7,19 @@
  * 3. Placed Comments Outside JSX Tags: Comments like {/* This is a comment inside JSX */ //} should be placed outside the JSX tags themselves.
 /**/
 
-// JSX code for Navbar
+// React and Routing Setup
+import React from 'react';
+import { BrowserRouter as Router, Routes, Route, NavLink } from 'react-router-dom';
 
 const Navbar = () => {
     return (
-        <header className="headerStyle fixed-navbar">
-            <a href="#" className="logo">
-                <img 
-                    src="../img/7-sprites/1-shidokan-logo/shidokan-indonesia.png"
-                    style={{width:80}}
-                />
-            </a>
-            <div className="menuToggle"></div>
-            <nav className="navbarActive"> {/*Class navbarActive hanya untuk memanggil li yang .active -->*/}
-                <ul className="adjust-navbar">
+        <header class="headerStyle fixed-navbar">
+            <a href="#" class="logo"><img src="../img/7-sprites/1-shidokan-logo/shidokan-indonesia.png" style="width:80px;"></a>
+            <div class="menuToggle"></div>
+            <nav class="navbarActive"> <!-- Class navbarActive hanya untuk memanggil li yang .active -->
+                <ul class="adjust-navbar">
                     <li><a href="../1_home/index.html" >Home</a></li>
-                    <li><a href="#" class="active">News<b className="arrow">&nbsp;▼</b></a>
+                    <li><a href="#" class="active">News<b class="arrow">&nbsp;▼</b></a>
                         <ul>
                             <li><a href="../2_news/nasional.html">National</a></li>
                             <li><a href="../2_news/internasional.html">International</a></li>
@@ -43,7 +40,7 @@ const Navbar = () => {
                             </li>
                         </ul>
                     </li>
-                    <li className="scrollNavbar"><a href="../4_contact-us/contactAndDojoList.html">Contact & Dojo List<b>&nbsp;▼</b></a>
+                    <li class="scrollNavbar"><a href="../4_contact-us/contactAndDojoList.html">Contact & Dojo List<b>&nbsp;▼</b></a>
                         <ul>
                             <li><a href="#">DojoA</a></li>
                             <li><a href="#">DojoB</a></li>
@@ -81,6 +78,33 @@ const Navbar = () => {
     );
 };
 
-// Render the navbar to the DOM
-const rootElement = document.getElementById('root');
-ReactDOM.render(<Navbar />, rootElement);
+/*const Navbar = () => (
+    
+);*/
+
+{/* This is a comment inside JSX */}
+{/* Export Navbar if you want to use it in other files */}
+{/* export default Navbar; */}
+
+{/* Render Navbar to the div with id 'navbar' */}
+{/* If only Navbar called, without Router */}
+{/* ReactDOM.render(<Navbar />, document.getElementById('navbar')); */}
+
+const Home = () => <div>Welcome to the home page</div>;
+const News = () => <div>News Page</div>;
+const NationalNews = () => <div>National News Page</div>;
+const InternationalNews = () => <div>International News Page</div>;
+
+const App = () => {
+    <Router>
+        <Navbar />
+        <Routes>
+            <Route path="/" element={<Home />} />
+            <Route path="../1_main_page/2_news/berita.html" element={<News />} />
+            <Route path="../1_main_page/2_news/nasional.html" element={<NationalNews />} />
+            <Route path="../1_main_page/2_news/internasional.html" element={<InternationalNews />} />
+        </Routes>
+    </Router>
+}
+
+export default App;
