@@ -1,3 +1,5 @@
+/* ===== 1 - HEADER BANNER ===== */
+
 /* 2_News */
 .banner_beritaMain {
     background:
@@ -128,5 +130,20 @@
     }
     .banner_merchandise {
         background-image: url('../1_main_page/img/1-banner/Banner_layoutMobile/1.5.1._Banner_OurPartner.jpg');
+    }
+}
+
+/* ===== 2 - DOJO SUB-BANNER ===== */
+/* Menampilkan foto - Foto per dojo */
+.foto-dojoAmpel {
+    background:
+        url('../1_main_page/img/8-carousel-dojo/1-wzki-ampel/dojoAmpel1_landscape.jpg') center / cover,
+        url('../1_main_page/img/8-carousel-dojo/1-wzki-ampel/dojoAmpel1_landscape.jpg') center / contain no-repeat;
+}
+
+/* Banner for Mobile View */
+@media screen and (max-width: 768px) {
+    .foto-dojoAmpel {
+        background-image: url('../1_main_page/img/8-carousel-dojo/1-wzki-ampel/dojoAmpel1_portrait2.jpg');
     }
 }
