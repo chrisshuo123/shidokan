@@ -104,6 +104,14 @@ header {
     }
 }
 
+/* Styles for class .dropdown-submenu-menu */
+/*.dropdown-submenu-menu {
+    margin-left: 15px; /* Indent for distinction */
+    /*padding: 0;
+    list-style: none;
+    background-color: #f8f9fa;
+    border: 1px solid #ddd;
+}*/
 
 /* === 2 - SCROLLBAR === */
 /* Give scrollbar when height of navbar (in toggle mode) exceeds 600px height */
