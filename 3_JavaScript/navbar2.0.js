@@ -129,21 +129,70 @@ document.querySelectorAll(".navbar .dropdown > a").forEach(function (dropdownLin
 
             // Toggle the dropdown menu
             const dropdownMenu = parentDropdown.querySelector(".dropdown-menu");
-            const isOpen = dropdownMenu.classList.contains("show");
+            //const isOpen = dropdownMenu.classList.contains("show");
 
             // Close any open dropdowns except the current one
-            document.querySelectorAll(".navbar .dropdown.show").forEach(function (openDropdown) {
+            /*document.querySelectorAll(".navbar .dropdown.show").forEach(function (openDropdown) {
                 if (openDropdown !== parentDropdown) {
                     openDropdown.classList.remove("show");
                     openDropdown.querySelector(".dropdown-menu").classList.remove("show");
                 }
-            });
+            });*/
+
+            // Close the previous dropdowns by clicking the same previous dropdown (giving hide dropdown)
+            if(parentDropdown.classList.contains("show")) {
+                // If the current dropdown is open, close it
+                parentDropdown.classList.remove("show");
+                dropdownMenu.classList.remove("show");
+            } else {
+                // Close any other open dropdowns
+                document.querySelectorAll(".navbar .dropdown.show").forEach(function (openDropdown) {
+                    openDropdown.classList.remove("show");
+                    openDropdown.querySelector(".dropdown-menu").classList.remove("show");
+                });
+            }
 
             // Toggle the current dropdown menu
             dropdownMenu.classList.toggle("show", !isOpen);
             parentDropdown.classList.toggle("show", !isOpen);
         }
     });
+});
+
+// Handle click for sub-sub-menus in mobile view
+document.querySelectorAll(".dropdown-submenu > a").forEach(function (submenuLink) {
+    submenuLink.addEventListener("click", function (e) {
+        if (window.innerWidth <= 900) { // Mobile view
+            e.preventDefault(); // Prevent default link behavior
+            const parentSubmenu = this.parentElement;
+            const submenuMenu = parentSubmenu.querySelector(".dropdown-menu");
+
+            if (parentSubmenu.classList.contains("show")) {
+                // Close the current sub-sub-menu
+                parentSubmenu.classList.remove("show");
+                submenuMenu.classList.remove("show");
+            } else {
+                // Close other open sub-sub-menus
+                document.querySelectorAll(".dropdown-submenu.show").forEach(function (openSubmenu) {
+                    openSubmenu.classList.remove("show");
+                    openSubmenu.querySelector(".dropdown-menu").classList.remove("show");
+                });
+
+                // Open the clicked sub-sub-menu
+                parentSubmenu.classList.add("show");
+                submenuMenu.classList.add("show");
+            }
+        }
+    });
+});
+
+// Automatically close dropdowns when clicking outside the navbar (optional but recommended)
+document.addEventListener("click", function (e) {
+    const isClickInsideNavbar = e.target.closest(".navbar");
+
+    if (!isClickInsideNavbar && window.innerWidth <= 900) {
+        resetDropdowns();
+    }
 });
 
 // Handle hover for sub-sub-menus in desktop view
@@ -155,6 +204,22 @@ document.querySelectorAll(".dropdown-submenu").forEach(function (submenu) {
     submenu.addEventListener("mouseout", function () {
         this.classList.remove("show");
         this.querySelector(".dropdown-menu").classList.remove("show");
+    });
+});
+
+// Handle hover for main menu items in desktop view
+document.querySelectorAll(".navbar .dropdown").forEach(function (dropdown) {
+    dropdown.addEventListener("mouseover", function () {
+        if (window.innerWidth > 900) {
+            this.classList.add("show");
+            this.querySelector(".dropdown-menu").classList.add("show");
+        }
+    });
+    dropdown.addEventListener("mouseout", function () {
+        if (window.innerWidth > 900) {
+            this.classList.remove("show");
+            this.querySelector(".dropdown-menu").classList.remove("show");
+        }
     });
 });
 
