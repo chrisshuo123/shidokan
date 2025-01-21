@@ -45,8 +45,8 @@ document.querySelectorAll(".navbar .dropdown").forEach(function (dropdown) {
     });
 });
 
-// FIX THE TOGGLE BEHAVIOUR
-// Recently there's a problem when disabling the toggle navbar, when implementing in this shidokan web
+// === FIX THE TOGGLE BEHAVIOUR ===
+// == 1 - Recently there's a problem when disabling the toggle navbar, when implementing in this shidokan web ==
 
 // Handle click events for dropdown links in mobile view
 document.querySelectorAll(".navbar .dropdown > a").forEach(function (dropdownLink) {
@@ -95,10 +95,73 @@ document.querySelector('.navbar-toggler').addEventListener('click', function() {
     console.log('Navbar toggled. Current state:', isExpanded);
 });
 
+// == 2 - reset dropdown menus ==
+/* Outmostly when after clicking a main-menu dropdown in mobile view, then resize it to laptop/pc view
+ and then the dropdown of the sub-menu permanently stays there */
+
+// Function to reset dropdown menus
+function resetDropdowns() {
+    // Remove 'show' class from all dropdowns by creating const dropdownMenu inside func params
+    document.querySelectorAll(".navbar .dropdown-menu").forEach(function (dropdownMenu) {
+        dropdownMenu.classList.remove('show');
+    });
+
+    document.querySelectorAll(".navbar .dropdown").forEach(function (dropdown) {
+        dropdown.classList.remove('show');
+    });
+}
+
+// Add a resize event listener to handle viewport changes
+window.addEventListener("resize", function () {
+    if(window.innerWidth > 900) { // Adjust the width to match your breakpoint
+        resetDropdowns();
+    }
+});
+
+// Handle click for mobile screens needed (added in below this, on ==ANIMATIONS== Part #2)
+
+// Handle click for mobile screens (main and sub-sub-menus)
+document.querySelectorAll(".navbar .dropdown > a").forEach(function (dropdownLink) {
+    dropdownLink.addEventListener('click', function (e) {
+        if (window.innerWidth <= 900) { // Only handle clicks for mobile screens
+            e.preventDefault();
+            const parentDropdown = this.parentElement;
+
+            // Toggle the dropdown menu
+            const dropdownMenu = parentDropdown.querySelector(".dropdown-menu");
+            const isOpen = dropdownMenu.classList.contains("show");
+
+            // Close any open dropdowns except the current one
+            document.querySelectorAll(".navbar .dropdown.show").forEach(function (openDropdown) {
+                if (openDropdown !== parentDropdown) {
+                    openDropdown.classList.remove("show");
+                    openDropdown.querySelector(".dropdown-menu").classList.remove("show");
+                }
+            });
+
+            // Toggle the current dropdown menu
+            dropdownMenu.classList.toggle("show", !isOpen);
+            parentDropdown.classList.toggle("show", !isOpen);
+        }
+    });
+});
+
+// Handle hover for sub-sub-menus in desktop view
+document.querySelectorAll(".dropdown-submenu").forEach(function (submenu) {
+    submenu.addEventListener("mouseover", function () {
+        this.classList.add("show");
+        this.querySelector(".dropdown-menu").classList.add("show");
+    });
+    submenu.addEventListener("mouseout", function () {
+        this.classList.remove("show");
+        this.querySelector(".dropdown-menu").classList.remove("show");
+    });
+});
+
 // === ANIMATIONS ===
 
-// Handle click for mobile screens
-document.querySelectorAll(".navbar .dropdown > a").forEach(function (dropdownLink) {
+// Handle click for mobile screens #1
+/*document.querySelectorAll(".navbar .dropdown > a").forEach(function (dropdownLink) {
     dropdownLink.addEventListener('click', function (e) {
         if (isNavbarCollapsed()) { // Only handle clicks in toggle mode (for mobile screen outmost)
             e.preventDefault(); // Prevent default link behavior
@@ -145,7 +208,34 @@ document.querySelectorAll(".navbar .dropdown > a").forEach(function (dropdownLin
             });
         }
     });
+}); */
+
+// Handle click for mobile screens #2
+document.querySelectorAll(".navbar .dropdown > a").forEach(function (dropdownLink) {
+    dropdownLink.addEventListener('click', function (e) {
+        if (window.innerWidth <= 900) { // Only handle clicks for mobile screens
+            e.preventDefault();
+            const parentDropdown = this.parentElement;
+
+            // Toggle the dropdown menu
+            const dropdownMenu = parentDropdown.querySelector(".dropdown-menu");
+            const isOpen = dropdownMenu.classList.contains("show");
+
+            // Close any open dropdowns except the current one
+            document.querySelectorAll(".navbar .dropdown.show").forEach(function (openDropdown) {
+                if (openDropdown !== parentDropdown) {
+                    openDropdown.classList.remove("show");
+                    openDropdown.querySelector(".dropdown-menu").classList.remove("show");
+                }
+            });
+
+            // Toggle the current dropdown menu
+            dropdownMenu.classList.toggle("show", !isOpen);
+            parentDropdown.classList.toggle("show", !isOpen);
+        }
+    });
 });
+
 
 // Function to check if the navbar is in toggle mode
 function isNavbarCollapsed() {
