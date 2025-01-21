@@ -341,7 +341,7 @@ img {
     background-repeat: no-repeat; /* Avoid repeating the image */
     position: relative;
     overflow: hidden; /* Ensure no overflow */
-    margin-top: var(--navbar-height, 135px); /* Dynamic adjustment for sticky navbar */
+    margin-top: var(--navbar-height, 105px); /* Dynamic adjustment for sticky navbar */
     background-color: #000; /* Black, matching the image style */
 }
 
@@ -418,7 +418,7 @@ img {
 }
 /* Fine-tune margin-top to dynamically adjust with navbar */
 :root {
-    --navbar-height: 135px; /* Default navbar height */
+    --navbar-height: 105px; /* Default navbar height */
 }
 @media screen and (max-width: 768px) {
     :root {
@@ -429,7 +429,7 @@ img {
 /* Menyesuaikan Banner dengan  .header ini dengan tingginya Navbar */
 @media screen and (min-width:900px) and (max-width:1167px) {
     .banner {
-        margin-top:145px;
+        margin-top:105px;
     }
     .banner-content h1 {
         font-size: 2.8rem; /* Adjust as needed */
@@ -440,7 +440,7 @@ img {
 }
 @media screen and (min-width:768px) and (max-width:900px) {
     .banner {
-        margin-top:108px;
+        margin-top:105px;
     }
     .banner content h1 {
         font-size: 2.4rem; /* Adjust as needed */
