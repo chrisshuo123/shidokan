@@ -80,7 +80,7 @@ h1 {
     /* Khusus Carousel Dojo */
     .carousel-dojo {
         /*aspect-ratio: 4 / 5;*/
-        aspect-ratio: 5 / 5;
+        aspect-ratio: 3 / 3; /* Sblmnya adalah 5 / 5 */
     }
 }
 
