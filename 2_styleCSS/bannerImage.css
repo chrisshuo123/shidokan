@@ -135,7 +135,7 @@
 
 /* ===== 2 - DOJO SUB-BANNER ===== */
 /* Menampilkan foto - Foto per dojo */
-.foto-dojoAmpel {
+.foto-dojoAmpel1 {
     background:
         url('../1_main_page/img/8-carousel-dojo/1-wzki-ampel/dojoAmpel1_landscape.jpg') center / cover,
         url('../1_main_page/img/8-carousel-dojo/1-wzki-ampel/dojoAmpel1_landscape.jpg') center / contain no-repeat;
@@ -143,7 +143,7 @@
 
 /* Banner for Mobile View */
 @media screen and (max-width: 768px) {
-    .foto-dojoAmpel {
+    .foto-dojoAmpel1 {
         background-image: url('../1_main_page/img/8-carousel-dojo/1-wzki-ampel/dojoAmpel1_portrait.jpg');
     }
 }
