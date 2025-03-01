@@ -1,3 +1,5 @@
+/* ===== 1 - HEADER BANNER ===== */
+
 /* 2_News */
 .banner_beritaMain {
     background:
@@ -128,5 +130,50 @@
     }
     .banner_merchandise {
         background-image: url('../1_main_page/img/1-banner/Banner_layoutMobile/1.5.1._Banner_OurPartner.jpg');
+    }
+}
+
+/* ===== 2 - DOJO SUB-BANNER ===== */
+/* Menampilkan foto - Foto per dojo */
+.foto-dojoAmpel1 {
+    background:
+        url('../1_main_page/img/8-carousel-dojo/1-wzki-ampel/dojoAmpel1_landscape.jpg') center / cover,
+        url('../1_main_page/img/8-carousel-dojo/1-wzki-ampel/dojoAmpel1_landscape.jpg') center / contain no-repeat;
+} .foto-dojoAmpel2 {
+    background:
+        url('../1_main_page/img/8-carousel-dojo/1-wzki-ampel/dojoAmpel2_landscape.jpg') center / cover,
+        url('../1_main_page/img/8-carousel-dojo/1-wzki-ampel/dojoAmpel2_landscape.jpg') center / contain no-repeat;
+} .foto-dojoAmpel3 {
+    background:
+        url('../1_main_page/img/8-carousel-dojo/1-wzki-ampel/dojoAmpel3_landscape.jpg') center / cover,
+        url('../1_main_page/img/8-carousel-dojo/1-wzki-ampel/dojoAmpel3_landscape.jpg') center / contain no-repeat;
+} .foto-dojoAmpel4 {
+    background:
+        url('../1_main_page/img/8-carousel-dojo/1-wzki-ampel/dojoAmpel4_landscape.jpg') center / cover,
+        url('../1_main_page/img/8-carousel-dojo/1-wzki-ampel/dojoAmpel4_landscape.jpg') center / contain no-repeat;
+} .foto-dojoAmpel5 {
+    background:
+        url('../1_main_page/img/8-carousel-dojo/1-wzki-ampel/dojoAmpel5_landscape.jpg') center / cover,
+        url('../1_main_page/img/8-carousel-dojo/1-wzki-ampel/dojoAmpel5_landscape.jpg') center / contain no-repeat;
+} .foto-dojoAmpel6 {
+    background:
+        url('../1_main_page/img/8-carousel-dojo/1-wzki-ampel/dojoAmpel6_landscape.jpg') center / cover,
+        url('../1_main_page/img/8-carousel-dojo/1-wzki-ampel/dojoAmpel6_landscape.jpg') center / contain no-repeat;
+}
+
+/* Banner for Mobile View */
+@media screen and (max-width: 768px) {
+    .foto-dojoAmpel1 {
+        background-image: url('../1_main_page/img/8-carousel-dojo/1-wzki-ampel/dojoAmpel1_portrait.jpg');
+    } .foto-dojoAmpel2 {
+        background-image: url('../1_main_page/img/8-carousel-dojo/1-wzki-ampel/dojoAmpel2_portrait.jpg');
+    } .foto-dojoAmpel3 {
+        background-image: url('../1_main_page/img/8-carousel-dojo/1-wzki-ampel/dojoAmpel3_portrait.jpg');
+    } .foto-dojoAmpel4 {
+        background-image: url('../1_main_page/img/8-carousel-dojo/1-wzki-ampel/dojoAmpel4_portrait.jpg');
+    } .foto-dojoAmpel5 {
+        background-image: url('../1_main_page/img/8-carousel-dojo/1-wzki-ampel/dojoAmpel5_portrait.jpg');
+    } .foto-dojoAmpel6 {
+        background-image: url('../1_main_page/img/8-carousel-dojo/1-wzki-ampel/dojoAmpel6_portrait.jpg');
     }
 }
