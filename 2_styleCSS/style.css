@@ -1488,61 +1488,11 @@ tbody {
 
 /* Adjust Margin-bottom footer saat di 768px */
 
-@media (max-width:768px) {
-    .footer {
-        padding-bottom: 135%;
-    }
-}
 @media (max-width:724px) {
-    .footer {
-        padding-bottom: 180%;
-    }
     .footer-bawah {
         margin-top: 10%;
     }
 }
-@media (max-width:575px) {
-    .footer {
-        padding-bottom: 200%;
-    }
-}
-
-@media screen and (min-width:485px) and (max-width:551px) {
-    .footer {
-        padding-bottom: 230%;
-    }
-}
-@media screen and (min-width:439px) and (max-width:485px) {
-    .footer {
-        padding-bottom: 250%;
-    }
-}
-@media screen and (min-width:420px) and (max-width:439px) {
-    .footer {
-        padding-bottom: 315%;
-    }
-}
-@media screen and (min-width:360px) and (max-width:420px) {
-    .footer {
-        padding-bottom: 375%;
-    }
-}
-@media screen and (min-width:318px) and (max-width:360px) {
-    .footer {
-        padding-bottom: 435%;
-    }
-}
-@media screen and (min-width:289px) and (max-width:318px) {
-    .footer {
-        padding-bottom: 495%;
-    }
-}
-@media screen and (min-width:200px) and (max-width:289px) {
-    .footer {
-        padding-bottom: 555%;
-    }
-}
-
 
 /* Footer Atas */
 .footer .footer-atas .flex-nav-footer {
