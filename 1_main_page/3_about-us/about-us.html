@@ -3,73 +3,120 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <!-- 1 - Bootstrap CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
-    <link rel="stylesheet" type="text/css" href="../../2_styleCSS/navbarStyle.css">
+    <!-- 2 - Styling CSS Files -->
+    <link rel="stylesheet" type="text/css" href="../../2_styleCSS/navbar2.0.css">
     <link rel="stylesheet" type="text/css" href="../../2_styleCSS/style.css">
+    <link rel="stylesheet" type="text/css" href="../../2_styleCSS/bannerImage.css">
+    <!-- 3 - React, ReactDOM, Babel Standalone -->
     <title>About Us</title>
 </head>
 <body>
     <!-- Navbar -->
-    <header class="headerStyle fixed-navbar">
-        <a href="#" class="logo"><img src="../img/7-shidokan-logo/shidokan-indonesia.png" style="width:80px;"></a>
-        <div class="menuToggle"></div>
-        <nav class="navbarActive"> <!-- Class navbarActive hanya untuk memanggil li yang .active -->
-            <ul class="adjust-navbar">
-                <li><a href="../1_home/index.html">Home</a></li>
-                <li><a href="../2_news/berita.html">News<b class="arrow">&nbsp;▼</b></a>
-                    <ul>
-                        <li><a href="../2_news/nasional.html">National</a></li>
-                        <li><a href="../2_news/internasional.html">International</a></li>
+    <header class="fixed-navbar">
+        <nav class="navbar navbar-expand-lg bg-custom"> <!-- Recently .navbar-light .bg-light -->
+        <div class="container-fluid">
+            <a href="#" class="navbar-brand">
+                <img src="../img/7-sprites/1-shidokan-logo/shidokan-indonesia.png" alt="Shidokan Indonesia Logo" style="width: 80px;">
+            </a>
+            <button class="navbar-toggler" type="button" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation" style="background-color: rgb(110, 4, 110);">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                    <a class="nav-link" aria-current="page" href="../1_home/index.html">Home</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="newsDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                        News
+                    </a>
+                    <ul class="dropdown-menu" aria-labelledby="newsDropdown">
+                        <li><a class="dropdown-item" href="../2_news/berita.html">News</a></li>
+                        <li><a class="dropdown-item" href="../2_news/nasional.html">&nbsp;National</a></li>
+                        <li><a class="dropdown-item" href="../2_news/internasional.html">&nbsp;International</a></li>
                     </ul>
-                </li>
-                <li><a href="#" class="active">About Us<b>&nbsp;▼</b></a>
-                    <ul>
-                        <li><a href="../3_about-us/sejarah.html">History</a></li>
-                        <li><a href="../3_about-us/profile.html">Profile</a></li>
-                        <li><a href="../3_about-us/blackbelts/blackbelts.html">Blackbelts<b>&nbsp;+</b></a>
-                            <ul>
-                                <li><a href="../3_about-us/blackbelts/1_shodan.html">Shodan</a></li>
-                                <li><a href="../3_about-us/blackbelts/2_nidan.html">Nidan</a></li>
-                                <li><a href="../3_about-us/blackbelts/3_sandan.html">Sandan</a></li>
-                                <li><a href="../3_about-us/blackbelts/4_yondan.html">Yondan</a></li>
-                                <li><a href="../3_about-us/blackbelts/5_godan.html">Godan</a></li>
-                            </ul>
-                        </li>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle active" href="#" id="aboutDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            About Us
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="aboutDropdown">
+                            <li><a class="dropdown-item active" href="#">About Us</a></li>
+                            <li><a class="dropdown-item" href="../3_about-us/sejarah.html">&nbsp;History</a></li>
+                            <li><a class="dropdown-item" href="../3_about-us/profile1.html">&nbsp;Profile</a></li>
+                            <li class="dropdown-submenu">
+                                <a class="dropdown-item dropdown-toggle" href="#" id="blackbeltsmenu">&nbsp;Blackbelts</a>
+                                <ul class="dropdown-menu" aria-labelledby="blackbeltsmenu">
+                                    <li><a class="dropdown-item" href="#">&nbsp;Blackbelts</a></li>
+                                    <li><a class="dropdown-item" href="../3_about-us/blackbelts/1_shodan.html">&nbsp;&nbsp;Shodan</a></li>
+                                    <li><a class="dropdown-item" href="../3_about-us/blackbelts/2_nidan.html">&nbsp;&nbsp;Nidan</a></li>
+                                    <li><a class="dropdown-item" href="../3_about-us/blackbelts/3_sandan.html">&nbsp;&nbsp;Sandan</a></li>
+                                    <li><a class="dropdown-item" href="../3_about-us/blackbelts/4_yondan.html">&nbsp;&nbsp;Yondan</a></li>
+                                    <li><a class="dropdown-item" href="../3_about-us/blackbelts/5_godan.html">&nbsp;&nbsp;Godan</a></li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="contactDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                        Contact & Dojo List
+                    </a>
+                    <ul class="dropdown-menu" aria-labelledby="contactDropdown" style="max-height: 200px; overflow-y: auto; overflow-x: hidden;">
+                        <li><a class="dropdown-item" href="../4_contact-us/contactAndDojoList.html">Contacts & Dojo List</a></li>
+                        <li><a class="dropdown-item" href="#">&nbsp;DojoA</a></li>
+                        <li><a class="dropdown-item" href="#">&nbsp;DojoB</a></li>
+                        <li><a class="dropdown-item" href="#">&nbsp;DojoC</a></li>
+                        <li><a class="dropdown-item" href="#">&nbsp;DojoD</a></li>
+                        <li><a class="dropdown-item" href="#">&nbsp;DojoE</a></li>
+                        <li><a class="dropdown-item" href="#">&nbsp;DojoF</a></li>
+                        <li><a class="dropdown-item" href="#">&nbsp;DojoG</a></li>
+                        <li><a class="dropdown-item" href="#">&nbsp;DojoH</a></li>
+                        <li><a class="dropdown-item" href="#">&nbsp;DojoI</a></li>
+                        <li><a class="dropdown-item" href="#">&nbsp;DojoJ</a></li>
+                        <li><a class="dropdown-item" href="#">&nbsp;DojoK</a></li>
+                        <li><a class="dropdown-item" href="#">&nbsp;DojoL</a></li>
+                        <li><a class="dropdown-item" href="#">&nbsp;DojoM</a></li>
+                        <li><a class="dropdown-item" href="#">&nbsp;DojoN</a></li>
+                        <li><a class="dropdown-item" href="#">&nbsp;DojoO</a></li>
+                        <li><a class="dropdown-item" href="#">&nbsp;DojoP</a></li>
+                        <li><a class="dropdown-item" href="#">&nbsp;DojoQ</a></li>
+                        <li><a class="dropdown-item" href="#">&nbsp;DojoR</a></li>
+                        <li><a class="dropdown-item" href="#">&nbsp;DojoS</a></li>
+                        <li><a class="dropdown-item" href="#">&nbsp;DojoT</a></li>
+                        <li><a class="dropdown-item" href="#">&nbsp;DojoU</a></li>
+                        <!-- Add more Dojos as needed -->
                     </ul>
-                </li>
-                <li class="scrollNavbar"><a href="../4_contact-us/contactAndDojoList.html">Contact & Dojo List<b>&nbsp;▼</b></a>
-                    <ul>
-                        <li><a href="#">DojoA</a></li>
-                        <li><a href="#">DojoB</a></li>
-                        <li><a href="#">DojoC</a></li>
-                        <li><a href="#">DojoD</a></li>
-                        <li><a href="#">DojoE</a></li>
-                        <li><a href="#">DojoE</a></li>
-                        <li><a href="#">DojoE</a></li>
-                        <li><a href="#">DojoE</a></li>
-                        <li><a href="#">DojoE</a></li>
-                        <li><a href="#">DojoE</a></li>
+                    </li>
+                    <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="shibuchoDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                        Voice from Shibucho
+                    </a>
+                    <ul class="dropdown-menu" aria-labelledby="shibuchoDropdown">
+                        <li><a class="dropdown-item" href="../5_voice-from-shibucho/voiceFromShibucho.html">Voice from Shibucho</a></li>
+                        <li><a class="dropdown-item" href="../5_voice-from-shibucho/tataTertibDojo.html">&nbsp;Tata Tertib Dojo</a></li>
+                        <li><a class="dropdown-item" href="../5_voice-from-shibucho/joinUs.html">&nbsp;Join Us!</a></li>
                     </ul>
-                </li>
-                <li><a href="../5_voice-from-shibucho/voiceFromShibucho.html">Voice from Shibucho<b>&nbsp;▼</b></a>
-                    <ul>
-                        <li><a href="../5_voice-from-shibucho/tataTertibDojo.html">Tata Tertib Dojo</a></li>
-                        <li><a href="../5_voice-from-shibucho/joinUs.html">Join Us!</a></li>
+                    </li>
+                    <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="sponsorsDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                        Our Sponsors
+                    </a>
+                    <ul class="dropdown-menu" aria-labelledby="sponsorsDropdown">
+                        <li><a class="dropdown-item" href="../6_sponsors/sponsors.html">Our Sponsors</a></li>
+                        <li><a class="dropdown-item" href="../6_sponsors/our_partner.html">&nbsp;Our Partner</a></li>
+                        <li><a class="dropdown-item" href="../6_sponsors/merchandise.html">&nbsp;Merchandise</a></li>
                     </ul>
-                </li>
-                <li><a href="../6_sponsors/sponsors.html">Our Sponsors<b>&nbsp;▼</b></a>
-                    <ul>
-                        <li><a href="../6_sponsors/our_partner.html">Our Partner</a></li>
-                        <li><a href="../6_sponsors/merchandise.html">Merchandise</a></li>
-                    </ul>
-                </li>
-            </ul>
+                    </li>
+                </ul>
+            </div>
+        </div>
         </nav>
     </header>
     <!-- Header Title & Sub -->
-    <div class="banner">
-        <img src="../img/3-news/shidokan-news-sample-1.jpg">
-        <!-- style="max-width:100%; height: auto;" -->
+    <div class="banner bannerimage banner_aboutUs">
         <div class="banner-content">
             <h1>About Us</h1>
             <p>Seputar kisah perjalanan visi, dan dedikasi yang menginspirasi langkah
@@ -86,19 +133,19 @@
             <h1>About Us</h1>
             <div class="row justify-content-md-center justify-content-center text-center" style="margin-left:1.5%;">
                 <div class="catalog-btn aboutUs-dataLink col-sm-4 col-5" data-link="../3_about-us/sejarah.html">
-                    <img src="../img/3-news/shidokan-news-sample-1.jpg" class="img-fluid">
+                    <img src="../img/4-news/shidokan-news-sample-1.jpg" class="img-fluid">
                     <p>Sejarah & Organisasi</p>
                 </div>
-                <div class="catalog-btn aboutUs-dataLink col-sm-4 col-5" data-link="../3_about-us/profile.html">
-                    <img src="../img/3-news/shidokan-news-sample-2.jpg" class="img-fluid">
+                <div class="catalog-btn aboutUs-dataLink col-sm-4 col-5" data-link="../3_about-us/profile1.html">
+                    <img src="../img/4-news/shidokan-news-sample-2.jpg" class="img-fluid">
                     <p>Profil</p>
                 </div>
                 <div class="catalog-btn aboutUs-dataLink col-sm-4 col-5" data-link="../6_sponsors/sponsors.html">
-                    <img src="../img/6-merchandise/uc1000_merchandise.png" class="img-fluid">
+                    <img src="../img/3-katalog/1-fotoDojo/dojo-image.jpg" class="img-fluid">
                     <p>Sponsor Kami</p>
                 </div>
                 <div class="catalog-btn aboutUs-dataLink col-sm-4 col-5" data-link="../3_about-us/blackbelts/blackbelts.html">
-                    <img src="../img/8-blackbelt-list/blackbelt_img.png" class="img-fluid">
+                    <img src="../img/3-katalog/2-blackbelt-list/blackbelt_img.png" class="img-fluid">
                     <p>Blackbelts</p>
                 </div>
             </div>
@@ -113,7 +160,7 @@
                 <ul class="footer-container">
                     <!-- First Logo -->
                     <li class="footer-item footer-logo">
-                        <img src="../img/7-shidokan-logo/shidokan-internasional.png" alt="Logo 1">
+                        <img src="../img/7-sprites/1-shidokan-logo/shidokan-internasional.png" alt="Logo 1">
                     </li>
                     <!-- Title and Description -->
                     <li class="footer-item footer-text">
@@ -122,7 +169,7 @@
                     </li>
                     <!-- Second Logo -->
                     <li class="footer-item footer-logo">
-                        <img src="../img/7-shidokan-logo/shidokan-indonesia.png" alt="Logo 2">
+                        <img src="../img/7-sprites/1-shidokan-logo/shidokan-indonesia.png" alt="Logo 2">
                     </li>
                 </ul>
                 <div class="flex-nav-footer">
@@ -175,11 +222,16 @@
             <p><i class="fa-solid fa-copyright fa-lg"></i> 2024 - Situs Resmi Shidokan Indonesia by PixelMind Solution</p>
         </div>
     </div>
-
+    <!-- 1 - THE BOOTSTRAP PLUGIN -->
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js" integrity="sha384-0pUGZvbkm6XF6gxjEnlmuGrJXVbNuzT9qBBavbLwCsOGabYfZo0T0to5eqruptLy" crossorigin="anonymous"></script>
+    <!-- 2 - FONT-STYLE PLUGIN -->
     <script src="https://kit.fontawesome.com/52139f278b.js" crossorigin="anonymous"></script>
+    <!-- 3 - JAVASCRIPT FILES -->
     <script src="../../3_JavaScript/app.js"></script>
     <script src="../../3_JavaScript/buttonLink.js"></script>
+    <script src="../../3_JavaScript/navbar2.0.js"></script>
+    <!-- 3.1 - To keep the Carousel JS Button -->
+    <!-- 3.2 - Add the JSX Babel Code Below -->
 </body>
 </html>

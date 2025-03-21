@@ -13,6 +13,7 @@ const ulElements = document.querySelectorAll("header ul li ul");
 function adjustStyles() {
     console.log("Detected ul elements: ", ulElements); // Debug
 
+    // Give styling for the ul Element 3rd at "Dojo List"
     if (ulElements[3]) { // Ensure the 4th ul element exists
         const submenu = ulElements[3]; // Reference to the specific submenu
         const submenuItems = submenu.querySelectorAll("li"); // Get all <li> elements in the submenu
@@ -71,8 +72,8 @@ function adjustStyles() {
             // submenu.style.backgroundColor = "red";
             submenu.style.visibility = "visible"; // Ensure content is visible
             submenu.style.position = "relative"; // Ensure proper layout
-            submenu.style.paddingLeft = "14%";
-            submenu.style.marginLeft = "-0.5%";
+            submenu.style.paddingLeft = "16%"; /*  */
+            submenu.style.marginLeft = "-13.4%"; /* Adjusting the left button of the submenu */
             submenu.style.paddingRight = "-80%";
         }
     } else {

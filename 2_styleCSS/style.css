@@ -10,6 +10,8 @@ html, body {
 }
 
 body {
+    max-width:100vw;
+    overflow-x: hidden;
     /*background-color: rgb(35, 12, 23);*/
     background: #2A0134;
     color:white;
@@ -37,21 +39,78 @@ h1 {
 /* === BANNER CAROUSEL === */
 
 /* Custom styles for carousel */
-.carousel-item img {
-    height: 500px; /* Fixed height for consistency */
-    object-fit: cover; /* Ensures images fill the container without distortion */
+.carousel {
+    /*margin-top: var(--navbar-height, 135px); /* Adjust for sticky navbar */
+    overflow: hidden; /* Prevent overflow */
 }
 
+.carousel-image {
+    width: 100vw; /* Full container width */
+    height: auto;
+    aspect-ratio: 11 / 4; /* Responsive aspect ratio */
+    background-size: contain; /* Ensure the image fits without cropping */
+    background-position: center; /* Center the image */
+    background-repeat: no-repeat; /* Avoid repeating the image */
+    position: relative;
+    background-color: #000;
+    margin-top: 25px;
+}
+
+/* Khusus untuk yang Carousel Dojo */
+.carousel-dojo {
+    width: 80%;
+    margin: 0 auto;
+    height: auto;
+    aspect-ratio: 16 / 9;
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+    position: relative;
+    background-color: #000;
+    margin-top: 25px;
+}
+/* below 992px, the width adjusts to auto 100% */
+@media screen and (max-width: 992px) {
+    .carousel-dojo {
+        width: auto;
+    }
+}
+/* And below 768px if for class .carousel-dojo */
+@media screen and (max-width: 768px) {
+    /* Khusus Carousel Dojo */
+    .carousel-dojo {
+        /*aspect-ratio: 4 / 5;*/
+        aspect-ratio: 3 / 3; /* Sblmnya adalah 5 / 5 */
+    }
+}
+
+.carousel-karateguyimage {
+    background-image: url('../1_main_page/img/1-banner/banner_baru.png');
+}
+
+/* Change image and aspect ratio when screen width is below 600px */
+@media screen and (max-width: 600px) {
+    .carousel-image {
+        aspect-ratio: 1 / 0.7; /* Adjust aspect ratio to 1:0.7 */
+    }
+    .carousel-karateguyimage {
+        background-image: url('../1_main_page/img/1-banner/banner_square.png'); /* New image for mobile */
+    }
+}
+
+/* Carousel caption styling */
 .carousel-caption {
     background: rgba(0, 0, 0, 0.6); /* Semi-transparent background for better text visibility */
     padding: 1rem;
     border-radius: 10px;
 }
 
+/* Indicators */
 .carousel-indicators [data-bs-target] {
-    background-color: #007bff; /* Custom color for indicators */
+    background-color: #007bff; /* Custom indicator colors */
 }
 
+/* Navigation arrows */
 .carousel-control-prev-icon,
 .carousel-control-next-icon {
     filter: invert(1); /* Make navigation arrows more visible on dark images */
@@ -59,29 +118,36 @@ h1 {
 
 /* -- Adjusting Carousel Banner's height with the Sticky Navbar freezes on Top: -- */
 .carousel {
-    margin-top: 111px;
+    margin-top: 79px;
 }
 
-/* Menyesuaikan Banner dengan  .header ini dengan tingginya Navbar */
+/* Responsive adjustments for smaller screens */
+/* + this .header adjusts it's top margin with the sticky Navbar */
 @media screen and (min-width:900px) and (max-width:1175px) {
     .carousel {
-        margin-top:108px;
+        margin-top:79px;
     }
 }
 @media screen and (min-width:768px) and (max-width:900px) {
     .carousel {
-        margin-top:108px;
+        margin-top:80px;
     }
 }
 @media screen and (min-width:495px) and (max-width:768px) {
     .carousel {
-        margin-top:104px;
+        margin-top:80px;
         margin-bottom: 5%;
+    }
+    .carousel-caption {
+        font-size: 0.9rem; /* Adjust font size for captions */
     }
 }
 @media screen and (max-width:495px) {
     .carousel {
-        margin-top: 101px;
+        margin-top: 78px;
+    }
+    .carousel-caption {
+        font-size: 0.8rem;
     }
 }
 
@@ -265,53 +331,107 @@ img {
     /*min-height: 400px; */
 /*} */
 
+/* Banner container with background image */
 .banner {
-    position: relative; /* Ensure the banner-content is positioned relative to this */
-    width: 100%;
-    overflow: hidden; /* Prevent content overflow */
+    width: 100vw; /* Full screen width */
+    height: auto;
+    aspect-ratio: 11 / 4; /* Automatically adjust height based on width (16:9 ratio) -> change to 11:4 ratio */
+    background-size: contain; /* Ensures the image covers the entire div */
+    background-position: center; /* Center the image */
+    background-repeat: no-repeat; /* Avoid repeating the image */
+    position: relative;
+    overflow: hidden; /* Ensure no overflow */
+    margin-top: var(--navbar-height, 105px); /* Dynamic adjustment for sticky navbar */
+    background-color: #000; /* Black, matching the image style */
 }
 
-.banner img {
-    max-height: 400px;
-    object-fit: cover;
-    width:100vw;
-    max-width: 100vw;
-    margin: 0 calc(-50vw + 50%);
-    margin-top: 111px;
-    margin-bottom: 5%;
-    filter: brightness(50%);
+/*.bannerimage_karateGuy {
+    background: 
+        url('../1_main_page/img/1-banner/banner_baru.png') center / cover, 
+        url('../1_main_page/img/1-banner/banner_baru.png') center / contain no-repeat;
+    /*filter: brightness(50%); /* Optional: Match the foreground image's brightness */
+/*}*/
+
+/* Desktop-specific image */
+/*.bannerimage_karateGuy {
+    background-image: url('../1_main_page/img/1-banner/banner_karateGuy.png');
+    position: relative;
+}*/
+
+/* Create an overlay using a pseudo-element */
+.banner::before {
+    content:''; /* Empty content for the pseudo-element */
+    position:absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent black overlay */
+    z-index: 1; /* Place behind text but above the background image */
 }
 
 /* Text content styles */
 .banner-content {
-    position:absolute;
-    top: 50%; /* Center Vertically */
+    position: absolute;
+    top: 50%; /* Center vertically */
     left: 50%;
     transform: translate(-50%, -50%);
-    text-shadow: 0 2px 4px rgba(0,0,0, 0.8); /* Add a shadow to make text stand out */
-    z-index: 3;
     text-align: center;
-    color:white;
+    color: white;
+    z-index: 2;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.8); /* Add shadow for readability */
 }
+
 .banner-content h1 {
-    /*font-size: 3rem; /* Adjust as needed */
     font-size: clamp(2rem, 4vw, 3rem); /* Responsive font size */
-    font-weight: bold;
     margin: 0;
 }
+
 .banner-content p {
-    /*font-size: 1.5rem; /* Adjust as needed */
     font-size: clamp(1rem, 2.5vw, 1.5rem); /* Responsive font size */
     margin: 0;
-    text-align: center;
+}
+
+.banner-content h1,
+.banner-content p {
+    transition: font-size 0.3s ease;
+}
+
+/* Tablet adjustments */
+@media screen and (min-width: 600px) and (max-width: 768px) {
+    .banner {
+        --default-height: 300px; /* Smaller height for tablets */
+        /*height: 612px;*/
+    }
+}
+
+/* Mobile adjustments */
+@media screen and (max-width: 600px) {
+    .banner {
+        --default-height: 250px /* Smaller height for smartphones */
+        width: 100%; /* or any percentage of the container */
+        aspect-ratio: 1 / 0.7; /* Makes the element a perfect square */
+    }
+    /*.bannerimage_karateGuy {
+        background-image: url('../1_main_page/img/1-banner/banner_square.png'); /* Mobile-specific image */
+    /*}*/
+}
+/* Fine-tune margin-top to dynamically adjust with navbar */
+:root {
+    --navbar-height: 105px; /* Default navbar height */
+}
+@media screen and (max-width: 768px) {
+    :root {
+        --navbar-height: 108px; /* Smaller navbar for mobile */
+    }
 }
 
 /* Menyesuaikan Banner dengan  .header ini dengan tingginya Navbar */
-@media screen and (min-width:900px) and (max-width:1175px) {
-    .banner img {
-        margin-top:108px;
+@media screen and (min-width:900px) and (max-width:1167px) {
+    .banner {
+        margin-top:105px;
     }
-    .banner content h1 {
+    .banner-content h1 {
         font-size: 2.8rem; /* Adjust as needed */
     }
     .banner-content p {
@@ -319,8 +439,8 @@ img {
     }
 }
 @media screen and (min-width:768px) and (max-width:900px) {
-    .banner img {
-        margin-top:108px;
+    .banner {
+        margin-top:105px;
     }
     .banner content h1 {
         font-size: 2.4rem; /* Adjust as needed */
@@ -331,10 +451,8 @@ img {
 }
 @media screen and (min-width:495px) and (max-width:768px) {
     .banner {
-        margin-bottom: 5%;
-    }
-    .banner img {
         margin-top:104px;
+        margin-bottom: 5%;
     }
     .banner content h1 {
         font-size: 2.0rem; /* Adjust as needed */
@@ -344,7 +462,7 @@ img {
     }
 }
 @media screen and (max-width:495px) {
-    .banner img {
+    .banner {
         margin-top: 101px;
     }
     .banner-content h1 {
@@ -435,7 +553,7 @@ img {
 }
 
 /* Bagian Kanan */
-@media screen and (min-width:992px) and (max-width: 2000px) {
+@media screen and (min-width:992px) {
     .berita-scroll {
         margin-bottom: 2%;
         overflow: scroll;
@@ -496,7 +614,15 @@ img {
 /* 5 - Check HTML Structure for the Berita Carousel */
 /* Self check inside the id #newsCarousel */
 
-@media screen and (min-width:992px) and (max-width: 2000px) {
+/* General Style */
+.berita-scrollz {
+    overflow-y: auto; /* Ensure vertical scrolling */
+    overflow-x: hidden; /* Prevent horizontal scrolling */
+    max-height: 600px; /* Set a consistent maximum height */
+    margin-bottom: 2%; /* Optional spacing */
+}
+
+@media screen and (min-width:992px) {
     .berita-scrollz {
         margin-bottom: 2%;
         overflow: scroll;
@@ -701,40 +827,131 @@ tbody {
     margin: 0% auto;
     padding: 2% 0 2% 2%;
 }
+.flex-picAndInfo img {
+    border-radius: 10px;
+}
 
 .flex-instructorDetails {
-    display: flex;
+    /*display: flex;
     flex-direction: column;
     gap:70px;
     padding-top: 3%;
     padding-left: 2%;
-    margin-left: 5%;
-    background-color: red;
+    margin-left: 5%;*/
+    background-color: rgb(83, 3, 83);
+    border-radius: 10px;
 }
 .flex-instructorDetails .instructor-tagFlex {
     display: flex;
     flex-direction: column;
-    justify-content:space-around;
+    justify-content:space-between;
     align-items: left;
 }
+/*.flex-instructorDetails h3 {
+    margin-bottom: -6%;
+}*/
+.flex-instructorDetails .instructor-tagFlex h3 {
+    margin-top: 2%;
+}
 .flex-instructorDetails .instructor-tagFlex p:nth-of-type(1) {
-    font-size: 1.1rem;
+    font-size: 1rem;
     margin-bottom: -0.5%;
 }
-@media screen and (max-width:992px) {
-    .flex-picAndInfo-tag img {
+.flex-instructorDetails p {
+    font-size: 0.75rem;
+}
+.flex-instructorDetails .instructor-p-adjust {
+    margin-top: 2%;
+}
+.flex-instructorDetails .button-instructor {
+    margin-top: 2%;
+}
+/* Kill the Bug: when zooming out of +1200px, the button instructor moves a little to the top */
+@media screen and (min-width: 1301px) {
+    .flex-instructorDetails .button-instructor {
+        margin-top: 7%;
+    }
+}
+@media screen and (max-width: 1200px) {
+    /* h3 Text adjustment */
+    .flex-instructorDetails h3 {
+        font-size: 1.4rem;
+    }
+    /* Paragraph p adjustment */
+    .flex-instructorDetails .instructor-tagFlex p:nth-of-type(1) {
+        font-size: 0.8rem;
+        margin-bottom: -0.5%;
+    }
+    .flex-instructorDetails p {
+        font-size: 0.65rem;
+    }
+    /* Button text Adjustment */
+    .button-instructor button {
+        font-size: 0.8rem;
+        margin-top: -1.5%;
+    }
+    
+}
+@media screen and (max-width: 991px) {
+    /* Adjusting text to center */
+    .flex-instructorDetails {
+        text-align: center;
+    }
+    /* h3 Text adjustment */
+    .flex-instructorDetails h3 {
+        font-size: 1.3rem;
+    }
+    /* Paragraph p adjustment */
+    .flex-instructorDetails .instructor-tagFlex p:nth-of-type(1) {
+        font-size: 0.8rem;
+    }
+    .flex-instructorDetails p {
+        font-size: 0.7rem;
+    }
+}
+@media screen and (max-width:768px) {
+    /* Adjusting text to center */
+    .flex-instructorDetails {
+        text-align: center;
+        margin-left: -1.8%;
+        margin-top: 5%;
+        width: 95%;
+        margin-bottom: 2%;
+        padding-top: 2%;
+        padding-bottom: 2%;
+    }
+    /* Adjusting content info to center */
+    .flex-picAndInfo-tag {
         margin-left: -1.3%;
     }
-
-    .flex-instructorDetails {
-        margin-left: -1.8%;
+    /* Give img max-width */
+    .flex-picAndInfo-tag img {
+        margin: 0 auto;
     }
-    .flex-instructorDetails .instructor-tagFlex {
+    /* h3 text Adjustment */
+    .flex-instructorDetails h3 {
+        font-size: 2rem;
+        margin-bottom: auto;
+    }
+    /* Paragraph p adjustment */
+    .flex-instructorDetails .instructor-tagFlex p:nth-of-type(1) {
+        font-size: 1rem;
+    }
+    .flex-instructorDetails p {
+        font-size: 0.9rem;
+    }
+    /* Button text Adjustment */
+    .button-instructor button {
+        font-size: 1rem;
+        margin-top: -1.5%;
+    }
+
+    /*.flex-instructorDetails .instructor-tagFlex {
         text-align: center;
     }
     .flex-instructorDetails .instructor-tagFlex:nth-of-type(2) {
         margin-top: -10%;
-    }
+    }*/
 }
 
 
@@ -809,7 +1026,6 @@ tbody {
 /* - - FOOTER - - */
 
 .footer {
-    max-height:600px;
     object-fit: cover;
     width:100vw;
     max-width:100vw;
@@ -1166,6 +1382,9 @@ tbody {
     }
 }
 
+/* Ini styling yang wave, animasi tulisan geser, dkk */
+
+
 /*==============*/
 /* === Voice from Shinbucho === */
 /* ==  Tata Tertib Dojo & Join Us == */
@@ -1269,61 +1488,11 @@ tbody {
 
 /* Adjust Margin-bottom footer saat di 768px */
 
-@media (max-width:768px) {
-    .footer {
-        padding-bottom: 135%;
-    }
-}
 @media (max-width:724px) {
-    .footer {
-        padding-bottom: 180%;
-    }
     .footer-bawah {
         margin-top: 10%;
     }
 }
-@media (max-width:575px) {
-    .footer {
-        padding-bottom: 200%;
-    }
-}
-
-@media screen and (min-width:485px) and (max-width:551px) {
-    .footer {
-        padding-bottom: 230%;
-    }
-}
-@media screen and (min-width:439px) and (max-width:485px) {
-    .footer {
-        padding-bottom: 250%;
-    }
-}
-@media screen and (min-width:420px) and (max-width:439px) {
-    .footer {
-        padding-bottom: 315%;
-    }
-}
-@media screen and (min-width:360px) and (max-width:420px) {
-    .footer {
-        padding-bottom: 375%;
-    }
-}
-@media screen and (min-width:318px) and (max-width:360px) {
-    .footer {
-        padding-bottom: 435%;
-    }
-}
-@media screen and (min-width:289px) and (max-width:318px) {
-    .footer {
-        padding-bottom: 495%;
-    }
-}
-@media screen and (min-width:200px) and (max-width:289px) {
-    .footer {
-        padding-bottom: 555%;
-    }
-}
-
 
 /* Footer Atas */
 .footer .footer-atas .flex-nav-footer {
