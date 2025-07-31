@@ -343,6 +343,7 @@ img {
     overflow: hidden; /* Ensure no overflow */
     margin-top: var(--navbar-height, 105px); /* Dynamic adjustment for sticky navbar */
     background-color: #000; /* Black, matching the image style */
+    margin-bottom: 5%;
 }
 
 /*.bannerimage_karateGuy {
