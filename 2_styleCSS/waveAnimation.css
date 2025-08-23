@@ -88,3 +88,16 @@ section .wave.wave4 {
     border-radius: 50%;
     /*display: inline-block;*/
 }
+
+.oswald-kyokushinText {
+    font-family: "Oswald", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 1000;
+    font-style: bold;
+    font-size: 100px;
+}
+
+h1.oswald-kyokushinText {
+    white-space: nowrap;
+    overflow: hidden;
+}
