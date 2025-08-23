@@ -1,5 +1,22 @@
 /* ===== 1 - HEADER BANNER ===== */
 
+/*
+Daftar Isi:
+2 - News
+3 - About Us
+4 - Contact Us & Dojo Lists
+5 - Voice from Shinbucho
+6 - Sponsors
+
+Per daftar isi, terdapat 2 bagian:
+== 1 - Banner for PC / Screen View    ==
+== 2 - Banner for Mobile View (600px) ==
+*/
+
+/* ===================================== */
+/* == 1 - Banner for PC / Screen View == */
+/* ===================================== */
+
 /* 2_News */
 .banner_beritaMain {
     background:
@@ -75,7 +92,9 @@
         url('../1_main_page/img/1-banner/Banner_layoutDesktop/1.5._Banner_OurSponsors.jpg') center / contain no-repeat;
 }
 
-/* Banner for Mobile View */
+/* ======================================== */
+/* == 2 - Banner for Mobile View (600px) == */
+/* ======================================== */
 @media screen and (max-width: 600px) {
     /* 2_News */
     .banner_beritaMain {
