@@ -2,6 +2,7 @@
 
 /*
 Daftar Isi:
+1 - Home
 2 - News
 3 - About Us
 4 - Contact Us & Dojo Lists
@@ -16,6 +17,13 @@ Per daftar isi, terdapat 2 bagian:
 /* ===================================== */
 /* == 1 - Banner for PC / Screen View == */
 /* ===================================== */
+
+/* 1_Home Carousel Banner */
+.banner_home_shidokanTeam {
+    background:
+        url('../1_main_page/img/1-banner/Banner_layoutDesktop/homeCarouselBanner/1_banner_shidokan_team.jpg') center / cover,
+        url('../1_main_page/img/1-banner/Banner_layoutMobile/homeCarouselBanner/1_banner_shidokan_team.jpg') center / contain no-repeat;
+}
 
 /* 2_News */
 .banner_beritaMain {
