@@ -1,3 +1,8 @@
+/* Navbar Size */
+.fixed-navbar .container-fluid div ul a {
+    font-size: 1.1rem;
+}
+
 /* === 1 - DROPDOWN === */
 /* Adjust dropdown for submenu */
 header {
