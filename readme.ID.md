@@ -11,7 +11,9 @@ Jika memiliki kemampuan lebih lagi, akan diimplementasi fitur Blogspot khusus ba
 
 ## Home
 ## About Us
+Seputar kisah perjalanan visi, dan dedikasi yang menginspirasi langkah shidokan Indonesia kedepan, dibawah naungan Shidokan Internasional Jepang.  Bagian ini merupakan halaman utama about us, yang utamanya terdiri atas panel navigasi menuju ke halaman sejarah & organisasi, blackbelts, profil (dan sebagai tambahan ke halaman sponsor kami yang terdapat pada navbar utama shidokan website).
 ### History
+Sekumpulan sejarah Shidokan Indonesia yang disusun dalam bentuk dropdown menggunakan class dropdown pada style.css
 ### Blackbelts
 List Anggota Shidokan pemegang Sabuk Hitam, dimulai dari tingkat Ban Hitam Shodan, Nidan, Sandan, Yondan, dan Godan.
 ### Contacts & Dojo List
