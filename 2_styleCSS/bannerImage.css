@@ -99,6 +99,12 @@ Per daftar isi, terdapat 2 bagian:
         url('../1_main_page/img/1-banner/Banner_layoutDesktop/1.5._Banner_OurSponsors.jpg') center / cover,
         url('../1_main_page/img/1-banner/Banner_layoutDesktop/1.5._Banner_OurSponsors.jpg') center / contain no-repeat;
 }
+.banner_ourPartner {
+    background-image: url('../1_main_page/img/1-banner/Banner_layoutDesktop/2.5_OurPartner.jpg');
+}
+.banner_merchandise {
+    background-image: url('../1_main_page/img/1-banner/Banner_layoutDesktop/1.5.1._Banner_OurPartner.jpg');
+}
 
 /* ======================================== */
 /* == 2 - Banner for Mobile View (600px) == */
