@@ -1,4 +1,5 @@
 # Shidokan Website Readme
+### Pembuka
 Situs ini merupakan salah satu situs Resmi Company Profile dari Organisasi Kyokushin Internasional "Shidokan".  Situs ini dibangun secara Full Coding tanpa menggunakan Website Builder seperti Wordpress Elementor dll secara Fullstack baik itu front end (HTML5, CSS3, JS Bootstrap, ReactJS), dan back end (PHP, MySQL).
 
 Mengingat informasi dari client masih minim maka situs Shidokan ini masih baru dibangun secara front-end menggunakan bahasa dasar seperti HTML5, CSS3, JS, dan Bootstrap.
@@ -8,6 +9,10 @@ Untuk kedepan, Situs resmi Shidokan ini akan diimplementasi menggunakan ReactJS 
 Jika memiliki kemampuan lebih lagi, akan diimplementasi fitur Blogspot khusus bagi situs Shidokan ini menggunakan Typescript atau Laravel, seiring berjalannya proses belajar saya.
 
 # Konten Halaman
+Isi dari seluruh halaman Situs Shidokan yang menjelaskan isi, tujuan, fitur, serta implementasi yang diterapkan pada setiap halaman.
+
+## Navbar
+Terletak pada bagian paling teratas halaman Shidokan dimana masih menggunakan bahasa HTML murni menggunakan class .fixed-navbar bootstrap yang diambil dari JSDelivr CDN menggunakan bootstrap.min.css.  Sesuai dengan pernyataan pada pembuka, seluruh halaman termasuk Navbar akan diimplementasi menggunakan ReactJS sehingga lebih responsif dan menghemat waktu saat sedang mengkonfigurasi Navbar tanpa perlu membuka satu per satu halaman.
 
 ## Home
 ## About Us
