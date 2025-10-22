@@ -1,28 +1,25 @@
 # Shidokan Website Readme
-Situs ini merupakan salah satu situs Resmi Company Profile dari Organisasi Kyokushin Internasional "Shidokan" bertepatan di Jepang berlokasi di Indonesia.  Situs ini dibangun secara Full Coding tanpa menggunakan Website Builder seperti Wordpress Elementor dll melainkan dibangun secara Fullstack baik itu front end (HTML5, CSS3, JS Bootstrap, ReactJS), dan back end (PHP, MySQL).
+Situs ini merupakan salah satu situs Resmi Company Profile dari Organisasi Kyokushin Internasional "Shidokan" bertepatan di Jepang berlokasi di Indonesia.  Situs ini dibangun secara Full Coding tanpa menggunakan Website Builder seperti Wordpress Elementor dll melainkan dibangun secara Fullstack baik itu front end (HTML5, CSS3, JS Bootstrap, ReactJS), dan back end (PHP, MySQL).<br><br>
 
-**Status:** Dalam proses - Tampilan 80% jadi, berlangsung optimasi serta implementasi backend (PHP, MySQL)
+**Status:** Dalam proses - Tampilan 80% jadi, berlangsung optimasi serta implementasi backend (PHP, MySQL)<br>
 **Yang sudah selesai:**
 - ✅ Penyusunan Layouting Front-End (HTML, CSS, JS)
 - ✅ Penyusunan List Blackbelt Shidokan Indonesia
-- ✅ Penyusunan Informasi Sejarah _(history)_ Shidokan Indonesia
+- ✅ Penyusunan Informasi Sejarah _(history)_ Shidokan Indonesia<br>
 **Dalam Prosos:**
 - 🔄 Desain layout beranimasi pada halaman tentang kami _(about us)_
 - 🔄 Pembuatan CRUD Editor dan PHP MVC dalam menglist organisasi dan instruktur
-- 🔄 
+- 🔄 Implementasi fitur blogger pada halaman news dan history<br>
 **Fitur Berikut**
-- 💡 Migrasi / Revamp halaman .HTML menuju ReactJS
-**Tech Stack:** HTML, CSS, JS, Bootstrap, PHP, MySQL, ReactJS
+- 💡 Migrasi / Revamp halaman .HTML menuju ReactJS<br>
+**Tech Stack:** HTML, CSS, JS, Bootstrap, PHP, MySQL, ReactJS<br><br>
 
-
-
-
-Mengingat informasi dari client masih minim maka situs Shidokan ini masih baru dibangun secara front-end menggunakan bahasa dasar seperti HTML5, CSS3, JS, dan Bootstrap.
-
-Untuk kedepan, Situs resmi Shidokan ini akan diimplementasi menggunakan ReactJS seiring berjalannya proses belajar front-end ini demi kelancaran responsivitas situs Shidokan kedepan, beserta mulai menerapkan Back end yang mendata list instruktur dan berita menggunakan PHP dan MySQL mengingat Skala Organisasi ini yang masih kecil, serta mengintegrasi salah satu plugin absensi murid yang sempat dibeli oleh client kami.
-
+Mengingat informasi dari client masih minim maka situs Shidokan ini masih baru dibangun secara front-end menggunakan bahasa dasar seperti HTML5, CSS3, JS, dan Bootstrap.<br>
+<br>
+Untuk kedepan, Situs resmi Shidokan ini akan diimplementasi menggunakan ReactJS seiring berjalannya proses belajar front-end ini demi kelancaran responsivitas situs Shidokan kedepan, beserta mulai menerapkan Back end yang mendata list instruktur dan berita menggunakan PHP dan MySQL mengingat Skala Organisasi ini yang masih kecil, serta mengintegrasi salah satu plugin absensi murid yang sempat dibeli oleh client kami.<br>
+<br>
 Jika memiliki kemampuan lebih lagi, akan diimplementasi fitur Blogspot khusus bagi situs Shidokan ini menggunakan Typescript atau Laravel, seiring berjalannya proses belajar saya.
-
+<br>
 # Konten Halaman
 Isi dari seluruh halaman Situs Shidokan yang menjelaskan isi, tujuan, fitur, serta implementasi yang diterapkan pada setiap halaman.
 
