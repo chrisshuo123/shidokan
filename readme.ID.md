@@ -2,11 +2,13 @@
 Situs ini merupakan salah satu situs Resmi Company Profile dari Organisasi Kyokushin Internasional "Shidokan" bertepatan di Jepang berlokasi di Indonesia.  Situs ini dibangun secara Full Coding tanpa menggunakan Website Builder seperti Wordpress Elementor dll melainkan dibangun secara Fullstack baik itu front end (HTML5, CSS3, JS Bootstrap, ReactJS), dan back end (PHP, MySQL).<br><br>
 
 **Status:** Dalam proses - Tampilan 80% jadi, berlangsung optimasi serta implementasi backend (PHP, MySQL)<br>
+<br>
 **Yang sudah selesai:**
 - ✅ Penyusunan Layouting Front-End (HTML, CSS, JS)
 - ✅ Penyusunan List Blackbelt Shidokan Indonesia
 - ✅ Penyusunan Informasi Sejarah _(history)_ Shidokan Indonesia<br>
-**Dalam Prosos:**
+
+**Dalam Proses:**
 - 🔄 Desain layout beranimasi pada halaman tentang kami _(about us)_
 - 🔄 Pembuatan CRUD Editor dan PHP MVC dalam menglist organisasi dan instruktur
 - 🔄 Implementasi fitur blogger pada halaman news dan history<br>
@@ -32,6 +34,9 @@ Terletak pada bagian paling teratas halaman Shidokan dimana masih menggunakan ba
 3. Fix the a href links on 'Our Sponsors' navbar
 
 ## Home
+Halaman utama dari Shidokan Indonesia yang menampilkan halaman inti dari about us, history, blackbelts, contacts & dojo list, voice from shinbucho, dan our sponsors.
+## Berita _(Dalam perkembangan)_
+Halaman berita resmi shidokan baik Dalam Negeri _(Indonesia)_ maupun Luar Negeri _(Khususnya Jepang)_.  Oleh sebab diperlukan fitur blogger, maka halaman Berita sengaja tidak ditampilkan dulu.
 ## About Us
 Seputar kisah perjalanan visi, dan dedikasi yang menginspirasi langkah shidokan Indonesia kedepan, dibawah naungan Shidokan Internasional Jepang.  Bagian ini merupakan halaman utama about us, yang utamanya terdiri atas panel navigasi menuju ke halaman sejarah & organisasi, blackbelts, profil (dan sebagai tambahan ke halaman sponsor kami yang terdapat pada navbar utama shidokan website).
 ### History
@@ -41,11 +46,17 @@ List Anggota Shidokan pemegang Sabuk Hitam, dimulai dari tingkat Ban Hitam Shoda
 ### Contacts & Dojo List
 Sekumpulan List Dojo yang ada didalam Naungan Bendera Organisasi Shidokan di Indonesia
 ## Voice from Shinbucho
+Halaman berisi pesan dari Shinbucho (Branch Shidokan Indonesia), dilanjut dengan 2 menu pilihan yakni tata tertib dojo, dan join us (baik instruktur maupun ingin latihan bareng organisasi shidokan indonesia)
 ### Tata Tertib Dojo
+Halaman yang mencantumkan janji dojo
 ### Join Us
+Halaman untuk bergabung bersama Shidokan Indonesia baik Instruktur, maupun calon murid
 ## Our Sponsors
+Halaman utama "our sponsors" yang menyediakan 2 pilihan, diantaranya our partner, serta merchandise
 ### Our Partner
+Halaman ini menampilkan deretan logo partner dari Shidokan Indonesia
 ### Merchandise
+Menampilkan sekumpulan merchandise resmi dari Shidokan Indonesia
 
 
 
