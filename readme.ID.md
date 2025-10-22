@@ -1,6 +1,21 @@
 # Shidokan Website Readme
-### Pembuka
-Situs ini merupakan salah satu situs Resmi Company Profile dari Organisasi Kyokushin Internasional "Shidokan".  Situs ini dibangun secara Full Coding tanpa menggunakan Website Builder seperti Wordpress Elementor dll secara Fullstack baik itu front end (HTML5, CSS3, JS Bootstrap, ReactJS), dan back end (PHP, MySQL).
+Situs ini merupakan salah satu situs Resmi Company Profile dari Organisasi Kyokushin Internasional "Shidokan" bertepatan di Jepang berlokasi di Indonesia.  Situs ini dibangun secara Full Coding tanpa menggunakan Website Builder seperti Wordpress Elementor dll melainkan dibangun secara Fullstack baik itu front end (HTML5, CSS3, JS Bootstrap, ReactJS), dan back end (PHP, MySQL).
+
+**Status:** Dalam proses - Tampilan 80% jadi, berlangsung optimasi serta implementasi backend (PHP, MySQL)
+**Yang sudah selesai:**
+- ✅ Penyusunan Layouting Front-End (HTML, CSS, JS)
+- ✅ Penyusunan List Blackbelt Shidokan Indonesia
+- ✅ Penyusunan Informasi Sejarah _(history)_ Shidokan Indonesia
+**Dalam Prosos:**
+- 🔄 Desain layout beranimasi pada halaman tentang kami _(about us)_
+- 🔄 Pembuatan CRUD Editor dan PHP MVC dalam menglist organisasi dan instruktur
+- 🔄 
+**Fitur Berikut**
+- 💡 Migrasi / Revamp halaman .HTML menuju ReactJS
+**Tech Stack:** HTML, CSS, JS, Bootstrap, PHP, MySQL, ReactJS
+
+
+
 
 Mengingat informasi dari client masih minim maka situs Shidokan ini masih baru dibangun secara front-end menggunakan bahasa dasar seperti HTML5, CSS3, JS, dan Bootstrap.
 
