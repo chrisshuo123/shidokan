@@ -3,6 +3,11 @@
     font-size: 1.1rem;
 }
 
+.navbar-nav li a {
+    margin-top: 12px;
+    margin-right: 10px;
+}
+
 /* === 1 - DROPDOWN === */
 /* Adjust dropdown for submenu */
 header {
@@ -68,6 +73,11 @@ header {
 }*/
 .collapse {
     display: none !important;
+}
+
+/* Adjusting the margin-bottom distance for the no-dropdown navbar button */
+.navbar-collapse .navbar-nav .no-dropdown a {
+    margin-bottom: 1.5%;
 }
 
 /* -- Ensure that your submenu visibility is managed by CSS: -- */

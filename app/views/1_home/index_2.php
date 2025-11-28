@@ -30,7 +30,7 @@
 
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav">
-                    <li class="nav-item">
+                    <li class="nav-item no-dropdown">
                     <a class="nav-link active" aria-current="page" href="#">Home</a>
                     </li>
                     <li class="nav-item dropdown">
@@ -65,22 +65,27 @@
                         </ul>
                     </li>
                     <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle" href="#" id="contactDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                        Contact & Dojo List
+                        <a class="nav-link dropdown-toggle" href="#" id="contactDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            Dojo List
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="contactDropdown" style="max-height: 200px; overflow-y: auto; overflow-x: hidden;">
+                            <li><a class="dropdown-item" href="../4_contact-us/dojoList.html">Dojo List</a></li>
+                            <li><a class="dropdown-item" href="#">&nbsp;Shidokan Ikigai Honbu</a></li>
+                            <li><a class="dropdown-item" href="#">&nbsp;As-Sa'adah Integrated Islamic Elementary School</a></li>
+                            <li><a class="dropdown-item" href="#">&nbsp;Asrama Denpom III/1 Shidokan Jawa Barat Honbu</a></li>
+                            <li><a class="dropdown-item" href="#">&nbsp;Shidokan Penerbad Semarang</a></li>
+                            <li><a class="dropdown-item" href="#">&nbsp;Shidokan Yuan Surabaya Barat</a></li>
+                            <li><a class="dropdown-item" href="#">&nbsp;Shidokan Main Branch (Walikota Mustajab)</a></li>
+                            <li><a class="dropdown-item" href="#">&nbsp;Shidokan Bali Lion Dojo</a></li>
+                            <li><a class="dropdown-item" href="#">&nbsp;Kyokushin Ampel</a></li>
+                            <li><a class="dropdown-item" href="#">&nbsp;Kyokushin Alkhairiyah</a></li>
+                            <!-- Add more Dojos as needed -->
+                        </ul>
+                    </li>
+                    <li class="nav-item no-dropdown">
+                    <a class="nav-link" aria-current="page" href="../5_contact-us/contactUs.html">
+                        Contact Us
                     </a>
-                    <ul class="dropdown-menu" aria-labelledby="contactDropdown" style="max-height: 200px; overflow-y: auto; overflow-x: hidden;">
-                        <li><a class="dropdown-item" href="../4_contact-us/contactAndDojoList.html">Contacts & Dojo List</a></li>
-                        <li><a class="dropdown-item" href="#">&nbsp;Shidokan Ikigai Honbu</a></li>
-                        <li><a class="dropdown-item" href="#">&nbsp;As-Sa'adah Integrated Islamic Elementary School</a></li>
-                        <li><a class="dropdown-item" href="#">&nbsp;Asrama Denpom III/1 Shidokan Jawa Barat Honbu</a></li>
-                        <li><a class="dropdown-item" href="#">&nbsp;Shidokan Penerbad Semarang</a></li>
-                        <li><a class="dropdown-item" href="#">&nbsp;Shidokan Yuan Surabaya Barat</a></li>
-                        <li><a class="dropdown-item" href="#">&nbsp;Shidokan Main Branch (Walikota Mustajab)</a></li>
-                        <li><a class="dropdown-item" href="#">&nbsp;Shidokan Bali Lion Dojo</a></li>
-                        <li><a class="dropdown-item" href="#">&nbsp;Kyokushin Ampel</a></li>
-                        <li><a class="dropdown-item" href="#">&nbsp;Kyokushin Alkhairiyah</a></li>
-                        <!-- Add more Dojos as needed -->
-                    </ul>
                     </li>
                     <li class="nav-item dropdown">
                     <a class="nav-link dropdown-toggle" href="#" id="shibuchoDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
@@ -97,9 +102,9 @@
                         Our Sponsors
                     </a>
                     <ul class="dropdown-menu" aria-labelledby="sponsorsDropdown">
-                        <li><a class="dropdown-item" href="../6_sponsors/sponsors.html">Our Sponsors</a></li>
-                        <li><a class="dropdown-item" href="../6_sponsors/our_partner.html">&nbsp;Our Partner</a></li>
-                        <li><a class="dropdown-item" href="../6_sponsors/merchandise.html">&nbsp;Merchandise</a></li>
+                        <li><a class="dropdown-item" href="../7_sponsors/sponsors.html">Our Sponsors</a></li>
+                        <li><a class="dropdown-item" href="../7_sponsors/our_partner.html">&nbsp;Our Partner</a></li>
+                        <li><a class="dropdown-item" href="../7_sponsors/merchandise.html">&nbsp;Merchandise</a></li>
                     </ul>
                     </li>
                 </ul>
