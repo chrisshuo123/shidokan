@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
-    <!--<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">-->
+    <!-- 1 - Bootstrap CSS -->
     <!-- Versi bootstrapnya jsdelivr dari GPT yang untuk menjalankan fungsi Carousel Banner -->
     <!--<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet">-->
     <!-- 1 - Bootstrap CSS for Navbar 2.0 -->
@@ -11,9 +11,13 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
     <!--<link rel="stylesheet" type="text/css" href="../../2_styleCSS/navbarStyle.css">-->
     <!-- 2 - Styling CSS Files -->
-    <link rel="stylesheet" type="text/css" href="<?= $BASEURL; ?>/navbar2.0.css">
-    <link rel="stylesheet" type="text/css" href="<?= $BASEURL; ?>/style.css">
-    <link rel="stylesheet" type="text/css" href="<?= $BASEURL; ?>/bannerImage.css">
+    <link rel="stylesheet" type="text/css" href="<?= BASEURL; ?>/css/navbar2.0.css">
+    <link rel="stylesheet" type="text/css" href="<?= BASEURL; ?>/css/bannerImage.css">
+    <link rel="stylesheet" type="text/css" href="<?= BASEURL; ?>/css/style.css">
+    <link rel="stylesheet" type="text/css" href="<?= BASEURL; ?>/css/map.css">
+    <link rel="stylesheet" type="text/css" href="<?= BASEURL; ?>/css/waveAnimation.css">
+    <!-- <link rel="stylesheet" type="text/css" href="<?= BASEURL; ?>/css/navbarStyle.css"> -->
+    <link rel="stylesheet" type="text/css" href="<?= BASEURL; ?>/css/popUpStyle.css">
     <!-- 3 - React, ReactDOM, Babel Standalone -->
     <title>Halaman <?= $data['judul']; ?></title>
 </head>
@@ -24,7 +28,7 @@
         <nav class="navbar navbar-expand-lg bg-custom"> <!-- Recently .navbar-light .bg-light -->
         <div class="container-fluid">
             <a href="#" class="navbar-brand">
-                <img src="1_main_page/img/7-sprites/1-shidokan-logo/shidokan-indonesia.png" alt="Shidokan Indonesia Logo" style="width: 80px;">
+                <img src="<?= BASEURL; ?>/img/7-sprites/1-shidokan-logo/shidokan-indonesia.png" alt="Shidokan Indonesia Logo" style="width: 80px;">
             </a>
             <button class="navbar-toggler" type="button" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation" style="background-color: rgb(110, 4, 110);">
                 <span class="navbar-toggler-icon"></span>
@@ -33,16 +37,16 @@
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav">
                     <li class="nav-item">
-                    <a class="nav-link active" aria-current="page" href="#">Home</a>
+                    <a class="nav-link active" aria-current="page" href="<?= BASEURL; ?>">Home</a>
                     </li>
                     <li class="nav-item dropdown">
                     <a class="nav-link dropdown-toggle" href="#" id="newsDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                         News
                     </a>
                     <ul class="dropdown-menu" aria-labelledby="newsDropdown">
-                        <li><a class="dropdown-item" href="1_main_page/2_news/berita.html">News</a></li>
-                        <li><a class="dropdown-item" href="1_main_page/2_news/nasional.html">&nbsp;National</a></li>
-                        <li><a class="dropdown-item" href="1_main_page/2_news/internasional.html">&nbsp;International</a></li>
+                        <li><a class="dropdown-item" href="<?= BASEURL; ?>/2_news">News</a></li>
+                        <li><a class="dropdown-item" href="<?= BASEURL; ?>/2_news/nasional">&nbsp;National</a></li>
+                        <li><a class="dropdown-item" href="<?= BASEURL; ?>/2_news/internasional">&nbsp;International</a></li>
                     </ul>
                     </li>
                     <li class="nav-item dropdown">
@@ -50,18 +54,18 @@
                             About Us
                         </a>
                         <ul class="dropdown-menu" aria-labelledby="aboutDropdown">
-                            <li><a class="dropdown-item" href="1_main_page/3_about-us/about-us.html">About Us</a></li>
-                            <li><a class="dropdown-item" href="1_main_page/3_about-us/sejarah.html">&nbsp;History</a></li>
-                            <li><a class="dropdown-item" href="1_main_page/3_about-us/profile1.html">&nbsp;Profile</a></li>
+                            <li><a class="dropdown-item" href="<?= BASEURL; ?>/3_about">About Us</a></li>
+                            <li><a class="dropdown-item" href="<?= BASEURL; ?>/3_about/sejarah">&nbsp;History</a></li>
+                            <li><a class="dropdown-item" href="<?= BASEURL; ?>/3_about/profile1">&nbsp;Profile</a></li>
                             <li class="dropdown-submenu">
                                 <a class="dropdown-item dropdown-toggle" href="#" id="blackbeltsmenu">&nbsp;Blackbelts</a>
                                 <ul class="dropdown-menu" aria-labelledby="blackbeltsmenu">
-                                    <li><a class="dropdown-item active" href="#">&nbsp;Blackbelts</a></li>
-                                    <li><a class="dropdown-item" href="1_main_page/3_about-us/blackbelts/1_shodan.html">&nbsp;&nbsp;Shodan</a></li>
-                                    <li><a class="dropdown-item" href="1_main_page/3_about-us/blackbelts/2_nidan.html">&nbsp;&nbsp;Nidan</a></li>
-                                    <li><a class="dropdown-item" href="1_main_page/3_about-us/blackbelts/3_sandan.html">&nbsp;&nbsp;Sandan</a></li>
-                                    <li><a class="dropdown-item" href="1_main_page/3_about-us/blackbelts/4_yondan.html">&nbsp;&nbsp;Yondan</a></li>
-                                    <li><a class="dropdown-item" href="1_main_page/3_about-us/blackbelts/5_godan.html">&nbsp;&nbsp;Godan</a></li>
+                                    <li><a class="dropdown-item active" href="<?= BASEURL; ?>/4_blackbelts">&nbsp;Blackbelts</a></li>
+                                    <li><a class="dropdown-item" href="<?= BASEURL; ?>/4_blackbelts/1_shodan">&nbsp;&nbsp;Shodan</a></li>
+                                    <li><a class="dropdown-item" href="<?= BASEURL; ?>/4_blackbelts/2_nidan">&nbsp;&nbsp;Nidan</a></li>
+                                    <li><a class="dropdown-item" href="<?= BASEURL; ?>/4_blackbelts/3_sandan">&nbsp;&nbsp;Sandan</a></li>
+                                    <li><a class="dropdown-item" href="<?= BASEURL; ?>/4_blackbelts/4_yondan">&nbsp;&nbsp;Yondan</a></li>
+                                    <li><a class="dropdown-item" href="<?= BASEURL; ?>/4_blackbelts/5_godan">&nbsp;&nbsp;Godan</a></li>
                                 </ul>
                             </li>
                         </ul>
@@ -71,7 +75,7 @@
                         Contact & Dojo List
                     </a>
                     <ul class="dropdown-menu" aria-labelledby="contactDropdown" style="max-height: 200px; overflow-y: auto; overflow-x: hidden;">
-                        <li><a class="dropdown-item" href="1_main_page/4_contact-us/contactAndDojoList.html">Contacts & Dojo List</a></li>
+                        <li><a class="dropdown-item" href="<?= BASEURL; ?>/6_contact">Contacts & Dojo List</a></li>
                         <li><a class="dropdown-item" href="#">&nbsp;Shidokan Ikigai Honbu</a></li>
                         <li><a class="dropdown-item" href="#">&nbsp;As-Sa'adah Integrated Islamic Elementary School</a></li>
                         <li><a class="dropdown-item" href="#">&nbsp;Asrama Denpom III/1 Shidokan Jawa Barat Honbu</a></li>
@@ -89,9 +93,9 @@
                         Voice from Shibucho
                     </a>
                     <ul class="dropdown-menu" aria-labelledby="shibuchoDropdown">
-                        <li><a class="dropdown-item" href="1_main_page/5_voice-from-shibucho/voiceFromShibucho.html">Voice from Shibucho</a></li>
-                        <li><a class="dropdown-item" href="1_main_page/5_voice-from-shibucho/tataTertibDojo.html">&nbsp;Tata Tertib Dojo</a></li>
-                        <li><a class="dropdown-item" href="1_main_page/5_voice-from-shibucho/joinUs.html">&nbsp;Join Us!</a></li>
+                        <li><a class="dropdown-item" href="<?= BASEURL; ?>/7_voiceFromShibucho">Voice from Shibucho</a></li>
+                        <li><a class="dropdown-item" href="<?= BASEURL; ?>/7_voiceFromShibucho/tataTertib">&nbsp;Tata Tertib Dojo</a></li>
+                        <li><a class="dropdown-item" href="<?= BASEURL; ?>/7_voiceFromShibucho/joinUs">&nbsp;Join Us!</a></li>
                     </ul>
                     </li>
                     <li class="nav-item dropdown">
@@ -99,9 +103,9 @@
                         Our Sponsors
                     </a>
                     <ul class="dropdown-menu" aria-labelledby="sponsorsDropdown">
-                        <li><a class="dropdown-item" href="1_main_page/6_sponsors/sponsors.html">Our Sponsors</a></li>
-                        <li><a class="dropdown-item" href="1_main_page/6_sponsors/our_partner.html">&nbsp;Our Partner</a></li>
-                        <li><a class="dropdown-item" href="1_main_page/6_sponsors/merchandise.html">&nbsp;Merchandise</a></li>
+                        <li><a class="dropdown-item" href="<?= BASEURL; ?>/8_sponsors">Our Sponsors</a></li>
+                        <li><a class="dropdown-item" href="<?= BASEURL; ?>/8_sponsors/ourPartner">&nbsp;Our Partner</a></li>
+                        <li><a class="dropdown-item" href="<?= BASEURL; ?>/8_sponsors/merchandise">&nbsp;Merchandise</a></li>
                     </ul>
                     </li>
                 </ul>

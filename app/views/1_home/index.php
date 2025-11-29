@@ -20,7 +20,7 @@
                 </div>
             </div>
             <div class="carousel-item">
-                <div class="carousel-image" style="background-image: url('1_main_page/img/1-banner/banner-sample-2.jpg');"></div>
+                <div class="carousel-image" style="background-image: url('<?= BASEURL; ?>/img/1-banner/banner-sample-2.jpg');"></div>
                 <!--<img src="../img/1-banner/banner-sample-2.jpg" class="d-block w-100" alt="Slide 2">-->
                 <div class="carousel-caption">
                     <h3>Explore Slide 2</h3>
@@ -28,7 +28,7 @@
                 </div>
             </div>
             <div class="carousel-item">
-                <div class="carousel-image" style="background-image: url('1_main_page/img/1-banner/banner-sample-1.jpg');"></div>
+                <div class="carousel-image" style="background-image: url('<?= BASEURL; ?>/img/1-banner/banner-sample-1.jpg');"></div>
                 <!--<img src="../img/1-banner/banner-sample-1.jpg" class="d-block w-100" alt="Slide 3">-->
                 <div class="carousel-caption">
                     <h3>Experience Slide 3</h3>
@@ -54,7 +54,7 @@
             <h1>Selamat datang di Shidokan Indonesia</h1>
             <div class="fullParagraph">
                 <div class="image-text-wrapper" style="width: 80%; margin:0% auto;">
-                    <img src="1_main_page/img/2-instruktur-face/2-home-profil.JPG" class="intro-image">
+                    <img src="<?= BASEURL; ?>/img/2-instruktur-face/2-home-profil.JPG" class="intro-image">
                     <div class="text-content">
                         <p style="font-size: 1.2rem;">Sebuah organisasi Kyokushin Internasional yang langsung terpusat dengan Jepang ini didirikan oleh Yoshiji Soeno, founder dari Shidokan sekaligus merupakan salah satu murid berprestasinya Sosaimas Oyama.  Yoshiji Soeno, mempercayai serta menunjuk  Sensei Erick Danurahardja, mantan anggota dari Kyokushin Karate Indonesia (KKI) yang saat itu dipimpin oleh Shihan JB Sujoto, untuk menjabat Head Branch Shidokan Indonesia demi mengembang dan memperkenalkan organisasi Shidokan di Indonesia.</p>
                     </div>
@@ -139,47 +139,47 @@
             <div class="row justify-content-md-center justify-content-center text-center daftar-dojo" style="margin-left:1.5%;">
                 <!-- #1 - Shidokan Ikigai Honbu -->
                 <div class="catalog-btn col-lg-4 col-md-5 col-5" data-link="#">
-                    <img src="1_main_page/img/3-katalog/dojoBuilding1.png" class="img-fluid">
+                    <img src="<?= BASEURL; ?>/img/3-katalog/dojoBuilding1.png" class="img-fluid">
                     <p style="padding:0 1% 0 1%;">Shidokan Ikigai Honbu</p>
                 </div>
                 <!-- #2 - As-Sa'adah Integrated Islamic Elementary School -->
                 <div class="catalog-btn col-lg-4 col-md-5 col-5" data-link="#">
-                    <img src="1_main_page/img/3-katalog/dojoBuilding2.png" class="img-fluid">
+                    <img src="<?= BASEURL; ?>/img/3-katalog/dojoBuilding2.png" class="img-fluid">
                     <p style="padding:0 1% 0 1%;">As-Sa'adah Integrated Islamic Elementary School</p>
                 </div>
                 <!-- #3 - Asrama Denpom III/1 Shidokan Jawa Barat Honbu -->
                 <div class="catalog-btn col-lg-4 col-md-5 col-5" data-link="#">
-                    <img src="1_main_page/img/3-katalog/dojoBuilding3.png" class="img-fluid">
+                    <img src="<?= BASEURL; ?>/img/3-katalog/dojoBuilding3.png" class="img-fluid">
                     <p style="padding:0 1% 0 1%;">Asrama Denpom III/1 Shidokan Jawa Barat Honbu</p>
                 </div>
                 <!-- #4 - Shidokan Penerbad Semarang -->
                 <div class="catalog-btn col-lg-4 col-md-5 col-5" data-link="#">
-                    <img src="1_main_page/img/3-katalog/dojoBuilding4.png" class="img-fluid">
+                    <img src="<?= BASEURL; ?>/img/3-katalog/dojoBuilding4.png" class="img-fluid">
                     <p style="padding:0 1% 0 1%;">Shidokan Penerbad Semarang</p>
                 </div>
                 <!-- #5 - Shidokan Yuan Surabaya Barat -->
                 <div class="catalog-btn col-lg-4 col-md-5 col-5" data-link="#">
-                    <img src="1_main_page/img/3-katalog/dojoBuilding4.png" class="img-fluid">
+                    <img src="<?= BASEURL; ?>/img/3-katalog/dojoBuilding4.png" class="img-fluid">
                     <p style="padding:0 1% 0 1%;">Shidokan Yuan Surabaya Barat</p>
                 </div>
                 <!-- #6 - Shidokan Main Branch (Walikota Mustajab) -->
                 <div class="catalog-btn col-lg-4 col-md-5 col-5" data-link="#">
-                    <img src="1_main_page/img/3-katalog/dojoBuilding4.png" class="img-fluid">
+                    <img src="<?= BASEURL; ?>/img/3-katalog/dojoBuilding4.png" class="img-fluid">
                     <p style="padding:0 1% 0 1%;">Shidokan Main Branch (Walikota Mustajab)</p>
                 </div>
                 <!-- #7 - Shidokan Bali Lion Dojo -->
                 <div class="catalog-btn col-lg-4 col-md-5 col-5" data-link="#">
-                    <img src="1_main_page/img/3-katalog/dojoBuilding4.png" class="img-fluid">
+                    <img src="<?= BASEURL; ?>/img/3-katalog/dojoBuilding4.png" class="img-fluid">
                     <p style="padding:0 1% 0 1%;">Shidokan Bali Lion Dojo</p>
                 </div>
                 <!-- #8 - Kyokushin Ampel -->
                 <div class="catalog-btn col-lg-4 col-md-5 col-5" data-link="#">
-                    <img src="1_main_page/img/3-katalog/dojoBuilding4.png" class="img-fluid">
+                    <img src="<?= BASEURL; ?>/img/3-katalog/dojoBuilding4.png" class="img-fluid">
                     <p style="padding:0 1% 0 1%;">Kyokushin Ampel</p>
                 </div>
                 <!-- #9 - Kyokushin Alkhairiyah -->
                 <div class="catalog-btn col-lg-4 col-md-5 col-5" data-link="#">
-                    <img src="1_main_page/img/3-katalog/dojoBuilding4.png" class="img-fluid">
+                    <img src="<?= BASEURL; ?>/img/3-katalog/dojoBuilding4.png" class="img-fluid">
                     <p style="padding:0 1% 0 1%;">Kyokushin Alkhairiyah</p>
                 </div>
             </div>
@@ -192,27 +192,27 @@
             <div class="row justify-content-md-center justify-content-center text-center">
                 <!-- Data-Link tinggal diterapin URL Saja -->
                 <div class="logo_dataLink col-md-2 col-5" style="padding:0; margin-right:3%; margin-bottom: 2%;" data-link="#">
-                    <img src="1_main_page/img/5-partner/tokoemas.png" class="img-fluid">
+                    <img src="<?= BASEURL; ?>/img/5-partner/tokoemas.png" class="img-fluid">
                     <p>Toko Emas</p>
                 </div>
                 <div class="logo_dataLink col-md-2 col-5" style="padding:0; margin-right:3%; margin-bottom: 2%;" data-link="#">
-                    <img src="1_main_page/img/5-partner/uc1000.png" class="img-fluid">
+                    <img src="<?= BASEURL; ?>/img/5-partner/uc1000.png" class="img-fluid">
                     <p>You C-1000</p>
                 </div>
                 <div class="logo_dataLink col-md-2 col-5" style="padding:0; margin-right:3%; margin-bottom: 2%;" data-link="#">
-                    <img src="1_main_page/img/5-partner/tokoemas.png" class="img-fluid">
+                    <img src="<?= BASEURL; ?>/img/5-partner/tokoemas.png" class="img-fluid">
                     <p>Shidokan Jepang</p>
                 </div>
                 <div class="logo_dataLink col-md-2 col-5" style="padding:0; margin-right:3%; margin-bottom: 2%;" data-link="#">
-                    <img src="1_main_page/img/5-partner/uc1000.png" class="img-fluid">
+                    <img src="<?= BASEURL; ?>/img/5-partner/uc1000.png" class="img-fluid">
                     <p>Logo A</p>
                 </div>
                 <div class="logo_dataLink col-md-2 col-5" style="padding:0; margin-right:3%; margin-bottom: 2%;" data-link="#">
-                    <img src="1_main_page/img/5-partner/tokoemas.png" class="img-fluid">
+                    <img src="<?= BASEURL; ?>/img/5-partner/tokoemas.png" class="img-fluid">
                     <p>Logo B</p>
                 </div>
                 <div class="logo_dataLink col-md-2 col-5" style="padding:0; margin-right:3%; margin-bottom: 2%;" data-link="#">
-                    <img src="1_main_page/img/5-partner/uc1000.png" class="img-fluid">
+                    <img src="<?= BASEURL; ?>/img/5-partner/uc1000.png" class="img-fluid">
                     <p>Logo C</p>
                 </div>
             </div>
@@ -224,13 +224,13 @@
             <h1 style="margin-top:3%;">Merchandise</h1>
             <div class="row justify-content-md-center justify-content-center text-center">
                 <div class="col-md-3 col-5" style="padding:0; margin-right:3%;">
-                    <img src="1_main_page/img/6-merchandise/uc1000_merchandise.png" class="img-fluid">
+                    <img src="<?= BASEURL; ?>/img/6-merchandise/uc1000_merchandise.png" class="img-fluid">
                 </div>
                 <div class="col-md-3 col-5" style="padding:0; margin-right:3%;">
-                    <img src="1_main_page/img/6-merchandise/tomoemas1_merchandise.png" class="img-fluid">
+                    <img src="<?= BASEURL; ?>/img/6-merchandise/tomoemas1_merchandise.png" class="img-fluid">
                 </div>
                 <div class="col-md-3 col-5" style="padding:0; margin-right:3%;">
-                    <img src="1_main_page/img/6-merchandise/tokoemas2_merchandise.png" class="img-fluid">
+                    <img src="<?= BASEURL; ?>/img/6-merchandise/tokoemas2_merchandise.png" class="img-fluid">
                 </div>
             </div>
         </div>

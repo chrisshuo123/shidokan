@@ -21,7 +21,7 @@ section .wave {
     left: 0;
     width: 100%;
     height: 100px;
-    background: url(../1_main_page/img/7-sprites/3-sprite-animation/wave.png);
+    background: url("http://localhost/shidokan-web/public/img/7-sprites/3-sprite-animation/wave.png");
     background-size: 200% 100%;
 }
 section .wave.wave1 {
