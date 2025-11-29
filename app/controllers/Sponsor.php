@@ -1,6 +1,6 @@
 <?php
 
-class Sponser extends Controller {
+class Sponsor extends Controller {
     public function index() {
         $data['judul'] = "Our Sponsors";
     

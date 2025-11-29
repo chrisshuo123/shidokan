@@ -44,9 +44,9 @@
                         News
                     </a>
                     <ul class="dropdown-menu" aria-labelledby="newsDropdown">
-                        <li><a class="dropdown-item" href="<?= BASEURL; ?>/2_news">News</a></li>
-                        <li><a class="dropdown-item" href="<?= BASEURL; ?>/2_news/nasional">&nbsp;National</a></li>
-                        <li><a class="dropdown-item" href="<?= BASEURL; ?>/2_news/internasional">&nbsp;International</a></li>
+                        <li><a class="dropdown-item" href="#">News</a></li>
+                        <li><a class="dropdown-item" href="#">&nbsp;National</a></li>
+                        <li><a class="dropdown-item" href="#">&nbsp;International</a></li>
                     </ul>
                     </li>
                     <li class="nav-item dropdown">
@@ -54,18 +54,18 @@
                             About Us
                         </a>
                         <ul class="dropdown-menu" aria-labelledby="aboutDropdown">
-                            <li><a class="dropdown-item" href="<?= BASEURL; ?>/3_about">About Us</a></li>
-                            <li><a class="dropdown-item" href="<?= BASEURL; ?>/3_about/sejarah">&nbsp;History</a></li>
-                            <li><a class="dropdown-item" href="<?= BASEURL; ?>/3_about/profile1">&nbsp;Profile</a></li>
+                            <li><a class="dropdown-item" href="<?= BASEURL; ?>/about">About Us</a></li>
+                            <li><a class="dropdown-item" href="<?= BASEURL; ?>/about/sejarah">&nbsp;History</a></li>
+                            <li><a class="dropdown-item" href="<?= BASEURL; ?>/about/profile1">&nbsp;Profile</a></li>
                             <li class="dropdown-submenu">
                                 <a class="dropdown-item dropdown-toggle" href="#" id="blackbeltsmenu">&nbsp;Blackbelts</a>
                                 <ul class="dropdown-menu" aria-labelledby="blackbeltsmenu">
-                                    <li><a class="dropdown-item active" href="<?= BASEURL; ?>/4_blackbelts">&nbsp;Blackbelts</a></li>
-                                    <li><a class="dropdown-item" href="<?= BASEURL; ?>/4_blackbelts/1_shodan">&nbsp;&nbsp;Shodan</a></li>
-                                    <li><a class="dropdown-item" href="<?= BASEURL; ?>/4_blackbelts/2_nidan">&nbsp;&nbsp;Nidan</a></li>
-                                    <li><a class="dropdown-item" href="<?= BASEURL; ?>/4_blackbelts/3_sandan">&nbsp;&nbsp;Sandan</a></li>
-                                    <li><a class="dropdown-item" href="<?= BASEURL; ?>/4_blackbelts/4_yondan">&nbsp;&nbsp;Yondan</a></li>
-                                    <li><a class="dropdown-item" href="<?= BASEURL; ?>/4_blackbelts/5_godan">&nbsp;&nbsp;Godan</a></li>
+                                    <li><a class="dropdown-item active" href="<?= BASEURL; ?>/blackbelts">&nbsp;Blackbelts</a></li>
+                                    <li><a class="dropdown-item" href="<?= BASEURL; ?>/blackbelts/shodan">&nbsp;&nbsp;Shodan</a></li>
+                                    <li><a class="dropdown-item" href="<?= BASEURL; ?>/blackbelts/nidan">&nbsp;&nbsp;Nidan</a></li>
+                                    <li><a class="dropdown-item" href="<?= BASEURL; ?>/blackbelts/sandan">&nbsp;&nbsp;Sandan</a></li>
+                                    <li><a class="dropdown-item" href="<?= BASEURL; ?>/blackbelts/yondan">&nbsp;&nbsp;Yondan</a></li>
+                                    <li><a class="dropdown-item" href="<?= BASEURL; ?>/blackbelts/godan">&nbsp;&nbsp;Godan</a></li>
                                 </ul>
                             </li>
                         </ul>
@@ -75,7 +75,7 @@
                         Contact & Dojo List
                     </a>
                     <ul class="dropdown-menu" aria-labelledby="contactDropdown" style="max-height: 200px; overflow-y: auto; overflow-x: hidden;">
-                        <li><a class="dropdown-item" href="<?= BASEURL; ?>/6_contact">Contacts & Dojo List</a></li>
+                        <li><a class="dropdown-item" href="<?= BASEURL; ?>/contactDojo">Contacts & Dojo List</a></li>
                         <li><a class="dropdown-item" href="#">&nbsp;Shidokan Ikigai Honbu</a></li>
                         <li><a class="dropdown-item" href="#">&nbsp;As-Sa'adah Integrated Islamic Elementary School</a></li>
                         <li><a class="dropdown-item" href="#">&nbsp;Asrama Denpom III/1 Shidokan Jawa Barat Honbu</a></li>
@@ -93,9 +93,9 @@
                         Voice from Shibucho
                     </a>
                     <ul class="dropdown-menu" aria-labelledby="shibuchoDropdown">
-                        <li><a class="dropdown-item" href="<?= BASEURL; ?>/7_voiceFromShibucho">Voice from Shibucho</a></li>
-                        <li><a class="dropdown-item" href="<?= BASEURL; ?>/7_voiceFromShibucho/tataTertib">&nbsp;Tata Tertib Dojo</a></li>
-                        <li><a class="dropdown-item" href="<?= BASEURL; ?>/7_voiceFromShibucho/joinUs">&nbsp;Join Us!</a></li>
+                        <li><a class="dropdown-item" href="<?= BASEURL; ?>/shibucho">Voice from Shibucho</a></li>
+                        <li><a class="dropdown-item" href="<?= BASEURL; ?>/shibucho/tataTertib">&nbsp;Tata Tertib Dojo</a></li>
+                        <li><a class="dropdown-item" href="<?= BASEURL; ?>/shibucho/joinUs">&nbsp;Join Us!</a></li>
                     </ul>
                     </li>
                     <li class="nav-item dropdown">
@@ -103,9 +103,9 @@
                         Our Sponsors
                     </a>
                     <ul class="dropdown-menu" aria-labelledby="sponsorsDropdown">
-                        <li><a class="dropdown-item" href="<?= BASEURL; ?>/8_sponsors">Our Sponsors</a></li>
-                        <li><a class="dropdown-item" href="<?= BASEURL; ?>/8_sponsors/ourPartner">&nbsp;Our Partner</a></li>
-                        <li><a class="dropdown-item" href="<?= BASEURL; ?>/8_sponsors/merchandise">&nbsp;Merchandise</a></li>
+                        <li><a class="dropdown-item" href="<?= BASEURL; ?>/sponsor">Our Sponsors</a></li>
+                        <li><a class="dropdown-item" href="<?= BASEURL; ?>/sponsor/ourPartner">&nbsp;Our Partner</a></li>
+                        <li><a class="dropdown-item" href="<?= BASEURL; ?>/sponsor/merchandise">&nbsp;Merchandise</a></li>
                     </ul>
                     </li>
                 </ul>

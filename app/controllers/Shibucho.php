@@ -13,7 +13,7 @@ class Shibucho extends Controller {
         $data['judul'] = "Join Us";
 
         $this->view('templates/header', $data);
-        $this->view('7-voiceFromShibucho/joinUs', $data);
+        $this->view('7_voiceFromShibucho/joinUs', $data);
         $this->view('templates/footer');
     }
 
@@ -21,7 +21,7 @@ class Shibucho extends Controller {
         $data['judul'] = "Tata Tertib Dojo";
 
         $this->view('templates/header', $data);
-        $this->view('7-voiceFromShibucho/tataTertib', $data);
+        $this->view('7_voiceFromShibucho/tataTertib', $data);
         $this->view('templates/footer');
     }
 }
