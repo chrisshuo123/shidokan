@@ -84,16 +84,11 @@
     <script src="<?= BASEURL; ?>/js/app.js"></script>
     <script src="<?= BASEURL; ?>/js/buttonLink.js"></script>
     <script src="<?= BASEURL; ?>/js/carouselHome.js"></script>
-    <script src="<?= BASEURL; ?>/js/navbar2.1.js"></script>
-    <script src="<?= BASEURL; ?>/js/navbar2.0Babel.js"></script>
     <script src="<?= BASEURL; ?>/js/map.js"></script>
     <script src="<?= BASEURL; ?>/js/pagination.js"></script>
     <script src="<?= BASEURL; ?>/js/blackbeltStatus.js"></script>
-    <!-- Navbar Sebelumnya -->
-    <script src="<?= BASEURL; ?>/js/navbar2.0.js"></script>
-    <script type="text/babel" src="<?= BASEURL; ?>/js/navbar2.0Babel.js"></script>
-    <!-- Include your navbarBabel.js file -->
-    <script type="text/javascript" src="<?= BASEURL; ?>/js/navbarBabel.js"></script>
+    <!-- Coba Navbar dari Ecogada_Fullstack -->
+    <script src="<?= BASEURL; ?>/js/navbar.js"></script>
     <!-- 3.1 - To keep the Carousel JS Button -->
     <!-- 3.2 - Add the JSX Babel Code Below -->
     <!-- Include Babel to allow JSX syntax -->

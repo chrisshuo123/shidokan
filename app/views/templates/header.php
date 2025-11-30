@@ -11,13 +11,13 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
     <!--<link rel="stylesheet" type="text/css" href="../../2_styleCSS/navbarStyle.css">-->
     <!-- 2 - Styling CSS Files -->
-    <link rel="stylesheet" type="text/css" href="<?= BASEURL; ?>/css/navbar2.0.css">
     <link rel="stylesheet" type="text/css" href="<?= BASEURL; ?>/css/bannerImage.css">
     <link rel="stylesheet" type="text/css" href="<?= BASEURL; ?>/css/style.css">
     <link rel="stylesheet" type="text/css" href="<?= BASEURL; ?>/css/map.css">
     <link rel="stylesheet" type="text/css" href="<?= BASEURL; ?>/css/waveAnimation.css">
-    <!-- <link rel="stylesheet" type="text/css" href="<?= BASEURL; ?>/css/navbarStyle.css"> -->
     <link rel="stylesheet" type="text/css" href="<?= BASEURL; ?>/css/popUpStyle.css">
+    <!-- Coba Navbar dari Ecogada_Fullstack -->
+    <link rel="stylesheet" type="text/css" href="<?= BASEURL; ?>/css/navbar.css">
     <!-- 3 - React, ReactDOM, Babel Standalone -->
     <title>Halaman <?= $data['judul']; ?></title>
 </head>
