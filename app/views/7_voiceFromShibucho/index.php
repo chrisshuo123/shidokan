@@ -25,7 +25,6 @@
                 </div>
             </div>
         </div>
-        <div class="bottomline" style="margin-bottom: 7%;"></div>
 
         <!-- Daftar Dojo -->
         <div class="katalog-layout">

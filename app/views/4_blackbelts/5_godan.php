@@ -15,4 +15,3 @@
         </div>
         <p style="text-align: center;">- Belum ada data untuk saat ini -</p>
     </div>
-    <div class="bottomline" style="margin-bottom: 7%;"></div>

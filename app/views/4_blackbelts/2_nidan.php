@@ -53,4 +53,3 @@
             </tbody>
         </table>
     </div>
-    <div class="bottomline" style="margin-bottom: 7%;"></div>

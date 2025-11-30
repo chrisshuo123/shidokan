@@ -62,7 +62,6 @@
             </div>
         </div>
         <button type="button" class="btn btn-dark" style="margin: 2% auto; margin-bottom:-2%; display:block; font-size: 1.2rem;">Lihat Sejarah Kami</button>
-        <div class="bottomline"></div>
 
         <!-- Berita -->
         <!--<div class="berita" style="margin-bottom: 7%;">
@@ -127,8 +126,7 @@
                 </div>
                 <button type="button" class="btn btn-dark">Lihat Berita Internasional Selengkapnya</button>
             </div>
-        </div>
-        <div class="bottomline" style="margin-bottom: 5%;"></div>-->
+        </div> -->
 
         <!-- Profile -->
         
@@ -184,7 +182,6 @@
                 </div>
             </div>
         </div>
-        <div class="bottomline" style="margin-bottom: 5%;"></div>
 
         <!-- Our Partner -->
         <div class="our-partner font-responsive">
@@ -217,7 +214,6 @@
                 </div>
             </div>
         </div>
-        <div class="bottomline"></div>
 
         <!-- Merchandise -->
         <div class="merchandise">
