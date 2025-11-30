@@ -13,11 +13,11 @@
             <p style="text-align:center;">Kumpulan lengkap Partner & Merchandise Shidokan Indonesia</p>
             <div class="row justify-content-md-center justify-content-center text-center" style="margin-left:1.5%;">
                 <div class="catalog-btn sponsors_dataLink col-sm-4 col-5" data-link="../6_sponsors/our_partner.html">
-                    <img src="../img/3-katalog/1-fotoDojo/dojo-image.jpg" class="img-fluid">
+                    <img src="<?= BASEURL; ?>/img/3-katalog/1-fotoDojo/dojo-image.jpg" class="img-fluid">
                     <p>Our Partner</p>
                 </div>
                 <div class="catalog-btn sponsors_dataLink col-sm-4 col-5" data-link="../6_sponsors/merchandise.html">
-                    <img src="../img/3-katalog/1-fotoDojo/dojo-image.jpg" class="img-fluid">
+                    <img src="<?= BASEURL; ?>/img/3-katalog/1-fotoDojo/dojo-image.jpg" class="img-fluid">
                     <p>Merchandise</p>
                 </div>
             </div>
