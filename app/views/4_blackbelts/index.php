@@ -13,23 +13,23 @@
             <p style="text-align: center;">Blackbelt terdiri atas Shodan, Nidan, Sandan, Yondan, dan Godan, yang secara harafiah adalah tingkat I, II, III, IV, dan V</p>
             <div class="row justify-content-md-center justify-content-center text-center" style="margin-left:1.5%;">
                 <div class="catalog-btn blackbelt_dataLink col-sm-4 col-5" data-link="../blackbelts/1_shodan.html">
-                    <img src="../../img/3-katalog/2-blackbelt-list/blackbelt_img.png" class="img-fluid">
+                    <img src="http://localhost/shidokan-web/public/img/3-katalog/2-blackbelt-list/blackbelt_img.png" class="img-fluid">
                     <p>Shodan</p>
                 </div>
                 <div class="catalog-btn blackbelt_dataLink col-sm-4 col-5" data-link="../blackbelts/2_nidan.html">
-                    <img src="../../img/3-katalog/2-blackbelt-list/blackbelt_img.png" class="img-fluid">
+                    <img src="http://localhost/shidokan-web/public/img/3-katalog/2-blackbelt-list/blackbelt_img.png" class="img-fluid">
                     <p>Nidan</p>
                 </div>
                 <div class="catalog-btn blackbelt_dataLink col-sm-4 col-5" data-link="../blackbelts/3_sandan.html">
-                    <img src="../../img/3-katalog/2-blackbelt-list/blackbelt_img.png" class="img-fluid">
+                    <img src="http://localhost/shidokan-web/public/img/3-katalog/2-blackbelt-list/blackbelt_img.png" class="img-fluid">
                     <p>Sandan</p>
                 </div>
                 <div class="catalog-btn blackbelt_dataLink col-sm-4 col-5" data-link="../blackbelts/4_yondan.html">
-                    <img src="../../img/3-katalog/2-blackbelt-list/blackbelt_img.png" class="img-fluid">
+                    <img src="http://localhost/shidokan-web/public/img/3-katalog/2-blackbelt-list/blackbelt_img.png" class="img-fluid">
                     <p>Yondan</p>
                 </div>
                 <div class="catalog-btn blackbelt_dataLink col-sm-4 col-5" data-link="../blackbelts/5_godan.html">
-                    <img src="../../img/3-katalog/2-blackbelt-list/blackbelt_img.png" class="img-fluid">
+                    <img src="http://localhost/shidokan-web/public/img/3-katalog/2-blackbelt-list/blackbelt_img.png" class="img-fluid">
                     <p>Godan</p>
                 </div>
             </div>

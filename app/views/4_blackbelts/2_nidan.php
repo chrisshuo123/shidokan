@@ -14,7 +14,7 @@
             <p>Blackbelt Tingkat 2 DAN II</p>
         </div>
         <!-- List Shodan Shidokan Indonesia -->
-        <table>
+        <table class="blackbelt">
             <thead>
                 <tr>
                     <th>No.</th>

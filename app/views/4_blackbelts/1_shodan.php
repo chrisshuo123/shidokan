@@ -14,7 +14,7 @@
             <p>Blackbelt Tingkat 1 DAN I</p>
         </div>
         <!-- List Shodan Shidokan Indonesia -->
-        <table>
+        <table class="blackbelt">
             <thead>
                 <tr>
                     <th>No.</th>
