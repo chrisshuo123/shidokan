@@ -703,6 +703,10 @@ img {
 
 /* ===== BLACKBELTS LIST ====== */
 
+.blackbelt {
+    color:white;
+}
+
 .blackbelt-title {
     margin-bottom: 5%;
 }
@@ -751,7 +755,7 @@ thead {
     background-color: #000;
 }
 tbody {
-    background-color: #130716;
+    background-color: #715977ff;
 }
 
 @media screen and (min-width:526px) and (max-width: 768px) {
