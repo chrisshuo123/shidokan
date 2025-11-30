@@ -8,6 +8,14 @@
     background-color: RGB(42,1,52);
     width: 100%;
 }
+/* Adjust the navbar button's vertical align to center */
+.fixed-navbar .navbar .container-fluid {
+    margin-top: 10px;
+}
+.fixed-navbar .navbar .container-fluid .navbar-brand {
+    margin-top: -10px;
+}
+
 .fixed-navbar a {
     color: white;
 }
