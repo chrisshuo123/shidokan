@@ -21,5 +21,4 @@
                 <li><p>Menggunakan do-gi lengkap berlogo Kyokushin / Shidokan, kecuali hari yang disepakati untuk sesi latihan “no-gi”.</p></li>
             </ol>
         </div>
-        <div class="bottomline" style="margin-top: -9%; margin-bottom: 8%;"></div>
     </div>

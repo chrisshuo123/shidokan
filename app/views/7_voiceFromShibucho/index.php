@@ -11,7 +11,7 @@
             <h1>Pesan dari Shibucho Shidokan Indonesia</h1>
             <div class="fullParagraph">
                 <div class="image-text-wrapper">
-                    <img src="../img/2-instruktur-face/1-announcement.JPG" class="intro-image">
+                    <img src="<?= BASEURL; ?>/img/2-instruktur-face/1-announcement.JPG" class="intro-image">
                     <div class="text-content">
                         <p style="margin-bottom: 2%; font-size:1.3rem;"><b>OSU!<br></b></p>
                         <p style="margin-top:1%;">Sejak awal terciptanya beladiri Karate di dunia hingga eksistensinya saat ini, sejarah mencatat bahwa perkembangan beladiri Karate tidak lepas dari berbagai macam modifikasi, mulai dari teknik bertarung, pola drilling latihan, hingga peraturan pertandingan,  yang bahkan dulunya olah raga yang saya gemari ini adalah murni suatu seni untuk membela diri saja.</p>
@@ -32,11 +32,11 @@
             <!--<h1>Daftar Dojo</h1>-->
             <div class="row justify-content-md-center justify-content-center text-center" style="margin-left:1.5%; margin: 5% auto;">
                 <div class="catalog-btn voiceFrom_datalink col-sm-4 col-5" data-link="../5_voice-from-shibucho/tataTertibDojo.html">
-                    <img src="../img/3-katalog/1-fotoDojo/dojo-image.jpg" class="img-fluid">
+                    <img src="<?= BASEURL; ?>/img/3-katalog/1-fotoDojo/dojo-image.jpg" class="img-fluid">
                     <p>Tata Tertib Dojo</p>
                 </div>
                 <div class="catalog-btn voiceFrom_datalink col-sm-4 col-5" data-link="../5_voice-from-shibucho/joinUs.html">
-                    <img src="../img/3-katalog/1-fotoDojo/dojo-image.jpg" class="img-fluid">
+                    <img src="<?= BASEURL; ?>/img/3-katalog/1-fotoDojo/dojo-image.jpg" class="img-fluid">
                     <p>Join Us!</p>
                 </div>
             </div>

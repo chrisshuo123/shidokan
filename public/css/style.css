@@ -1413,10 +1413,19 @@ tbody {
     padding-left: 5%;
     padding-right: 5%;
 }
+.layout-instruksi ul li::marker {
+    color: white;
+}
+.layout-instruksi h1 {
+    color:white;
+}
+.layout-instruksi p {
+    color:white;
+}
 
 /* == Join Us == */
 .layout-joinUs {
-    background-color: #100313;
+    background-color: #bcaebfff;
     border-radius: 20px;
     border: 2px solid #ffffff;
     margin-bottom: 10%;
