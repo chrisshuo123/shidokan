@@ -61,7 +61,7 @@
                 </div>
             </div>
         </div>
-        <button type="button" class="btn btn-dark" style="margin: 2% auto; margin-bottom:-2%; display:block; font-size: 1.2rem;">Lihat Sejarah Kami</button>
+        <button type="button" class="btn btn-dark" style="margin: 5% auto; display:block; font-size: 1.2rem;">Lihat Sejarah Kami</button>
 
         <!-- Berita -->
         <!--<div class="berita" style="margin-bottom: 7%;">

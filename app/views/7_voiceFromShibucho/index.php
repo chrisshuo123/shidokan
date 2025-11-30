@@ -30,11 +30,11 @@
         <div class="katalog-layout">
             <!--<h1>Daftar Dojo</h1>-->
             <div class="row justify-content-md-center justify-content-center text-center" style="margin-left:1.5%; margin: 5% auto;">
-                <div class="catalog-btn voiceFrom_datalink col-sm-4 col-5" data-link="../5_voice-from-shibucho/tataTertibDojo.html">
+                <div class="catalog-btn voiceFrom_datalink col-sm-4 col-5" data-link="<?= BASEURL; ?>/shibucho/tataTertib">
                     <img src="<?= BASEURL; ?>/img/3-katalog/1-fotoDojo/dojo-image.jpg" class="img-fluid">
                     <p>Tata Tertib Dojo</p>
                 </div>
-                <div class="catalog-btn voiceFrom_datalink col-sm-4 col-5" data-link="../5_voice-from-shibucho/joinUs.html">
+                <div class="catalog-btn voiceFrom_datalink col-sm-4 col-5" data-link="<?= BASEURL; ?>/shibucho/joinUs">
                     <img src="<?= BASEURL; ?>/img/3-katalog/1-fotoDojo/dojo-image.jpg" class="img-fluid">
                     <p>Join Us!</p>
                 </div>

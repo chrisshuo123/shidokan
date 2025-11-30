@@ -1221,10 +1221,10 @@ tbody {
 }
 .dropdown .dropdown-content p {
     text-align: left;
-    color:white;
+    color:black;
 }
 .dropdown .dropdown-content ol li {
-    color:white;
+    color:black;
 }
 
 /* Applying paragraph spaces for the 2nd, 3rd, etc */
@@ -1250,7 +1250,7 @@ tbody {
 
 .dropbtn {
     width: 100%;
-    background-color: #7b1364;
+    background-color: #726073ff;
     color: #fff;
     border: none;
     border-radius: 8px;
@@ -1262,13 +1262,13 @@ tbody {
 }
 
 .dropbtn:hover {
-    background-color: #555;
+    background-color: rgba(72, 52, 67, 1)073ff;
 }
 
 .dropdown-content {
     display: none; /* Hidden by default */
     position: relative;
-    background-color: #190415; /* Warna isi BG paragraf p */
+    background-color: #e3dbe2ff; /* Warna isi BG paragraf p */
     min-width: 100%;
     box-shadow: 0px 4px 8px rgba(0,0,0,0.2);
     border-radius: 8px;

@@ -12,11 +12,11 @@
             <h1>Sponsor Kami</h1>
             <p style="text-align:center;">Kumpulan lengkap Partner & Merchandise Shidokan Indonesia</p>
             <div class="row justify-content-md-center justify-content-center text-center" style="margin-left:1.5%;">
-                <div class="catalog-btn sponsors_dataLink col-sm-4 col-5" data-link="../6_sponsors/our_partner.html">
+                <div class="catalog-btn sponsors_dataLink col-sm-4 col-5" data-link="<?= BASEURL; ?>/sponsor/ourPartner">
                     <img src="<?= BASEURL; ?>/img/3-katalog/1-fotoDojo/dojo-image.jpg" class="img-fluid">
                     <p>Our Partner</p>
                 </div>
-                <div class="catalog-btn sponsors_dataLink col-sm-4 col-5" data-link="../6_sponsors/merchandise.html">
+                <div class="catalog-btn sponsors_dataLink col-sm-4 col-5" data-link="<?= BASEURL; ?>/sponsor/merchandise">
                     <img src="<?= BASEURL; ?>/img/3-katalog/1-fotoDojo/dojo-image.jpg" class="img-fluid">
                     <p>Merchandise</p>
                 </div>
