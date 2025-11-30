@@ -1,5 +1,27 @@
 /* === NAVBAR & DROPDOWN STYLES === */
 
+/* Make navbar fixed on the top screen */
+.fixed-navbar {
+    position: fixed;
+    top: 0px;
+    z-index: 100;
+    background-color: RGB(42,1,52);
+    width: 100%;
+}
+.fixed-navbar a {
+    color: white;
+}
+.fixed-navbar .dropdown-menu a {
+    color: black;
+}
+.fixed-navbar .nav-item .active {
+    color: white;
+    font-weight: bold;
+}
+.fixed-navbar .dropdown-menu .active {
+    background-color: gray;
+}
+
 /* Ensure navbar is visible */
 .navbar-collapse {
     transition: all 0.3s ease;
@@ -23,10 +45,19 @@
 /* Mobile behavior */
 @media (max-width: 991px) {
     .navbar-collapse {
+        max-height: 350px;
+        overflow-y: auto;
         background-color: #f8f9fa;
         padding: 10px;
         border-radius: 5px;
         margin-top: 10px;
+    }
+    .navbar-collapse a {
+        color: black;
+    }
+    .navbar-collapse .nav-item .active {
+        color: black;
+        font-weight: bold;
     }
     
     .navbar .dropdown > .dropdown-menu,

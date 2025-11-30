@@ -124,7 +124,7 @@ h1 {
 
 /* Responsive adjustments for smaller screens */
 /* + this .header adjusts it's top margin with the sticky Navbar */
-@media screen and (min-width:900px) and (max-width:1175px) {
+/* @media screen and (min-width:900px) and (max-width:1175px) {
     .carousel {
         margin-top:79px;
     }
@@ -141,7 +141,7 @@ h1 {
     }
     .carousel-caption {
         font-size: 0.9rem; /* Adjust font size for captions */
-    }
+    /*}
 }
 @media screen and (max-width:495px) {
     .carousel {
@@ -150,7 +150,7 @@ h1 {
     .carousel-caption {
         font-size: 0.8rem;
     }
-}
+} */
 
 /* === RESPONSIVE IMAGES === */
 
