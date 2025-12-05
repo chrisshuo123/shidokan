@@ -26,7 +26,7 @@
         <nav class="navbar navbar-expand-lg bg-custom"> <!-- Recently .navbar-light .bg-light -->
         <div class="container-fluid">
             <a href="#" class="navbar-brand">
-                <img src="<?= BASEURL; ?>/img/7-sprites/1-shidokan-logo/shidokan-indonesia.png" alt="Shidokan Indonesia Logo" style="width: 80px;">
+                <img src="<?= BASEURL; ?>/img/shidokan-indonesia.png" alt="Shidokan Indonesia Logo" style="width: 80px;">
             </a>
             <button class="navbar-toggler" type="button" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation" style="background-color: rgb(110, 4, 110);">
                 <span class="navbar-toggler-icon"></span>
@@ -35,10 +35,10 @@
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav">
                     <li class="nav-item">
-                        <a class="nav-link active" aria-current="page" href="<?= BASEURL; ?>">Panel Utama</a>
+                        <a class="nav-link" aria-current="page" href="<?= BASEURL; ?>/index">Panel Utama</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link active" aria-current="page" href="<?= BASEURL; ?>/instruktur">Panel Instruktur</a>
+                        <a class="nav-link" aria-current="page" href="<?= BASEURL; ?>/instruktur">Panel Instruktur</a>
                     </li>
                 </ul>
             </div>

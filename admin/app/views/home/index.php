@@ -8,7 +8,7 @@
             <!-- Button ke masing - masing CRUD Panel -->
             <div class="d-grid gap-2 col-6 mx-auto">
                 <a href="<?= BASEURL; ?>/instruktur" class="btn btn-primary" type="button">CRUD Instruktur List</a>
-                <button class="btn btn-primary" type="button">CRUD Dojo List</button>
+                <a href="#" class="btn btn-primary" type="button">CRUD Dojo List</a>
             </div>
             <!-- ------- -->
             <div class="row justify-content-center">
