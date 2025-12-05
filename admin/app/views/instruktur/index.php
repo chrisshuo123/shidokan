@@ -10,7 +10,7 @@
                     <th scope="col">Nama</th>
                     <th scope="col">Branch</th>
                     <th scope="col">Status</th>
-                    <th scope="col">Edit / Delete</th>
+                    <th scope="col">CRUD Editor</th>
                 </tr>
             </thead>
             <tbody>
@@ -20,6 +20,7 @@
                     <td>Flores</td>
                     <td>Aktif</td>
                     <td>
+                        <a href="#"><span class="badge text-bg-primary">Detail</span></a>
                         <a href="#"><span class="badge text-bg-warning">Ubah</span></a>
                         <a href="#"><span class="badge text-bg-danger">Delete</span></a>
                     </td>
