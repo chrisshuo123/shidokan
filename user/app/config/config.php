@@ -2,7 +2,7 @@
 // Simpan URL Absolut, atau DB disini
 // Awal yang berada pada core/constant, dipindah semua ke config/config
 
-define('BASEURL', 'http://localhost/shidokan-web/public');
+define('BASEURL', 'http://localhost/shidokan-web/user/public');
 
 define('DB_HOST', 'localhost');
 define('DB_PORT', '3307');
