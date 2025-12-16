@@ -1,0 +1,63 @@
+# Shidokan Website Readme
+This site is one of our main company profile from Shidokan Kyokushin International Organization from Japan located in Indonesia.  This site is builded using pure programming code without using any website builder such as Wordpress Elementor etc, where we build through Fullstack from Front-End (HTML5, CSS3, JS Bootstrap, ReactJS) and Back-end (PHP, MySQL)<br><br>
+
+**Status:** In process - Front-end 80% completed, now on-going optimizing and implementing the Backend (PHP, MySQL)<br>
+<br>
+**Yang sudah selesai:**
+- ✅ Penyusunan Layouting Front-End (HTML, CSS, JS)
+- ✅ Penyusunan List Blackbelt Shidokan Indonesia
+- ✅ Penyusunan Informasi Sejarah _(history)_ Shidokan Indonesia<br>
+
+**Dalam Proses:**
+- 🔄 Desain layout beranimasi pada halaman tentang kami _(about us)_
+- 🔄 Pembuatan CRUD Editor dan PHP MVC dalam menglist organisasi dan instruktur
+- 🔄 Implementasi fitur blogger pada halaman news dan history<br>
+**Fitur Berikut**
+- 💡 Migrasi / Revamp halaman .HTML menuju ReactJS<br>
+**Tech Stack:** HTML, CSS, JS, Bootstrap, PHP, MySQL, ReactJS<br><br>
+
+Mengingat informasi dari client masih minim maka situs Shidokan ini masih baru dibangun secara front-end menggunakan bahasa dasar seperti HTML5, CSS3, JS, dan Bootstrap.<br>
+<br>
+Untuk kedepan, Situs resmi Shidokan ini akan diimplementasi menggunakan ReactJS seiring berjalannya proses belajar front-end ini demi kelancaran responsivitas situs Shidokan kedepan, beserta mulai menerapkan Back end yang mendata list instruktur dan berita menggunakan PHP dan MySQL mengingat Skala Organisasi ini yang masih kecil, serta mengintegrasi salah satu plugin absensi murid yang sempat dibeli oleh client kami.<br>
+<br>
+Jika memiliki kemampuan lebih lagi, akan diimplementasi fitur Blogspot khusus bagi situs Shidokan ini menggunakan Typescript atau Laravel, seiring berjalannya proses belajar saya.
+<br>
+# Konten Halaman
+Isi dari seluruh halaman Situs Shidokan yang menjelaskan isi, tujuan, fitur, serta implementasi yang diterapkan pada setiap halaman.
+
+## Navbar
+Terletak pada bagian paling teratas halaman Shidokan dimana masih menggunakan bahasa HTML murni menggunakan class .fixed-navbar bootstrap yang diambil dari JSDelivr CDN menggunakan bootstrap.min.css.  Sesuai dengan pernyataan pada pembuka, seluruh halaman termasuk Navbar akan diimplementasi menggunakan ReactJS sehingga lebih responsif dan menghemat waktu saat sedang mengkonfigurasi Navbar tanpa perlu membuka satu per satu halaman.
+
+#### Configuration that need to be done:
+1. Adjust 'contacts and dojo list' to 'dojolist'
+2. Add new 'contact us' navbar next to 'dojolist'
+3. Fix the a href links on 'Our Sponsors' navbar
+
+## Home
+Halaman utama dari Shidokan Indonesia yang menampilkan halaman inti dari about us, history, blackbelts, contacts & dojo list, voice from shinbucho, dan our sponsors.
+## Berita _(Dalam perkembangan)_
+Halaman berita resmi shidokan baik Dalam Negeri _(Indonesia)_ maupun Luar Negeri _(Khususnya Jepang)_.  Oleh sebab diperlukan fitur blogger, maka halaman Berita sengaja tidak ditampilkan dulu.
+## About Us
+Seputar kisah perjalanan visi, dan dedikasi yang menginspirasi langkah shidokan Indonesia kedepan, dibawah naungan Shidokan Internasional Jepang.  Bagian ini merupakan halaman utama about us, yang utamanya terdiri atas panel navigasi menuju ke halaman sejarah & organisasi, blackbelts, profil (dan sebagai tambahan ke halaman sponsor kami yang terdapat pada navbar utama shidokan website).
+### History
+Sekumpulan sejarah Shidokan Indonesia yang disusun dalam bentuk dropdown menggunakan class dropdown pada style.css
+### Blackbelts
+List Anggota Shidokan pemegang Sabuk Hitam, dimulai dari tingkat Ban Hitam Shodan, Nidan, Sandan, Yondan, dan Godan.
+### Contacts & Dojo List
+Sekumpulan List Dojo yang ada didalam Naungan Bendera Organisasi Shidokan di Indonesia
+## Voice from Shinbucho
+Halaman berisi pesan dari Shinbucho (Branch Shidokan Indonesia), dilanjut dengan 2 menu pilihan yakni tata tertib dojo, dan join us (baik instruktur maupun ingin latihan bareng organisasi shidokan indonesia)
+### Tata Tertib Dojo
+Halaman yang mencantumkan janji dojo
+### Join Us
+Halaman untuk bergabung bersama Shidokan Indonesia baik Instruktur, maupun calon murid
+## Our Sponsors
+Halaman utama "our sponsors" yang menyediakan 2 pilihan, diantaranya our partner, serta merchandise
+### Our Partner
+Halaman ini menampilkan deretan logo partner dari Shidokan Indonesia
+### Merchandise
+Menampilkan sekumpulan merchandise resmi dari Shidokan Indonesia
+
+
+
+
