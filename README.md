@@ -3,7 +3,7 @@ This site is one of our main company profile from Shidokan Kyokushin Internation
 
 **Status:** In process - Front-end 80% completed, now on-going optimizing and implementing the Backend (PHP, MySQL)<br>
 <br>
-**Yang sudah selesai:**
+**Already Finished:**
 - ✅ Penyusunan Layouting Front-End (HTML, CSS, JS)
 - ✅ Penyusunan List Blackbelt Shidokan Indonesia
 - ✅ Penyusunan Informasi Sejarah _(history)_ Shidokan Indonesia<br>
