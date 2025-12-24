@@ -12,6 +12,7 @@ This site is one of our main company profile from Shidokan Kyokushin Internation
 - 🔄 Layout Animation Design on About Us Page<br>
 - 🔄 Create CRUD Editor and PHP MVC to list organization dan instructor database<br>
 - 🔄 Implement blog feature on News dan History Page<br>
+<br>
 **The Next Feature**
 - 💡 Migrate / Revamp .HTML into ReactJS format<br>
 **Tech Stack:** HTML, CSS, JS, Bootstrap, PHP, MySQL, ReactJS<br><br>
