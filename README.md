@@ -7,14 +7,15 @@ This site is one of our main company profile from Shidokan Kyokushin Internation
 - ✅ Front-End Layouting (HTML, CSS, JS)<br>
 - ✅ Arrange the Blackbelt List of Shidokan Indonesia<br>
 - ✅ Arrange the Information History of Shidokan Indonesia<br>
-<br>
+
 **In Progress**
 - 🔄 Layout Animation Design on About Us Page<br>
 - 🔄 Create CRUD Editor and PHP MVC to list organization dan instructor database<br>
 - 🔄 Implement blog feature on News dan History Page<br>
-<br>
+
 **The Next Feature**
 - 💡 Migrate / Revamp .HTML into ReactJS format<br>
+
 **Tech Stack:** HTML, CSS, JS, Bootstrap, PHP, MySQL, ReactJS<br><br>
 
 Mengingat informasi dari client masih minim maka situs Shidokan ini masih baru dibangun secara front-end menggunakan bahasa dasar seperti HTML5, CSS3, JS, dan Bootstrap.<br>
