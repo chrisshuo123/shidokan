@@ -4,23 +4,25 @@ This site is one of our main company profile from Shidokan Kyokushin Internation
 **Status:** In process - Front-end 80% completed, now on-going optimizing and implementing the Backend (PHP, MySQL)<br>
 <br>
 **Already Finished:**
-- ✅ Penyusunan Layouting Front-End (HTML, CSS, JS)
-- ✅ Penyusunan List Blackbelt Shidokan Indonesia
-- ✅ Penyusunan Informasi Sejarah _(history)_ Shidokan Indonesia<br>
-
-**Dalam Proses:**
-- 🔄 Desain layout beranimasi pada halaman tentang kami _(about us)_
-- 🔄 Pembuatan CRUD Editor dan PHP MVC dalam menglist organisasi dan instruktur
-- 🔄 Implementasi fitur blogger pada halaman news dan history<br>
-**Fitur Berikut**
-- 💡 Migrasi / Revamp halaman .HTML menuju ReactJS<br>
+- ✅ Front-End Layouting (HTML, CSS, JS)<br>
+- ✅ Arrange the Blackbelt List of Shidokan Indonesia<br>
+- ✅ Arrange the Information History of Shidokan Indonesia<br>
+<br>
+**In Progress**
+- 🔄 Layout Animation Design on About Us Page<br>
+- 🔄 Create CRUD Editor and PHP MVC to list organization dan instructor database<br>
+- 🔄 Implement blog feature on News dan History Page<br>
+**The Next Feature**
+- 💡 Migrate / Revamp .HTML into ReactJS format<br>
 **Tech Stack:** HTML, CSS, JS, Bootstrap, PHP, MySQL, ReactJS<br><br>
 
 Mengingat informasi dari client masih minim maka situs Shidokan ini masih baru dibangun secara front-end menggunakan bahasa dasar seperti HTML5, CSS3, JS, dan Bootstrap.<br>
+Due to minimal information and sources from our client, we build the Shidokan Site using front-end _(still HTML5, CSS3, JS, and Bootstrap)_.<br>
 <br>
-Untuk kedepan, Situs resmi Shidokan ini akan diimplementasi menggunakan ReactJS seiring berjalannya proses belajar front-end ini demi kelancaran responsivitas situs Shidokan kedepan, beserta mulai menerapkan Back end yang mendata list instruktur dan berita menggunakan PHP dan MySQL mengingat Skala Organisasi ini yang masih kecil, serta mengintegrasi salah satu plugin absensi murid yang sempat dibeli oleh client kami.<br>
+In the mean time, this site will be implemented using ReactJS as time goes while learning advanced front-end to make this site more responsive, also start implement Backend that keeps instructor database and news using PHP and MySQL _(considering the small scale of our client's organization)_, also integrate one of our client's 'attendance application' he used to record student attendance.<br>
 <br>
 Jika memiliki kemampuan lebih lagi, akan diimplementasi fitur Blogspot khusus bagi situs Shidokan ini menggunakan Typescript atau Laravel, seiring berjalannya proses belajar saya.
+If we have more skill, we will implement Blog feature primarily for this Shidokan site using Typescript or Laravel, while continuing my learning journey.
 <br>
 # Konten Halaman
 Isi dari seluruh halaman Situs Shidokan yang menjelaskan isi, tujuan, fitur, serta implementasi yang diterapkan pada setiap halaman.
