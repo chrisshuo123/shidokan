@@ -35,31 +35,27 @@ Located on the most top of Shidokan page where still using pure HTML Language us
 2. Add new 'contact us' navbar next to 'dojolist'
 3. Fix the a href links on 'Our Sponsors' navbar
 
-## Home
-Halaman utama dari Shidokan Indonesia yang menampilkan halaman inti dari about us, history, blackbelts, contacts & dojo list, voice from shinbucho, dan our sponsors.
-## Berita _(Dalam perkembangan)_
-Halaman berita resmi shidokan baik Dalam Negeri _(Indonesia)_ maupun Luar Negeri _(Khususnya Jepang)_.  Oleh sebab diperlukan fitur blogger, maka halaman Berita sengaja tidak ditampilkan dulu.
-## About Us
-Seputar kisah perjalanan visi, dan dedikasi yang menginspirasi langkah shidokan Indonesia kedepan, dibawah naungan Shidokan Internasional Jepang.  Bagian ini merupakan halaman utama about us, yang utamanya terdiri atas panel navigasi menuju ke halaman sejarah & organisasi, blackbelts, profil (dan sebagai tambahan ke halaman sponsor kami yang terdapat pada navbar utama shidokan website).
-### History
-Sekumpulan sejarah Shidokan Indonesia yang disusun dalam bentuk dropdown menggunakan class dropdown pada style.css
-### Blackbelts
-List Anggota Shidokan pemegang Sabuk Hitam, dimulai dari tingkat Ban Hitam Shodan, Nidan, Sandan, Yondan, dan Godan.
-### Contacts & Dojo List
-Sekumpulan List Dojo yang ada didalam Naungan Bendera Organisasi Shidokan di Indonesia
-## Voice from Shinbucho
-Halaman berisi pesan dari Shinbucho (Branch Shidokan Indonesia), dilanjut dengan 2 menu pilihan yakni tata tertib dojo, dan join us (baik instruktur maupun ingin latihan bareng organisasi shidokan indonesia)
-### Tata Tertib Dojo
-Halaman yang mencantumkan janji dojo
-### Join Us
-Halaman untuk bergabung bersama Shidokan Indonesia baik Instruktur, maupun calon murid
-## Our Sponsors
-Halaman utama "our sponsors" yang menyediakan 2 pilihan, diantaranya our partner, serta merchandise
-### Our Partner
-Halaman ini menampilkan deretan logo partner dari Shidokan Indonesia
-### Merchandise
-Menampilkan sekumpulan merchandise resmi dari Shidokan Indonesia
-
-
-
-
+## Home Page
+The main page of Shidokan Website that shows the main page from about us, history, blackbelts, contacts & dojo list, voice from shinbucho, and our sponsors.
+## News Page _(Under maintenance)_
+The Official News page from Shidokan happened Domestically _(Indonesia)_ and Internationally _(mainly in Japan)_.  Due to the need of Blog Feature, we disable this News page for this time.
+## About Us Page
+About the story of a Journey, vision, and dedication that inspires Shidokan Indonesia milestone for the future, under the auspices of Shidokan Japan international.  This is part of the 'about us' main page, primarily consists of navigation panel that redirects toward the 'history & organization' page, 'blackbelts' page, 'profile' page _(and in addition towards the 'sponsors' page contained under the main navbar)_.
+### History Page
+A group of Shidokan Indonesia's history that arranged in the form of dropdown using class .dropdown _in style.css_
+### Blackbelts Page
+Indonesian Shidokan Blackbelt Holder Member List, starting from the lower rank consists of Shodan (I), Nidan (II), Sandan (III), Yondan (IV), and Godan (V).
+### Contacts & Dojo List Page
+A group of Dojo Lists contained under the auspices of Shidokan Indonesia Organization.
+## Voice from Shinbucho Page
+Page that contains message from Shinbucho _(Shidokan Indonesia Branch)_, continue with 2 navigation which we're 'tata tertib dojo' _means Dojo's Code of Conduct_, and 'Join Us' _(whether for Instructor or Students Candidate)_.
+### Tata Tertib Dojo Page _(Dojo's Code of Conduct Page)_
+Page that cites the Dojo's Code of Conduct lists.
+### Join Us Page
+Page for registering Instructor or Students Candidate into Shidokan Indonesia.
+## Our Sponsors Page
+The "Our Sponsors" main page that provides 2 navigation menu, among them we're 'partner', and 'merchandise'.
+### Our Partner Page
+This page shows the Partners & Sponsors Logo lists from Shidokan indonesia.
+### Merchandise Page
+Shows a group of Official Merchandise from Shidokan Indonesia.
