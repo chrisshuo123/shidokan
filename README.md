@@ -18,19 +18,17 @@ This site is one of our main company profile from Shidokan Kyokushin Internation
 
 **Tech Stack:** HTML, CSS, JS, Bootstrap, PHP, MySQL, ReactJS<br><br>
 
-Mengingat informasi dari client masih minim maka situs Shidokan ini masih baru dibangun secara front-end menggunakan bahasa dasar seperti HTML5, CSS3, JS, dan Bootstrap.<br>
 Due to minimal information and sources from our client, we build the Shidokan Site using front-end _(still HTML5, CSS3, JS, and Bootstrap)_.<br>
 <br>
 In the mean time, this site will be implemented using ReactJS as time goes while learning advanced front-end to make this site more responsive, also start implement Backend that keeps instructor database and news using PHP and MySQL _(considering the small scale of our client's organization)_, also integrate one of our client's 'attendance application' he used to record student attendance.<br>
 <br>
-Jika memiliki kemampuan lebih lagi, akan diimplementasi fitur Blogspot khusus bagi situs Shidokan ini menggunakan Typescript atau Laravel, seiring berjalannya proses belajar saya.
 If we have more skill, we will implement Blog feature primarily for this Shidokan site using Typescript or Laravel, while continuing my learning journey.
 <br>
-# Konten Halaman
-Isi dari seluruh halaman Situs Shidokan yang menjelaskan isi, tujuan, fitur, serta implementasi yang diterapkan pada setiap halaman.
+# Page Content
+The contents of the Shidokan Web Page which explain the content, purpose, features, and implementation applied to each page.
 
 ## Navbar
-Terletak pada bagian paling teratas halaman Shidokan dimana masih menggunakan bahasa HTML murni menggunakan class .fixed-navbar bootstrap yang diambil dari JSDelivr CDN menggunakan bootstrap.min.css.  Sesuai dengan pernyataan pada pembuka, seluruh halaman termasuk Navbar akan diimplementasi menggunakan ReactJS sehingga lebih responsif dan menghemat waktu saat sedang mengkonfigurasi Navbar tanpa perlu membuka satu per satu halaman.
+Located on the most top of Shidokan page where still using pure HTML Language using class .fixed-navbar bootstrap from JSDelivr CDN using bootstrap.min.css.  In accordance with the statement in the opening, the whole page including Navbar will be implemented using ReactJS to make it more responsive and time saving while configuring Navbar without hassle needing to open the .html page one by one in the Code Editor.
 
 #### Configuration that need to be done:
 1. Adjust 'contacts and dojo list' to 'dojolist'
