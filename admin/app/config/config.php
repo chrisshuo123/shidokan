@@ -6,7 +6,7 @@ define('BASEURL', 'http://localhost/shidokan-web/admin/public');
 
 define('DB_HOST', 'localhost');
 define('DB_PORT', '3307');
-define('DB_NAME', 'shidokan');
+define('DB_NAME', 'shidokan_db');
 define('DB_USER', 'root');
 define('DB_PASS', '');
 
