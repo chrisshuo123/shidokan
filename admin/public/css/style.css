@@ -60,6 +60,31 @@ h1 {
     margin-left: -25px;
 }
 
+/* Hal. Instructor Detail */
+.instructor-detail {
+    max-width: 540px;
+    margin-top: 5%;
+}
+.instructor-subdetail div {
+    margin-right: 3%;
+}
+.instructor-blackbelt-detail {
+    width: 25rem;
+}
+.detail-instruktur-branch {
+    width: 25rem;
+}
+.instruktur-dojo-detail {
+    width: 25rem;
+}
+@media screen and (min-width: 768px) {
+    .instructor-detail {
+        width: 540px;
+    }
+}
+
+
+
 /* === BANNER CAROUSEL === */
 
 /* Custom styles for carousel */
