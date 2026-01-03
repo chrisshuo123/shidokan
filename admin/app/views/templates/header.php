@@ -40,6 +40,9 @@
                     <li class="nav-item">
                         <a class="nav-link" aria-current="page" href="<?= BASEURL; ?>/instruktur">Panel Instruktur</a>
                     </li>
+                    <li class="nav-item">
+                        <a class="nav-link" aria-current="page" href="<?= BASEURL; ?>/dojo">Panel Dojo</a>
+                    </li>
                 </ul>
             </div>
         </div>
