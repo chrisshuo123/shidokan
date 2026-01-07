@@ -100,6 +100,37 @@ CREATE TABLE branch(
 INSERT INTO branch(branch)
     VALUES
         ('Surabaya'),('Bali'),('Semarang'),('Bandung'),('Flores'),('Luwuk'),('Bitung'),('Lombok');
+-- Add foto column in this table branch
+ALTER TABLE branch
+ADD COLUMN foto_lokasi BLOB after branch;
+-- Insert the images needed
+UPDATE branch
+SET foto_lokasi = LOAD_FILE('D:/XAMPP/htdocs/shidokan-web/admin/public/img/location/surabaya.JPG')
+WHERE idBranch = 1;
+UPDATE branch
+SET foto_lokasi = LOAD_FILE('D:/XAMPP/htdocs/shidokan-web/admin/public/img/location/bali.JPG')
+WHERE idBranch = 2;
+UPDATE branch
+SET foto_lokasi = LOAD_FILE('D:/XAMPP/htdocs/shidokan-web/admin/public/img/location/semarang.JPG')
+WHERE idBranch = 3;
+UPDATE branch
+SET foto_lokasi = LOAD_FILE('D:/XAMPP/htdocs/shidokan-web/admin/public/img/location/bandung.JPG')
+WHERE idBranch = 4;
+UPDATE branch
+SET foto_lokasi = LOAD_FILE('D:/XAMPP/htdocs/shidokan-web/admin/public/img/location/flores.JPG')
+WHERE idBranch = 5;
+UPDATE branch
+SET foto_lokasi = LOAD_FILE('D:/XAMPP/htdocs/shidokan-web/admin/public/img/location/luwuk.JPG')
+WHERE idBranch = 6;
+UPDATE branch
+SET foto_lokasi = LOAD_FILE('D:/XAMPP/htdocs/shidokan-web/admin/public/img/location/bitung.JPG')
+WHERE idBranch = 7;
+-- Lombok berhubungan belum ada, maka di comment dulu bagian image lombok
+-- SET foto_lokasi = LOAD_FILE('D:/xampp/htdocs/shidokan-web/admin/public/img/location/lombok.jpg')
+-- WHERE idBranch = 8,
+-- Now, change the datatype from BLOB into LONGBLOB
+ALTER TABLE branch
+CHANGE foto_lokasi foto_lokasi LONGBLOB;
 
 -- 1.5.2. LEVEL DAN TABLE
 -- Create the levelDan Table
