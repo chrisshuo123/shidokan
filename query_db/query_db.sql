@@ -87,6 +87,9 @@ CHANGE idInstruktur_fkInstruktur idInstruktur_fkDojo INT(10);
 alter table dojo
 ADD CONSTRAINT idInstruktur_fkDojo FOREIGN KEY (idInstruktur_fkDojo)
 REFERENCES instruktur(idInstruktur);
+-- Add Another Column called noTelpDojo (incase of data discrepancy between instructor and dojo)
+alter table dojo
+ADD COLUMN noTelpDojo VARCHAR(100) AFTER alamatDojo;
 
 -- 1.5. TABLE MAINLY FOR THE FOREIGN KONSTRAINTS
 
@@ -96,7 +99,11 @@ CREATE TABLE branch(
     idBranch INT(10) PRIMARY KEY auto_increment,
     branch VARCHAR(100) NOT NULL
 );
+-- Add new Province Column
+ALTER TABLE branch
+    ADD COLUMN provinsi VARCHAR(100) AFTER branch;
 -- Insert the data needed
+-- Insert branch column
 INSERT INTO branch(branch)
     VALUES
         ('Surabaya'),('Bali'),('Semarang'),('Bandung'),('Flores'),('Luwuk'),('Bitung'),('Lombok');
@@ -131,6 +138,19 @@ WHERE idBranch = 7;
 -- Now, change the datatype from BLOB into LONGBLOB
 ALTER TABLE branch
 CHANGE foto_lokasi foto_lokasi LONGBLOB;
+-- Insert Provinsi (Province) Column:
+UPDATE branch
+SET provinsi = CASE idBranch
+    WHEN 1 THEN 'Jawa Timur'
+    WHEN 2 THEN 'Bali'
+    WHEN 3 THEN 'Jawa Tengah'
+    WHEN 4 THEN 'Jawa Barat'
+    WHEN 5 THEN 'NTT'
+    WHEN 6 THEN 'Sulawesi Tengah'
+    WHEN 7 THEN 'Sulawesi Utara'
+    WHEN 8 THEN 'NTB'
+END
+WHERE idBranch BETWEEN 1 AND 8;
 
 -- 1.5.2. LEVEL DAN TABLE
 -- Create the levelDan Table
