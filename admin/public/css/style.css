@@ -1,0 +1,1714 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+* {
+    box-sizing: border-box;
+    font-family: 'poppins', sans-serif;
+}
+
+html, body {
+    overflow-x: hidden;
+    font-size: 0.9rem;
+}
+
+body {
+    max-width:100vw;
+    overflow-x: hidden;
+    /*background-color: rgb(35, 12, 23);*/
+    /* background: #2A0134; */
+}
+
+h1 {
+    text-align: center;
+}
+
+.container {
+    margin-top: 120px;
+}
+
+.bottomline {
+    border-bottom: 6px solid white;
+    width: 20%;
+    border-radius: 2px;
+    margin:0% auto;
+    padding-top: 5%;
+    margin-top: 0%;
+    margin-bottom: 5%;
+}
+@media screen and (max-width: 768px) {
+    .bottomline {
+        margin-bottom: 6%;
+    }
+}
+
+/* === ADMIN PANEL === */
+
+/* Hal. Utama Admin */
+.fitur-list {
+    color: #eed6eaff;
+    background-color: #856c81ff;
+    text-align:left;
+    display: flex;
+    flex-direction:column;
+    justify-content:flex-start;
+    align-items:center;
+    margin-top: 4%;
+    padding: 3% 0;
+    border-radius: 35px;
+}.fitur-list ul {
+    margin-left: -55px;
+}.fitur-list p {
+    margin-left: -25px;
+}
+
+/* Hal. Instructor Detail */
+.instructor-detail {
+    max-width: 540px;
+    margin-top: 5%;
+}
+.instructor-subdetail div {
+    margin-right: 3%;
+}
+.instructor-blackbelt-detail {
+    width: 25rem;
+}
+.detail-instruktur-branch {
+    width: 25rem;
+}
+.instruktur-dojo-detail {
+    width: 25rem;
+}
+@media screen and (min-width: 768px) {
+    .instructor-detail {
+        width: 540px;
+    }
+}
+
+
+
+/* === BANNER CAROUSEL === */
+
+/* Custom styles for carousel */
+.carousel {
+    /*margin-top: var(--navbar-height, 135px); /* Adjust for sticky navbar */
+    overflow: hidden; /* Prevent overflow */
+    margin-top: 75px !important;
+}
+
+.carousel-image {
+    width: 100vw; /* Full container width */
+    height: auto;
+    aspect-ratio: 11 / 4; /* Responsive aspect ratio */
+    background-size: contain; /* Ensure the image fits without cropping */
+    background-position: center; /* Center the image */
+    background-repeat: no-repeat; /* Avoid repeating the image */
+    position: relative;
+    background-color: #000;
+    margin-top: 25px;
+}
+
+/* Khusus untuk yang Carousel Dojo */
+.carousel-dojo {
+    width: 80%;
+    margin: 0 auto;
+    height: auto;
+    aspect-ratio: 16 / 9;
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+    position: relative;
+    background-color: #000;
+    margin-top: 25px;
+}
+/* below 992px, the width adjusts to auto 100% */
+@media screen and (max-width: 992px) {
+    .carousel-dojo {
+        width: auto;
+    }
+}
+/* And below 768px if for class .carousel-dojo */
+@media screen and (max-width: 768px) {
+    /* Khusus Carousel Dojo */
+    .carousel-dojo {
+        /*aspect-ratio: 4 / 5;*/
+        aspect-ratio: 3 / 3; /* Sblmnya adalah 5 / 5 */
+    }
+}
+
+.carousel-karateguyimage {
+    background-image: url('../1_main_page/img/1-banner/banner_baru.png');
+}
+
+/* Change image and aspect ratio when screen width is below 600px */
+@media screen and (max-width: 600px) {
+    .carousel-image {
+        aspect-ratio: 1 / 0.7; /* Adjust aspect ratio to 1:0.7 */
+    }
+    .carousel-karateguyimage {
+        background-image: url('../1_main_page/img/1-banner/banner_square.png'); /* New image for mobile */
+    }
+}
+
+/* Carousel caption styling */
+.carousel-caption {
+    background: rgba(0, 0, 0, 0.6); /* Semi-transparent background for better text visibility */
+    padding: 1rem;
+    border-radius: 10px;
+}
+
+/* Indicators */
+.carousel-indicators [data-bs-target] {
+    background-color: #007bff; /* Custom indicator colors */
+}
+
+/* Navigation arrows */
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+    filter: invert(1); /* Make navigation arrows more visible on dark images */
+}
+
+/* -- Adjusting Carousel Banner's height with the Sticky Navbar freezes on Top: -- */
+.carousel {
+    margin-top: 79px;
+}
+
+/* Responsive adjustments for smaller screens */
+/* + this .header adjusts it's top margin with the sticky Navbar */
+/* @media screen and (min-width:900px) and (max-width:1175px) {
+    .carousel {
+        margin-top:79px;
+    }
+}
+@media screen and (min-width:768px) and (max-width:900px) {
+    .carousel {
+        margin-top:80px;
+    }
+}
+@media screen and (min-width:495px) and (max-width:768px) {
+    .carousel {
+        margin-top:80px;
+        margin-bottom: 5%;
+    }
+    .carousel-caption {
+        font-size: 0.9rem; /* Adjust font size for captions */
+    /*}
+}
+@media screen and (max-width:495px) {
+    .carousel {
+        margin-top: 78px;
+    }
+    .carousel-caption {
+        font-size: 0.8rem;
+    }
+} */
+
+/* === RESPONSIVE IMAGES === */
+
+img {
+    max-width: 100%;
+    height: auto;
+    display: block; /* Prevents inline spacing issues */
+}
+
+/* === PARAGRAPH & TITLE+SUB STYLE === */
+/* -Paragraph Atas- */
+.paragraph-intro {
+    margin-bottom: 7%;
+    width:80%;
+    margin:0 auto;
+}
+
+.paragraph-intro h1 {
+    margin-bottom: 5%;
+}
+
+@media screen and (min-width:768px) and (max-width: 992px) {
+    .paragraph-intro img {
+        width: 40%;
+    }
+}
+
+.paragraph-intro .fullParagraph {
+    display:inline-block;
+}
+.paragraph-intro .fullParagraph p {
+    text-align:justify;
+}
+
+.intro-image {
+    width:30%;
+    float: left;
+    margin-right:1%;
+    border-radius: 3%;
+    /* Add some style for the image, like border-radius */
+}
+
+.text-content {
+    flex:1; /* Allow text to take up the remaining space */
+    text-align: justify;
+}
+
+.text-content p {
+    margin-bottom: 10px;
+}
+
+/* Ini khusus yang intro shidokan bagian Home saja: */
+@media screen and (max-width: 768px) {
+    .intro-home {
+        font-size: 1rem;
+    }
+}
+
+/* Responsive design: when width screen <= 768px */
+@media screen and (max-width: 768px) {
+    .image-text-wrapper {
+        display:flex;
+        flex-direction: column; /* stack the image and text vertically */
+        align-items: center; /* Center-align content */
+    }
+
+    .intro-image {
+        width:auto; /* Make image bigger on small screens */
+        margin-bottom: 20px; /* Add some spacing below the image */
+    }
+
+    .text-content p {
+        font-size:1em; /* Adjust text size */
+        text-align: center; /* Center-align text */
+    }
+
+    .paragraph-intro h1 {
+        font-size: 1.8em;
+        text-align: center;
+    }
+}
+
+.font-responsive h2 {
+    text-align: center;
+}
+.font-responsive p {
+    text-align:center;
+}
+
+/* Other media queries for responsiveness */
+@media screen and (max-width: 992px) {
+    .font-responsive .row p {
+        font-size: 0.95em;
+    }
+    .font-responsive .row h1 {
+        font-size: 1.6em;
+    }
+    .font-responsive .row h3 {
+        font-size: 1.3em;
+    }
+}
+
+/*.fullParagraph {
+    margin-bottom: 5%;
+}
+
+.paragraph-intro .row {
+    display: flex;
+    justify-content: center;
+}
+*/
+.paragraph-intro .btn {
+    display:block;
+    margin: 2% auto;
+}
+
+/* Menyesuaikan margin */
+/*@media screen and (max-width: 768px) {
+    .paragraph-intro .row .col-md-6:nth-last-child() {
+        margin-top: -13%;
+    }
+}
+
+/* Menyesuaikan ukuran teksnya */
+/*.font-responsive {
+    text-align: justify;
+}
+
+.font-responsive .row h1 {
+    text-align: left;
+}
+.font-responsive .row h3 {
+    font-size: 1.6em;
+}
+
+@media screen and (max-width:992px) {
+    .font-responsive .row p {
+        font-size: 0.95em;
+    }
+    .font-responsive .row h1 {
+        font-size:1.6em;
+    }
+    .font-responsive .row h3 {
+        font-size:1.3em;
+    }
+}
+@media screen and (max-width:768px) {
+    .font-responsive .row p {
+        font-size: 1em;
+        text-align: center;
+    }
+    .font-responsive .row h1 {
+        font-size:1.8em;
+        text-align: center;
+    }
+}
+
+/* === TITLE+SUB & HEADER STYLE === */
+
+/*.banner img {
+    max-height: 400px;
+    object-fit: cover;
+    width:100vw;
+    max-width:100vw;
+    /* margin-left: calc(-50vw + 50%); */
+    /*aspect-ratio: 16 / 9; /* Adjust to your desired aspect ratio */
+    /*margin: 0 calc(-50vw + 50%);
+} */
+
+/*.banner {
+    /*position:relative;
+    text-align: center; /* Center the content horizontally */
+    /*color:white; /* Default text color for header content */
+    /*background: rgba(0, 0, 0, 0.8); /* Adjust transparency as needed */
+    /*padding-top:12%;*/
+    /*margin-bottom: 5%;
+    margin-top:0;
+    /*padding-top:13%;*/
+    /*min-height: 400px; */
+/*} */
+
+/* Banner container with background image */
+.banner {
+    width: 100vw; /* Full screen width */
+    height: auto;
+    aspect-ratio: 11 / 4; /* Automatically adjust height based on width (16:9 ratio) -> change to 11:4 ratio */
+    background-size: contain; /* Ensures the image covers the entire div */
+    background-position: center; /* Center the image */
+    background-repeat: no-repeat; /* Avoid repeating the image */
+    position: relative;
+    overflow: hidden; /* Ensure no overflow */
+    margin-top: var(--navbar-height, 105px); /* Dynamic adjustment for sticky navbar */
+    background-color: #000; /* Black, matching the image style */
+    margin-top: 100px;
+    margin-bottom: 5%;
+}
+
+/*.bannerimage_karateGuy {
+    background: 
+        url('../1_main_page/img/1-banner/banner_baru.png') center / cover, 
+        url('../1_main_page/img/1-banner/banner_baru.png') center / contain no-repeat;
+    /*filter: brightness(50%); /* Optional: Match the foreground image's brightness */
+/*}*/
+
+/* Desktop-specific image */
+/*.bannerimage_karateGuy {
+    background-image: url('../1_main_page/img/1-banner/banner_karateGuy.png');
+    position: relative;
+}*/
+
+/* Create an overlay using a pseudo-element */
+.banner::before {
+    content:''; /* Empty content for the pseudo-element */
+    position:absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent black overlay */
+    z-index: 1; /* Place behind text but above the background image */
+}
+
+/* Text content styles */
+.banner-content {
+    position: absolute;
+    top: 50%; /* Center vertically */
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    color: white;
+    z-index: 2;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.8); /* Add shadow for readability */
+}
+
+.banner-content h1 {
+    font-size: clamp(2rem, 4vw, 3rem); /* Responsive font size */
+    margin: 0;
+}
+
+.banner-content p {
+    font-size: clamp(1rem, 2.5vw, 1.5rem); /* Responsive font size */
+    margin: 0;
+}
+
+.banner-content h1,
+.banner-content p {
+    transition: font-size 0.3s ease;
+}
+
+/* Tablet adjustments */
+@media screen and (min-width: 600px) and (max-width: 768px) {
+    .banner {
+        --default-height: 300px; /* Smaller height for tablets */
+        /*height: 612px;*/
+    }
+}
+
+/* Mobile adjustments */
+@media screen and (max-width: 600px) {
+    .banner {
+        --default-height: 250px /* Smaller height for smartphones */
+        width: 100%; /* or any percentage of the container */
+        aspect-ratio: 1 / 0.7; /* Makes the element a perfect square */
+    }
+    /*.bannerimage_karateGuy {
+        background-image: url('../1_main_page/img/1-banner/banner_square.png'); /* Mobile-specific image */
+    /*}*/
+}
+/* Fine-tune margin-top to dynamically adjust with navbar */
+:root {
+    --navbar-height: 105px; /* Default navbar height */
+}
+@media screen and (max-width: 768px) {
+    :root {
+        --navbar-height: 108px; /* Smaller navbar for mobile */
+    }
+}
+
+/* Menyesuaikan Banner dengan  .header ini dengan tingginya Navbar */
+@media screen and (min-width:900px) and (max-width:1167px) {
+    .banner {
+        margin-top:105px;
+    }
+    .banner-content h1 {
+        font-size: 2.8rem; /* Adjust as needed */
+    }
+    .banner-content p {
+        font-size: 1.2rem;
+    }
+}
+@media screen and (min-width:768px) and (max-width:900px) {
+    .banner {
+        margin-top:105px;
+    }
+    .banner content h1 {
+        font-size: 2.4rem; /* Adjust as needed */
+    }
+    .banner-content p {
+        font-size: 1.1rem;
+    }
+}
+@media screen and (min-width:495px) and (max-width:768px) {
+    .banner {
+        margin-top:104px;
+        margin-bottom: 5%;
+    }
+    .banner content h1 {
+        font-size: 2.0rem; /* Adjust as needed */
+    }
+    .banner-content p {
+        font-size: 1rem;
+    }
+}
+@media screen and (max-width:495px) {
+    .banner {
+        margin-top: 101px;
+    }
+    .banner-content h1 {
+        font-size: 1.8rem;
+    }
+    .banner-content p {
+        font-size: 0.8rem;
+    }
+}
+
+/*.banner::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    /*width: 100%;*/
+    /*height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); /* Black color with 50% transparency */
+    /*pointer-events: none; /* Allow interactions with the image beneath */
+    /*z-index: 1; /* Ensure the overlay sits above the image */
+    /*width:100vw;
+    max-width:100vw;
+    margin: 0 calc(-50vw + 50%);
+} */
+
+/* Adjusting Title+Sub Size each Width */
+@media screen and (max-width:1168px) {
+    .header-title {
+        font-size:2.5rem;
+    }
+    .header-subtitle {
+        font-size:1.1rem;
+    }
+}
+
+
+
+/* === STYLE BERITA === */
+
+/* Carousel Berita */
+.carousel-berita .btn {
+    display:block;
+    margin: 2% auto;
+}
+
+/* === BERITA LAYOUT === */
+/* dibagian Home */
+
+/* Menyesuaikan Layout Berita (di Home) */
+@media screen and (max-width:576px) {
+
+}
+
+/* Menyesuaikan ukuran teksnya */
+@media screen and (max-width:992px) {
+    .font-berita .row p {
+        font-size: 0.95em;
+    }
+    .font-berita .row h3 {
+        font-size:1.8em;
+    }
+}
+@media screen and (max-width:768px) {
+    .font-berita .row p {
+        font-size: 1em;
+        text-align: center;
+    }
+    .font-berita .row h3 {
+        font-size:1.8em;
+        text-align: center;
+    }
+}
+
+.justify-content-center h3 {
+    font-size: 2em;
+}
+
+/* BUAT HAL. UTAMA BERITA */
+/* Bagian Kiri */
+.berita-container div {
+    margin-top: 1%;
+}
+.berita-scroll.d-none {
+    display: none !important;
+}
+.news-carousel.d-none {
+    display: none !important;
+}
+
+/* Bagian Kanan */
+@media screen and (min-width:992px) {
+    .berita-scroll {
+        margin-bottom: 2%;
+        overflow: scroll;
+        overflow-x: hidden;
+        max-height: 600px;
+    }
+    .berita-scroll div:last-child {
+        margin-bottom: 2%;
+    }
+}
+@media screen and (max-width: 991px) {
+    .berita-scroll {
+        overflow: hidden;
+        max-height: none; /* Ensure no height constraint */
+    }
+}
+/* For Testing Purpose on class .berita-scroll */
+
+.news-carousel {
+    position: relative;
+    z-index: 10; /* Ensure it is above other elements */
+}
+
+/* The Next / Prev Button Does not work, here's what I've implemented: */
+/* 1 - Reset Custom CSS */
+.carousel-control-prev,
+.carousel-control-next {
+    position: absolute; /* Bootstrap default */
+    z-index: 11; /* Bootstrap default */
+    pointer-events: auto; /* Keep this if buttons need to respond to clicks */
+}
+/* 2 - Ensure Buttons Are Visible */
+.carousel-control-prev,
+.carousel-control-next {
+    opacity: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+/* 3 - Fix Overlapping or Hidden Buttons */
+.carousel-control-prev,
+.carousel-control-next {
+    z-index: 2; /* Place above most elements */
+}
+
+.carousel {
+    position: relative; /* Ensure carousel contains buttons properly */
+    overflow: visible; /* Prevent buttons from being clipped */
+}
+/* 4 - Debug Button Placement */
+.carousel-control-prev,
+.carousel-control-next {
+    top: 50%; /* Center vertically */
+    transform: translateY(-50%);
+    width: 5%; /* Adjust button width */
+    height: auto; /* Maintain aspect ratio */
+}
+/* 5 - Check HTML Structure for the Berita Carousel */
+/* Self check inside the id #newsCarousel */
+
+/* General Style */
+.berita-scrollz {
+    overflow-y: auto; /* Ensure vertical scrolling */
+    overflow-x: hidden; /* Prevent horizontal scrolling */
+    max-height: 600px; /* Set a consistent maximum height */
+    margin-bottom: 2%; /* Optional spacing */
+}
+
+@media screen and (min-width:992px) {
+    .berita-scrollz {
+        margin-bottom: 2%;
+        overflow: scroll;
+        overflow-x: hidden;
+        max-height: 600px;
+    }
+    .berita-scrollz div:last-child {
+        margin-bottom: 2%;
+    }
+}
+
+/* Hide the carousel when the screen width is above 992px */
+@media screen and (min-width: 992px) {
+    .news-carousel {
+        display: none !important;
+    }
+    .berita-scrollz {
+        display: block !important;
+    }
+}
+
+/* Show the carousel and hide the scroll when the screen width is below 992px */
+@media screen and (max-width: 991px) {
+    .news-carousel {
+        display: block !important;
+    }
+    .berita-scrollz {
+        display: none !important;
+    }
+}
+
+/*@media screen and (max-width: 991px) {
+    .berita-scrollz {
+        overflow: hidden;
+        max-height: none; /* Ensure no height constraint */
+  /*  }
+}*/
+
+/* BUAT SUB-HAL DARI MASING2 Nasional & Int'll News */
+/* Pagination (Halaman, Next / Prev & Bulletin Page) */
+.pagination {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    margin: 20px;
+}
+.content {
+    text-align: left;
+    font-size: 18px;
+    margin: 20px auto;
+    max-width: 1100px;
+}
+.bullets {
+    display: flex;
+    gap: 5px;
+}
+.bullet {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background-color: gray;
+    cursor: pointer;
+}
+.bullet.active {
+    background-color: blue;
+}
+.paragraph {
+    margin-bottom: 20px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: #f9f9f9;
+}
+
+/* ===== BLACKBELTS LIST ====== */
+
+.blackbelt {
+    color:white;
+}
+
+.blackbelt-title {
+    margin-bottom: 5%;
+}
+.blackbelt-title h2 {
+    text-align: center;
+}
+.blackbelt-title p {
+    text-align: center;
+}
+
+table {
+    width: 100%;
+    margin: 0 auto;
+    border-collapse: separate; /* Separates cell borders */
+    border-spacing: 0; /* Ensures no gaps between cells */
+    border: 2px solid #000; /* Outer border for the table */
+    border-radius: 15px; /* Rounds the outer corners */
+    /*overflow: hidden; /* Ensures contents stay within rounded corners */
+}
+
+/* Gives the Layout Style */
+th, td {
+    border: 2px solid #ddd; /* Inner cell borders */
+    text-align: center;
+    padding: 8px; /* Optional for better spacing */
+}
+
+thead tr:first-child th:first-child {
+    border-top-left-radius: 15px; /* Top-left corner */
+}
+
+thead tr:first-child th:last-child {
+    border-top-right-radius: 15px; /* Top-right corner */
+}
+
+tbody tr:last-child td:first-child {
+    border-bottom-left-radius: 15px; /* Bottom-left corner */
+}
+
+tbody tr:last-child td:last-child {
+    border-bottom-right-radius: 15px; /* Bottom-right corner */
+}
+
+/* Gives the Color Style for each Column and Rows */
+thead {
+    background-color: #000;
+}
+tbody {
+    background-color: #715977ff;
+}
+
+@media screen and (min-width:526px) and (max-width: 768px) {
+    table thead tr th {
+        font-size: 0.8rem;
+    }
+    table tbody tr td {
+        font-size: 0.7rem;
+    }
+}
+
+@media (max-width: 525px) {
+    table, thead, tbody, th, td, tr {
+        display: block;
+    }
+
+    table {
+        border: none;
+        border-radius: 0;
+    }
+
+    tr {
+        margin-bottom: 1rem;
+        border: 2px solid #ddd;
+        border-radius: 10px;
+        padding: 10px;
+    }
+
+    th {
+        display: none; /* Hide table headers */
+    }
+
+    td {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 8px;
+    }
+
+    td::before {
+        content: attr(data-label); /* Use data-label for column names */
+        flex: 0 0 40%;
+        font-weight: bold;
+        text-align: left;
+    }
+
+    td {
+        flex: 1 0 60%;
+        text-align: right;
+    }
+
+    /* Hide empty cells */
+    thead {
+        display: none; /* Completely hide empty cells */
+    }
+
+    thead tr:first-child th:first-child {
+        border-top-left-radius: 0px; /* Top-left corner */
+    }
+    
+    thead tr:first-child th:last-child {
+        border-top-right-radius: 0px; /* Top-right corner */
+    }
+    
+    tbody tr:last-child td:first-child {
+        border-bottom-left-radius: 0px; /* Bottom-left corner */
+    }
+    
+    tbody tr:last-child td:last-child {
+        border-bottom-right-radius: 0px; /* Bottom-right corner */
+    }
+}
+
+/* ==== DAFTAR DOJO ==== */
+.flex-picAndInfo {
+    margin: 0% auto;
+    padding: 2% 0 2% 2%;
+}
+.flex-picAndInfo img {
+    border-radius: 10px;
+}
+
+.flex-instructorDetails {
+    /*display: flex;
+    flex-direction: column;
+    gap:70px;
+    padding-top: 3%;
+    padding-left: 2%;
+    margin-left: 5%;*/
+    background-color: rgb(83, 3, 83);
+    border-radius: 10px;
+}
+.flex-instructorDetails .instructor-tagFlex {
+    display: flex;
+    flex-direction: column;
+    justify-content:space-between;
+    align-items: left;
+}
+/*.flex-instructorDetails h3 {
+    margin-bottom: -6%;
+}*/
+.flex-instructorDetails .instructor-tagFlex h3 {
+    margin-top: 2%;
+}
+.flex-instructorDetails .instructor-tagFlex p:nth-of-type(1) {
+    font-size: 1rem;
+    margin-bottom: -0.5%;
+}
+.flex-instructorDetails p {
+    font-size: 0.75rem;
+}
+.flex-instructorDetails .instructor-p-adjust {
+    margin-top: 2%;
+}
+.flex-instructorDetails .button-instructor {
+    margin-top: 2%;
+}
+/* Kill the Bug: when zooming out of +1200px, the button instructor moves a little to the top */
+@media screen and (min-width: 1301px) {
+    .flex-instructorDetails .button-instructor {
+        margin-top: 7%;
+    }
+}
+@media screen and (max-width: 1200px) {
+    /* h3 Text adjustment */
+    .flex-instructorDetails h3 {
+        font-size: 1.4rem;
+    }
+    /* Paragraph p adjustment */
+    .flex-instructorDetails .instructor-tagFlex p:nth-of-type(1) {
+        font-size: 0.8rem;
+        margin-bottom: -0.5%;
+    }
+    .flex-instructorDetails p {
+        font-size: 0.65rem;
+    }
+    /* Button text Adjustment */
+    .button-instructor button {
+        font-size: 0.8rem;
+        margin-top: -1.5%;
+    }
+    
+}
+@media screen and (max-width: 991px) {
+    /* Adjusting text to center */
+    .flex-instructorDetails {
+        text-align: center;
+    }
+    /* h3 Text adjustment */
+    .flex-instructorDetails h3 {
+        font-size: 1.3rem;
+    }
+    /* Paragraph p adjustment */
+    .flex-instructorDetails .instructor-tagFlex p:nth-of-type(1) {
+        font-size: 0.8rem;
+    }
+    .flex-instructorDetails p {
+        font-size: 0.7rem;
+    }
+}
+@media screen and (max-width:768px) {
+    /* Adjusting text to center */
+    .flex-instructorDetails {
+        text-align: center;
+        margin-left: -1.8%;
+        margin-top: 5%;
+        width: 95%;
+        margin-bottom: 2%;
+        padding-top: 2%;
+        padding-bottom: 2%;
+    }
+    /* Adjusting content info to center */
+    .flex-picAndInfo-tag {
+        margin-left: -1.3%;
+    }
+    /* Give img max-width */
+    .flex-picAndInfo-tag img {
+        margin: 0 auto;
+    }
+    /* h3 text Adjustment */
+    .flex-instructorDetails h3 {
+        font-size: 2rem;
+        margin-bottom: auto;
+    }
+    /* Paragraph p adjustment */
+    .flex-instructorDetails .instructor-tagFlex p:nth-of-type(1) {
+        font-size: 1rem;
+    }
+    .flex-instructorDetails p {
+        font-size: 0.9rem;
+    }
+    /* Button text Adjustment */
+    .button-instructor button {
+        font-size: 1rem;
+        margin-top: -1.5%;
+    }
+
+    /*.flex-instructorDetails .instructor-tagFlex {
+        text-align: center;
+    }
+    .flex-instructorDetails .instructor-tagFlex:nth-of-type(2) {
+        margin-top: -10%;
+    }*/
+}
+
+
+/* ==== FUNGSI LAYOUT KATALOG ==== */
+
+.katalog-layout .row div {
+    border-radius: 3%;
+    margin-right: 3%;
+    margin-bottom: 3%;
+    margin-top:2%;
+    padding:0;
+    position:relative;
+    overflow: hidden;
+    background-color: rgba(150, 122, 150, 1);
+    transition: background-color 0.3s ease; /* Smooth animation effect */
+}
+.katalog-layout .row div p {
+    font-size: 1.2em;
+    transition: font-size 0.3s ease, transform 0.3s ease; /* Smooth animation for font size and position */
+    color: rgba(255, 242, 255, 1);
+    vertical-align: middle;
+    padding:1% 1% 1% 1%;
+}
+.katalog-layout .row div img {
+    margin-bottom: 2%;
+    border-top-left-radius: 3%;
+    border-top-right-radius: 3%;
+    transition: transform 0.3s ease /* Smooth scaling for hover in/out */
+}
+.katalog-layout .row div:hover {
+    background-color: rgb(29, 1, 29);
+}
+.katalog-layout .row div:hover p { 
+    font-size: 1.25em; /* Expand text size */
+    transform: translateY(5px); /* Move text slightly upwards */
+}
+/* Hover effect for the image */
+.katalog-layout .row div:hover img {
+    transform: scale(1.05); /* Scale up the image by 5% */
+    /*transition: transform 0.3s ease; /* Smooth animation effect */
+}
+
+/* Katalog font size and animation behavior in  */
+@media screen and (max-width: 992px) {
+    .katalog-layout .row div p {
+        font-size: 1em;
+        transition: font-size 0.3s ease, transform 0.3s ease; /* Smooth animation for font size and position */
+    }
+    .katalog-layout .row div:hover p { 
+        font-size: 1.05em; /* Expand text size */
+        transform: translateY(5px); /* Move text slightly upwards */
+    }
+}
+@media screen and (max-width: 768px) {
+    .katalog-layout .row div p {
+        font-size: 0.9em;
+        transition: font-size 0.3s ease, transform 0.3s ease; /* Smooth animation for font size and position */
+    }
+    .katalog-layout .row div:hover p { 
+        font-size: 0.95em; /* Expand text size */
+        transform: translateY(5px); /* Move text slightly upwards */
+    }
+}
+
+/* --Button Catalog Behavior-- */
+/* General button styling */
+.catalog-btn {
+    cursor:pointer;
+}
+.catalog-btn img {
+    max-height: 200px;
+    width:100vh;
+}
+
+/* - - FOOTER - - */
+
+.footer {
+    object-fit: cover;
+    width:100vw;
+    max-width:100vw;
+    /* margin-left: calc(-50vw + 50%); */
+    margin: 0 calc(-50vw + 50%);
+    margin-top: 5%;
+    color: white;
+}
+
+.footer .footer-atas {
+    margin-left: -2%;
+}
+
+.footer .footer-tengah {
+    margin-left: -2%;
+}
+
+/* Adjusting the top footer in width */
+@media screen and (max-width: 768px) {
+    .footer {
+        margin-top: 10%;
+    }
+}
+
+/* Footer Atas */
+
+/*.footer .footer-atas .flex-shidokanlogo-footer {
+    text-align: center;
+}
+
+.footer .footer-atas .flex-shidokanlogo-footer ul {
+    display:flex;
+    flex-direction: row;
+    justify-content: center;
+    list-style-type: none;
+} */
+
+/* ===RESPONSIVE 2 LOGO & 1 TITLE SHIDOKAN=== */
+/* General container styles */
+.footer-container {
+    display: flex;
+    /*flex-wrap: nowrap; /* Default: no wrapping */
+    justify-content: space-around;
+    align-items: center;
+    list-style: none;
+    padding: 0 10%;
+    margin: 0;
+}
+
+@media (max-width:900px) {
+    .footer-container {
+        padding:0;
+    }
+}
+
+/* Footer items default styling */
+.footer-item {
+    /*flex: 1;*/
+    margin: 10px;
+    text-align:center;
+}
+
+/* Logo-specific styling */
+.footer-logo img {
+    /*width: 70%; /* Default logo size */
+    max-width: 150px; /* Limit logo size on larger screens */
+    display: block;
+    margin: 0 auto;
+}
+
+/* Title and text styling */
+.footer-text {
+    max-width: 400px; /* Prevent text from stretching too wide */
+    margin: 0 auto;
+    /*padding: 10px; */
+}
+
+.footer-text p {
+    text: white;
+}
+
+/* Responsive Styles */
+@media (max-width:725px) {
+    .footer-container {
+        flex-wrap: wrap; /* Enable wrapping at 768px */
+        justify-content: space-between; /* Ensure logos are spaced correctly */
+    }
+
+    /* Ensure logos are in the same row */
+    .footer-item:nth-of-type(1),
+    .footer-item:nth-of-type(3) {
+        flex: 1; /* Equal width for logos */
+        margin-bottom: 10px; /* Add space between Logos and text */
+        /*order: 1; /* Logos stay together at the top */
+    }
+
+    /* Title moves below logos and take full width */
+    .footer-item:nth-of-type(2) {
+        order: 2; 
+        /*width: 100%; */ /* Full-width title */
+        flex: 0 0 100%; /* Forces it to take a full row */
+        margin-top:2%; /* Add spacing to seperate from logos */
+    }
+}
+
+@media (max-width: 432px) {
+    .footer-item:nth-of-type(1),
+    .footer-item:nth-of-type(3) {
+        flex: 0 0 100%; /* Logos stack vertically */
+    }
+    .footer-logo img {
+        width: 50%; /* Adjust logo size for smaller screens */
+    }
+}
+
+/*======SEJARAH======*/
+
+/* === Testimoni === */
+.testimoni-flex {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    gap:20px; /* Adds consistent spacing between items */
+    /*height: 100%; /* Ensures the flex container fills the parent height (optional) */
+}
+
+/* Bug: Pada lebar layar max-width 992px, ada sedikit anomali */
+@media screen and (min-width: 991px) and (max-width: 991px) {
+    .testimoni-flex {
+        margin: 6% 0 6% 0;
+    }
+    .testimoni-flex:last-child {
+        margin:0 auto;
+    }
+}
+/* Ini yang tanpa anomali */
+@media (max-width:991px) {
+    .testimoni-flex {
+        margin: 6% 0 6% 0;
+    }
+    .testimoni-flex:last-child {
+        margin:0 auto;
+    }
+}
+
+@media (max-width:768px) {
+    .testimoni-flex {
+        margin-bottom: 5%;
+    }
+}
+
+/* Dropdown Styling */
+.dropdown-div {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    font-family: 'Poppins', sans-serif;
+    /*height: 100vh;
+    margin: 0;*/
+    background: #f5f5f5;
+}
+
+.dropdown-stack {
+    list-style: none;
+    padding: 0;
+    max-width: 800px;
+    margin: 0 auto;
+    display:block;
+}
+
+.dropdown {
+    position: relative;
+    display: block;
+    margin-bottom: 16px;
+}
+
+.dropdown .title-dropbtn {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    transition: 0.15s ease;
+}
+.dropdown .dropdown-content p {
+    text-align: left;
+    color:black;
+}
+.dropdown .dropdown-content ol li {
+    color:black;
+}
+
+/* Applying paragraph spaces for the 2nd, 3rd, etc */
+.dropdown-content p + p {
+    margin-top:-1%;
+}
+
+/*.dropdown-content .show .arrow {
+    transform: rotate(45deg) translate(-5px, -5px);
+}
+
+.dropdown-content .show .arrow:before {
+    transform: translate(10px,0);
+}
+.dropdown-content .show .arrow:after {
+    transform: rotate(90deg) translate(10px, 0);
+}
+
+.dropdown-content .show {
+    opacity: 0.3;
+    height:108px;
+} */
+
+.dropbtn {
+    width: 100%;
+    background-color: #726073ff;
+    color: #fff;
+    border: none;
+    border-radius: 8px;
+    font-size: 12px;
+    padding: 12px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    text-align:left;
+}
+
+.dropbtn:hover {
+    background-color: rgba(72, 52, 67, 1)073ff;
+}
+
+.dropdown-content {
+    display: none; /* Hidden by default */
+    position: relative;
+    background-color: #e3dbe2ff; /* Warna isi BG paragraf p */
+    min-width: 100%;
+    box-shadow: 0px 4px 8px rgba(0,0,0,0.2);
+    border-radius: 8px;
+    z-index: -1;
+    margin-top: -4px;
+    padding: 12px 16px;
+    margin-top: -3%; /* Menaikkan kotak isi sebanyak 3%, sehingga border radius atas tertutup */
+
+    max-height: 0;
+    overflow:hidden;
+    transform: translateY(-20px); /* Slide up initially */
+    opacity: 0;
+    display: none; /* Start with a display name */
+    transition: transform 0.5s ease, opacity 0.5s ease, max-height 0.5s ease;
+
+    /* Animation Transition */
+    /*opacity: 0; /* Start fully hidden */
+    /*transform: scaleY(0); /* Start collapsed */
+    /*transform-origin: top; /* Animation from the top */
+    /*transition: transform 0.3s ease, opacity 0.3s ease; /* Smooth animation */
+}
+
+.dropdown-content.show {
+    max-height: 2400px; /* Adjust to fit content */
+    transform: translateY(0); /* Slide down to original position */
+    opacity: 1; /* Fully visible */
+    display:block; /* Ensure it's visible */
+    
+    /* Animation Transition */
+    /*display: block; /* Ensure it takes space */
+    /*opacity: 1; /* Fully visible */
+    /*transform: scaleY(1); /* Expand smoothly */
+}
+
+.dropdown-content p {
+    margin: 0;
+    color: #ffffff;
+    font-size: 12px;
+    padding-top: 3%; /* Membenjolkan bagian atas kotak isi p */
+}
+
+.dropdown-content ol li {
+    color: #000;
+    font-size: 12px;
+}
+
+/* Arrow Animation */
+/*.arrow {
+    width: 13px;
+    height: 13px;
+    display: inline-block;
+    position: relative;
+    bottom: -5px;
+    left: -10px;
+    transition: 0.4s ease;
+    margin-top: 2px;
+    margin-left: 2%;
+    margin-right: 1%;
+    text-align: left;
+    transform: rotate(45deg);
+    float: right;
+}
+
+.arrow:before, .arrow:after {
+    position: absolute;
+    content: '';
+    display: inline-block;
+    width: 12px;
+    height: 3px;
+    background-color: #fff;
+    transition: 0.4s ease;
+} */
+
+/*.arrow:after {
+    position: absolute;
+    transform: rotate(90deg);
+    top: -5px;
+    left: 5px;
+} */
+
+.arrow {
+    margin-left: 10px !important;
+    display: inline-block !important;
+    transition: transform 0.5s ease !important;
+}
+
+.arrow.rotated {
+    transform: rotate(180deg) !important;
+}
+
+/*===============*/
+/* === Contact & Dojo List === */
+
+.profil-instruktur {
+    background-color: #1b0221;
+    width:80%;
+    margin: 0 auto;
+    border-radius: 20px;
+    border: 2px solid #945fa1;
+}
+.profil-instruktur h2 {
+    text-align: center;
+    padding: 2% 0 2% 0;
+    border-bottom:2px solid #945fa1;
+    background-color: #09020a;
+    border-radius: 20px 20px 0 0;
+}
+
+.kontak-shidokan {
+    background-color: #1b0221;
+    padding-top: 2%;
+    padding-bottom: 1%;
+    border: 2px solid #945fa1;
+    margin:5% auto;
+    margin-top: 3%;
+    border-radius: 10px;
+
+    padding-left:20%;
+    padding-right: 20%;
+}
+
+@media (max-width:900px) {
+    .kontak-shidokan {
+        padding-left: 0%;
+        padding-right: 0%;
+    }
+}
+
+/* Ini styling yang wave, animasi tulisan geser, dkk */
+
+
+/*==============*/
+/* === Voice from Shinbucho === */
+/* ==  Tata Tertib Dojo & Join Us == */
+.layout-instruksi {
+    background-color: #100313;
+    padding: 3%;
+    border-radius: 20px;
+    border: 2px solid #ffffff;
+    margin-bottom: 10%;
+    text-align: justify;
+    padding-left: 5%;
+    padding-right: 5%;
+}
+.layout-instruksi ul li::marker {
+    color: white;
+}
+.layout-instruksi h1 {
+    color:white;
+}
+.layout-instruksi p {
+    color:white;
+}
+
+/* == Join Us == */
+.layout-joinUs {
+    background-color: #bcaebfff;
+    border-radius: 20px;
+    border: 2px solid #ffffff;
+    margin-bottom: 10%;
+    text-align: center;
+    margin: 0 auto;
+    margin-bottom: 10%;
+    /* Flex Aligning */
+    display:flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.layout-joinUs img {
+    margin-top:3%;
+    height: auto;
+    max-width: 100%;
+}
+.layout-joinUs p {
+    padding: 3%;
+}
+.layout-joinUs button {
+    margin-bottom:3%;
+}
+.layout-joinUs:nth-child(odd) {
+    margin-right: 5%;
+}
+
+/*==============*/
+/* ===Our Partner=== */
+.our-partner {
+    margin-top:2%;
+}
+.our-partner h1 {
+    margin-bottom: 2%;
+}
+.our-partner .row div img {
+    border-radius: 3%;
+    margin-bottom: 2%;
+    transition: transform 0.3s ease; /* Smooth scaling for hover in/out */
+    border: 1px solid #404040ff;
+}
+.our-partner .row div p {
+    font-size: 1.15em;
+    transition: font-size 0.3s ease, transform 0.3s ease; /* Smooth animation for font size and position */
+}
+.our-partner .row div:hover img {
+    transform: scale(1.05); /* Scale up the image by 5% */
+    cursor: pointer;
+}
+.our-partner .row div:hover p {
+    font-size: 1.15em;
+    transform: translateY(5px); /* Move text slightly upwards */
+    cursor: pointer;
+}
+
+/*==============*/
+/* ===Merchandise=== */
+
+.merchandise {
+    margin-top:2%;
+}
+.merchandise h1 {
+    margin-bottom: 2%;
+}
+.merchandise .row div img {
+    border-radius: 3%;
+    margin-bottom: 2%;
+    transition: transform 0.3s ease /* Smooth scaling for hover in/out */
+}
+.merchandise .row div p {
+    font-size: 1.15em;
+    transition: font-size 0.3s ease, transform 0.3s ease; /* Smooth animation for font size and position */
+}
+.merchandise .row div:hover img {
+    transform: scale(1.05); /* Scale up the image by 5% */
+    /*cursor: pointer;*/
+}
+.merchandise .row div:hover p {
+    font-size: 1.15em;
+    transform: translateY(5px); /* Move text slightly upwards */
+    /*cursor: pointer;*/
+}
+
+/*==============*/
+/*====FOOTER====*/
+
+/* Adjust Margin-bottom footer saat di 768px */
+
+@media (max-width:724px) {
+    .footer-bawah {
+        margin-top: 10%;
+    }
+}
+
+/* Footer Atas */
+.footer .footer-atas .flex-nav-footer {
+    margin: auto;
+    width: 100%;
+    /*border: 3px solid green;*/
+    padding: 10px;
+}
+
+.footer .footer-atas .flex-nav-footer ul {
+    display:flex;
+    flex-direction: row;
+    justify-content: center;
+    flex:0;
+    list-style-type: none;
+}
+
+.footer .footer-atas .flex-nav-footer ul li button {
+    background-color: rgb(153, 45, 153);
+    color:white;
+    border: 1px solid rgb(0, 0, 0);
+    border-radius: 10px;
+}
+
+.footer .footer-atas .flex-nav-footer ul li button:hover {
+    background-color: rgb(82, 34, 82);
+    color:rgb(211, 199, 199);
+    border: 1px solid rgb(101, 15, 28);
+    border-radius: 10px;
+}
+
+/* Button decoration */
+.button-style {
+    background-color: #04AA6D; /* Green */
+    border: none;
+    color: white;
+    padding: 4px 8px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 12px;
+    margin: 4px 2px;
+    transition-duration: 0.4s;
+    cursor: pointer;
+    z-index: 10;
+}
+
+.button-purple {
+    background-color: white; 
+    color: black; 
+    border: 2px solid #008CBA;
+}
+
+.button-purple:hover {
+    background-color: #008CBA;
+    color: white;
+}
+
+@media screen and (max-width: 768px) {
+    .footer .footer-atas .flex-shidokanlogo-footer .flex-nav-footer ul {
+        display: flex;
+        flex-direction: column;
+        width:100%;
+        /*background-color: green;*/
+        margin-left: -2%;
+    }
+
+    .button-purple {
+        width:100%;
+    }
+}
+
+/* Footer Tengah */
+
+.footer .footer-tengah .row {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around !important;
+}
+
+.footer .footer-tengah .row .layout-infoDojo-footer ul {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    white-space: nowrap;
+    margin-left: -7.5%;
+}
+
+.footer .footer-tengah .row .layout-infoDojo-footer ul li {
+    display: flex;
+    flex-direction: row;
+}
+
+.footer .footer-tengah .row .layout-infolatihan-footer ul {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    white-space: nowrap;
+    margin-left: -11%;
+}
+
+.footer .footer-tengah .row .layout-infolatihan-footer ul li {
+    display:flex;
+    flex-direction: row;
+}
+
+@media screen and (max-width: 576px) {
+    .footer .footer-tengah .row .layout-infoDojo-footer ul {
+        align-items: center;
+    }
+
+    .footer .footer-tengah .row .layout-infoDojo-footer ul li {
+        display: relative;
+        text-align: center;
+    }
+
+    .footer .footer-tengah .row .layout-infolatihan-footer ul {
+        align-items: center;
+        margin-left: -7.5%;
+    }
+
+    .footer .footer-tengah .layout-infolatihan-footer ul li {
+        display:flex;
+        flex-direction: row;
+        text-align: center;
+    }
+}
+
+/* Footer Bawah */
+.footer .footer-bawah {
+    text-align: center;
+    padding-bottom: 2.5%;
+}
+
+@media (max-width:768px) {
+    .footer .footer-bawah {
+        font-size: 0.9em;
+    }
+}
+
+@media (max-width:540px) {
+    .footer .footer-bawah {
+        font-size: 0.8em;
+    }
+}
