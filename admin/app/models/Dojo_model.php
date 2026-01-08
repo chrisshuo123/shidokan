@@ -10,8 +10,7 @@ class Dojo_model {
 
     public function getDojoList() {
         $query = '
-            SELECT namaDojo, alamatDojo, foto FROM
-            dojo
+            SELECT * FROM dojo;
         ';
 
         $this->db->query($query);
