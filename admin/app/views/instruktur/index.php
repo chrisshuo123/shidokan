@@ -36,7 +36,7 @@
                             <td><?= htmlspecialchars($listInstruktur['status']); ?></td>
                             <td><?= htmlspecialchars($listInstruktur['levelDan']) ?></td>
                             <td>
-                                <a href="#"><span class="badge text-bg-primary">Detail</span></a>
+                                <a href="<?= BASEURL; ?>/instruktur/detail/<?= $listInstruktur['idInstruktur']; ?>"><span class="badge text-bg-primary">Detail</span></a>
                             </td>
                         </tr>
                         <?php $counter++ ?>
