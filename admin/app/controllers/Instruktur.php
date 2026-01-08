@@ -10,8 +10,15 @@ class Instruktur extends Controller {
         $this->view('templates/footer');
     }
 
-    public function detail() {
+    public function detail($idInstruktur) {
         $data['judul'] = "Detail Instruktur";
+        $data['instrukturDetail'] = $this->model('Instruktur_model')->getInstrukturDetail($idInstruktur);
+
+        // Debug: Check what's being returned
+        // echo '<pre>';
+        // var_dump($data['instrukturDetail']);
+        // echo '</pre>';
+        // die();
 
         $this->view('templates/header', $data);
         $this->view('instruktur/detail', $data);
