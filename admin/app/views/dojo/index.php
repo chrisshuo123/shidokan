@@ -9,7 +9,9 @@
                     <th scope="col">#</th>
                     <th scope="col">Nama Dojo</th>
                     <th scope="col">Alamat Dojo</th>
-                    <th scope="col">Foto</th>
+                    <th scope="col">No. Telp Dojo</th>
+                    <!-- <th scope="col">Pengelola</th> -->
+                    <th scope="col">Foto Dojo</th>
                 </tr>
             </thead>
             <tbody>
@@ -30,8 +32,12 @@
                         <tr>
                             <th scope="row"><?= htmlspecialchars($counter); ?></th>
                             <td><?= htmlspecialchars($listInstruktur['namaDojo']); ?></td>
-                            <td><?= htmlspecialchars($listInstruktur['alamatDojo']); ?></td>
-                            <td><?= htmlspecialchars($listInstruktur['foto']); ?></td>
+                            <td style="width: 20%;"><?= htmlspecialchars($listInstruktur['alamatDojo']); ?></td>
+                            <td><?= htmlspecialchars($listInstruktur['noTelpDojo']); ?></td>
+                            <!-- <td><= htmlspecialchars($listInstruktur['foto']); ?></td> -->
+                            <td style="width: 35%;">
+                                <img src="<?= BASEURL; ?>/img/dojo/<?= $listInstruktur['link_foto']; ?>.jpg">
+                            </td>
                         </tr>
                         <?php $counter++ ?>
                     <?php endforeach; ?>
