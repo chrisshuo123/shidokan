@@ -172,4 +172,130 @@ class Instruktur_model {
         
         return $instrukturData;
     }
+
+    public function tambahInstruktur($data) {
+        $query = "
+            INSERT INTO instruktur
+                (namaDepan, namaBelakang, prestasi, emailAddress, noTelp, foto, pesanTambahan, idBranch_fkInstruktur, idStatus_fkInstruktur)
+            VALUES
+                (:namaDepan, :namaBelakang, :prestasi, :emailAddress, :noTelp, :foto, :pesanTambahan, :idBranch_fkInstruktur, :idStatus_fkInstruktur)
+        ";
+
+        $this->db->query($query);
+        // Bind semua parameter
+        $this->db->bind(':namaDepan', $data['namaDepan']);
+        $this->db->bind(':namaBelakang', $data['namaBelakang']);
+        $this->db->bind(':prestasi', $data['prestasi']);
+        $this->db->bind(':emailAddress', $data['emailAddress']);
+        $this->db->bind(':noTelp', $data['noTelp']);
+        $this->db->bind(':foto', $data['foto']);
+        $this->db->bind(':pesanTambahan', $data['pesanTambahan']);
+        $this->db->bind(':idBranch_fkInstruktur', $data['idBranch_fkInstruktur']);
+        $this->db->bind(':idStatus_fkInstruktur', $data['idStatus_fkInstruktur']);
+
+        $this->db->execute();
+
+        // Kembalikan ID yang baru dibuat
+        $idInstruktur = $this->db->lastInsertID(); // Simpan ID Instruktur
+
+        // QUERY 2: table blackbelt
+        $query2 = "
+            INSERT INTO blackbelt
+                (nomorSertifikat, dateIssued, idLevelDan_fkBlackBelt)
+            VALUES
+                (:nomorSertifikat, :dateIssued, :idLevelDan_fkBlackBelt)
+        ";
+
+        $this->db->query($query2);
+        // Bind this
+        $this->db->bind(":nomorSertifikat", $data['nomorSertifikat']);
+        $this->db->bind(":dateIssued", $data['dateIssued']);
+        $this->db->bind(":idLevelDan_fkBlackBelt", $data['idLevelDan_fkBlackBelt']);
+        $this->db->execute();
+        $idBlackBelt = $this->db->lastInsertID(); // Simpan ID blackbelt
+
+        // QUERY 3: table blackbeltmany
+        $query3 = "
+            INSERT INTO blackbeltmany
+                (idInstruktur_fkBlackBeltMany, idBlackBelt_fkBlackBeltMany)
+            VALUES
+                (:idInstruktur_fkBlackBeltMany, :idBlackBelt_fkBlackBeltMany)
+        ";
+
+        $this->db->query($query3);
+        // Bind this
+        $this->db->bind(":idInstruktur_fkBlackBeltMany",$idInstruktur);
+        $this->db->bind(":idBlackBelt_fkBlackBeltMany", $idBlackBelt);
+        $this->db->execute();
+        
+        return $idInstruktur; // Kembalikan ID Instruktur
+    }
+    
+    // Showing the Dropdown Branch and Status in Add Instructor Form
+    public function getBranchList() {
+        $query = "
+            SELECT idBranch, branch FROM branch
+        ";
+
+        $this->db->query($query);
+        return $this->db->resultSet();
+    }
+
+    public function getStatusList() {
+        $query = "
+            SELECT idStatus, status FROM status
+        ";
+
+        $this->db->query($query);
+        return $this->db->resultSet();
+    }
+    // Showing the Dropdown levelDan in Add Instructor Form on Blackbelt session
+    public function getLevelDanList() {
+        $query = "
+            SELECT idLevelDan, levelDan FROM leveldan
+        ";
+
+        $this->db->query($query);
+        return $this->db->resultSet();
+    }
+
+    public function deleteInstruktur($idInstruktur) {
+        // Delete instruktur, tapi seluruh blackbelt terkaitnya ikut dihapus juga
+        // 1. Ambil dulu id blackbelt yang terkait
+        $query = "
+            SELECT idBlackBelt_fkBlackBeltMany FROM blackbeltmany
+            WHERE idInstruktur_fkBlackBeltMany = :idInstruktur
+        ";
+        $this->db->query($query);
+        $this->db->bind(':idInstruktur', $idInstruktur);
+        $blackBeltIds = $this->db->resultSet(); // Menangkap banyak (yg terpaut dgn idInstruktur)
+    
+        // 2. Delete dari junction table
+        $query1 = "
+            DELETE FROM blackbeltmany WHERE idInstruktur_fkBlackBeltMany = :idInstruktur
+        ";
+        $this->db->query($query1);
+        $this->db->bind(':idInstruktur', $idInstruktur);
+        $this->db->execute();
+
+        // 3. Delete blackbelt yang terkait
+        foreach($blackBeltIds as $blackBeltId) {
+            $query2 = "
+                DELETE FROM blackbelt WHERE idBlackBelt = :idBlackBelt_fkBlackBeltMany;
+            ";
+            $this->db->query($query2);
+            $this->db->bind(":idBlackBelt_fkBlackBeltMany", $blackBeltId['idBlackBelt_fkBlackBeltMany']);
+            $this->db->execute();
+        }
+
+        // 4. Delete instruktur
+        $query3 = "
+            DELETE FROM instruktur WHERE idInstruktur = :idInstruktur
+        ";
+        $this->db->query($query3);
+        $this->db->bind(":idInstruktur", $idInstruktur);
+        $this->db->execute();
+
+        return $this->db->rowCount();
+    }
 }
