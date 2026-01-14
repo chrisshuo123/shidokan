@@ -69,7 +69,14 @@
         <div class="card mb-3 instructor-detail">
             <div style="border-top: 1px solid #d2ceceff; border-bottom: 1px solid #d2ceceff; border-radius:0px; padding: 2% 0 2% 3%;">
                 <h5>Catatan / Deskripsi</h5>
-                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quia tempore debitis nihil rem minus dolores, sequi nisi inventore tenetur laboriosam sint architecto ipsum laborum excepturi dolorem fugiat, totam, nulla voluptatem!</p>
+                
+                <?php if(!empty($data['instrukturDetail']) && trim($data['instrukturDetail']['pesanTambahan']) !== ""): ?>
+                    <!-- Using single() returns one record, so no foreach needed -->
+                    <?php $instruktur = $data['instrukturDetail']; ?>
+                    <p><?= htmlspecialchars($instruktur['pesanTambahan']); ?></p>
+                <?php else: ?>
+                    <p style="color:gray;">Belum ada deskripsi</p>
+                <?php endif; ?>
             </div>
         </div>
     </div>

@@ -83,6 +83,17 @@ h1 {
     }
 }
 
+/* Hal. Tambah Instruktur (Pop-Up Modal) */
+.sub-formModal {
+    background-color:rgb(206, 203, 206);
+    padding: 2%;
+    border-radius:12px;
+    margin-bottom: 5%;
+}
+.sub-formModal .mb-3 label {
+    font-size: 1rem;
+}
+
 
 
 /* === BANNER CAROUSEL === */
