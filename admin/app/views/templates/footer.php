@@ -32,5 +32,7 @@
     <!--<script async defer
         src="https://maps.googleapis.com/maps/api/js?key=YOUR_API_KEY&callback=initMap">
     </script>-->
+    <!-- 4 - JQUERY MODAL POP-UP -->
+    <script src="<?= BASEURL; ?>/js/script.js"></script>
 </body>
 </html>
